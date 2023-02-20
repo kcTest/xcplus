@@ -1,4 +1,4 @@
-package com.zkc.xcplus.content.model;
+package com.zkc.xcplus.content.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
