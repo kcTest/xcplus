@@ -14,15 +14,17 @@
     <artifactId>xcplus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>xcplus</name>
-    <description>xcplus</description>
     <packaging>pom</packaging>
 
     <modules>
         <module>xcplus-base</module>
+        <module>xcplus-content</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
+        <lombok.version>1.18.26</lombok.version>
+        <mybatisplus.version>3.5.1</mybatisplus.version>
     </properties>
 
     <dependencies>
@@ -38,13 +40,32 @@
         </dependency>
     </dependencies>
 
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>
