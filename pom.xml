@@ -28,6 +28,9 @@
         <lombok.version>1.18.26</lombok.version>
         <mybatisplus-core.version>3.5.1</mybatisplus-core.version>
         <xcplus-base.version>0.0.1-SNAPSHOT</xcplus-base.version>
+        <xcplus-content.service.version>0.0.1-SNAPSHOT</xcplus-content.service.version>
+        <xcplus-content.model.version>0.0.1-SNAPSHOT</xcplus-content.model.version>
+        <springdoc-openapi-ui.version>1.6.4</springdoc-openapi-ui.version>
     </properties>
 
     <dependencies>
@@ -61,6 +64,21 @@
                 <groupId>com.zkc</groupId>
                 <artifactId>xcplus-base</artifactId>
                 <version>${xcplus-base.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zkc</groupId>
+                <artifactId>xcplus-conente-service</artifactId>
+                <version>${xcplus-content.service.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zkc</groupId>
+                <artifactId>xcplus-content-model</artifactId>
+                <version>${xcplus-content.model.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc-openapi-ui.version}</version>
             </dependency>
         </dependencies>
 

@@ -1,0 +1,1552 @@
+2023-02-21 19:23:17,820 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 2820 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:23:17,820 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 2820 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:23:17,850 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:23:17,850 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:23:17,851 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:23:17,851 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:23:18,499 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:23:18,499 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:23:18,693 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:23:18,693 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:23:18,801 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 917 ms
+2023-02-21 19:23:18,801 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 917 ms
+2023-02-21 19:23:19,088 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:23:19,088 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:23:19,091 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:19,091 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:19,093 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-02-21 19:23:19,093 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-02-21 19:23:19,096 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:19,096 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:19,099 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:23:19,099 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:23:19,227 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:23:19,227 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:23:19,230 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:23:19,230 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:23:19,238 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:23:19,238 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:23:19,289 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:23:19,289 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:23:19,290 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:23:19,290 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:23:19,292 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:23:19,292 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:23:19,294 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:23:19,294 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:23:24,528 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 10176 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:23:24,528 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 10176 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:23:24,537 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:23:24,537 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:23:24,538 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:23:24,538 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:23:25,197 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:23:25,197 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:23:25,409 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:23:25,409 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:23:25,417 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:25,417 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:25,418 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:23:25,418 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:23:25,418 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:23:25,418 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:23:25,524 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:23:25,524 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:23:25,524 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 953 ms
+2023-02-21 19:23:25,524 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 953 ms
+2023-02-21 19:23:25,886 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:23:25,886 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:23:25,889 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:25,889 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:25,893 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:23:25,893 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:23:25,894 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:25,894 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:23:25,898 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:23:25,898 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:23:26,062 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:23:26,062 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:23:26,066 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:23:26,066 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:23:26,079 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:23:26,079 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:23:26,125 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,125 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,141 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:23:26,141 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:23:26,143 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:23:26,143 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:23:26,144 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:23:26,144 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:23:26,147 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:23:26,147 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:23:26,448 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,448 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,448 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:23:26,448 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:23:26,453 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,453 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,455 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,455 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:23:26,464 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:23:26,464 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:23:26,488 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:12)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:23:26,488 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:12)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+zkc->2023-02-21 19:24:04,255 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 4828 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+zkc->2023-02-21 19:24:04,255 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 4828 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+zkc->2023-02-21 19:24:04,262 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+zkc->2023-02-21 19:24:04,262 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+zkc->2023-02-21 19:24:04,264 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+zkc->2023-02-21 19:24:04,264 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+zkc->2023-02-21 19:24:04,898 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+zkc->2023-02-21 19:24:04,898 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+zkc->2023-02-21 19:24:05,122 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+zkc->2023-02-21 19:24:05,122 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+zkc->2023-02-21 19:24:05,129 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:05,129 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:05,130 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+zkc->2023-02-21 19:24:05,130 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+zkc->2023-02-21 19:24:05,130 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+zkc->2023-02-21 19:24:05,130 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+zkc->2023-02-21 19:24:05,259 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+zkc->2023-02-21 19:24:05,259 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+zkc->2023-02-21 19:24:05,259 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 958 ms
+zkc->2023-02-21 19:24:05,259 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 958 ms
+zkc->2023-02-21 19:24:05,601 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+zkc->2023-02-21 19:24:05,601 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+zkc->2023-02-21 19:24:05,605 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+zkc->2023-02-21 19:24:05,605 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+zkc->2023-02-21 19:24:05,609 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+zkc->2023-02-21 19:24:05,609 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+zkc->2023-02-21 19:24:05,611 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+zkc->2023-02-21 19:24:05,611 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+zkc->2023-02-21 19:24:05,614 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+zkc->2023-02-21 19:24:05,614 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+zkc->2023-02-21 19:24:05,754 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+zkc->2023-02-21 19:24:05,754 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+zkc->2023-02-21 19:24:05,756 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+zkc->2023-02-21 19:24:05,756 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+zkc->2023-02-21 19:24:05,770 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+zkc->2023-02-21 19:24:05,770 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+zkc->2023-02-21 19:24:05,817 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:05,817 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:05,831 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+zkc->2023-02-21 19:24:05,831 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+zkc->2023-02-21 19:24:05,833 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+zkc->2023-02-21 19:24:05,833 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+zkc->2023-02-21 19:24:05,835 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+zkc->2023-02-21 19:24:05,835 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+zkc->2023-02-21 19:24:05,838 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+zkc->2023-02-21 19:24:05,838 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+zkc->2023-02-21 19:24:06,132 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:06,132 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:06,133 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+zkc->2023-02-21 19:24:06,133 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+zkc->2023-02-21 19:24:06,137 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:06,137 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:06,140 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:06,140 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+zkc->2023-02-21 19:24:06,144 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+zkc->2023-02-21 19:24:06,144 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+zkc->2023-02-21 19:24:06,163 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:12)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+zkc->2023-02-21 19:24:06,163 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:12)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:24:21,637 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 2412 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:24:21,637 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 2412 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:24:21,644 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:24:21,644 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:24:21,645 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:24:21,645 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:24:22,306 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:24:22,306 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:24:22,544 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:24:22,544 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:24:22,554 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:22,554 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:22,554 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:24:22,554 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:24:22,554 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:24:22,554 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:24:22,680 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:24:22,680 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:24:22,681 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 1001 ms
+2023-02-21 19:24:22,681 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 1001 ms
+2023-02-21 19:24:23,009 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:24:23,009 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:24:23,011 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:24:23,011 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:24:23,014 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:24:23,014 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:24:23,016 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:24:23,016 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:24:23,021 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-21 19:24:23,021 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-21 19:24:23,159 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:24:23,159 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:24:23,161 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:24:23,161 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:24:23,172 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:24:23,172 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:24:23,216 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,216 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,230 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:24:23,230 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:24:23,232 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:24:23,232 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:24:23,234 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:24:23,234 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:24:23,237 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:24:23,237 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:24:23,532 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,532 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,532 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:24:23,532 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:24:23,537 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,537 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,539 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,539 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:24:23,544 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:24:23,544 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:24:23,563 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:12)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:24:23,563 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:12)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:28:58,249 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 4256 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:28:58,249 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 4256 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:28:58,257 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:28:58,257 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:28:58,258 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:28:58,258 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:28:58,895 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:28:58,895 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:28:59,114 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:28:59,114 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:28:59,122 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:28:59,122 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:28:59,123 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:28:59,123 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:28:59,123 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:28:59,123 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:28:59,226 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:28:59,226 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:28:59,226 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 935 ms
+2023-02-21 19:28:59,226 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 935 ms
+2023-02-21 19:28:59,526 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:28:59,526 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:28:59,529 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:28:59,529 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:28:59,534 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-02-21 19:28:59,534 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-02-21 19:28:59,535 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:28:59,535 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:28:59,538 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:28:59,538 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:28:59,696 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:28:59,696 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:28:59,698 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:28:59,698 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:28:59,709 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:28:59,709 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:28:59,755 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:28:59,755 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:28:59,768 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:28:59,768 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:28:59,769 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:28:59,769 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:28:59,771 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:28:59,771 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:28:59,773 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:28:59,773 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:29:00,071 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:00,071 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:00,071 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:29:00,071 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:29:00,076 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:00,076 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:00,077 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:00,077 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:00,082 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:29:00,082 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:29:00,102 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:29:00,102 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:29:16,951 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 12416 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:29:16,951 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 12416 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:29:16,960 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:29:16,960 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:29:16,961 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:29:16,961 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:29:17,580 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:29:17,580 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:29:17,768 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:29:17,768 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:29:17,868 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 879 ms
+2023-02-21 19:29:17,868 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 879 ms
+2023-02-21 19:29:18,114 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:29:18,114 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:29:18,117 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:18,117 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:18,121 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-02-21 19:29:18,121 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+2023-02-21 19:29:18,122 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:18,122 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:18,126 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:29:18,126 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:29:18,264 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:29:18,264 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:29:18,266 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:29:18,266 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:29:18,275 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:29:18,275 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:29:18,327 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:29:18,327 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:29:18,329 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:29:18,329 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:29:18,330 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:29:18,330 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:29:18,332 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:29:18,332 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:29:21,826 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 15004 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:29:21,826 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 15004 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:29:21,834 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:29:21,834 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:29:21,835 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:29:21,835 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:29:22,484 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:29:22,484 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:29:22,718 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:29:22,718 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:29:22,727 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:22,727 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:22,728 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:29:22,728 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:29:22,728 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:29:22,728 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:29:22,845 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:29:22,845 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:29:22,846 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 979 ms
+2023-02-21 19:29:22,846 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 979 ms
+2023-02-21 19:29:23,128 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:29:23,128 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:29:23,132 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:23,132 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:23,136 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:29:23,136 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:29:23,137 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:23,137 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:29:23,140 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:29:23,140 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:29:23,312 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:29:23,312 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:29:23,315 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:29:23,315 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:29:23,325 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:29:23,325 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:29:23,380 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,380 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,394 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:29:23,394 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:29:23,395 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:29:23,395 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:29:23,397 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:29:23,397 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:29:23,400 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:29:23,400 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:29:23,700 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,700 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,700 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:29:23,700 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:29:23,704 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,704 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,705 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,705 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:29:23,711 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:29:23,711 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:29:23,732 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:29:23,732 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:30:03,199 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 7016 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:30:03,199 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 7016 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:30:03,205 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:30:03,205 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:30:03,206 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:30:03,206 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:30:03,905 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:30:03,905 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:30:04,118 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:30:04,118 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:30:04,126 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:04,126 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:04,127 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:30:04,127 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:30:04,127 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:30:04,127 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:30:04,228 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:30:04,228 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:30:04,229 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 988 ms
+2023-02-21 19:30:04,229 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 988 ms
+2023-02-21 19:30:04,508 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:30:04,508 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:30:04,512 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:30:04,512 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:30:04,516 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:30:04,516 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:30:04,518 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:30:04,518 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:30:04,521 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-21 19:30:04,521 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-21 19:30:04,687 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:30:04,687 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:30:04,689 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:30:04,689 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:30:04,699 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:30:04,699 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:30:04,750 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:04,750 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:04,765 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:30:04,765 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:30:04,766 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:30:04,766 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:30:04,769 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:30:04,769 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:30:04,771 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:30:04,771 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:30:05,070 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:05,070 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:05,070 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:30:05,070 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:30:05,074 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:05,074 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:05,076 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:05,076 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:30:05,082 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:30:05,082 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:30:05,103 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:30:05,103 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:37:40,992 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 8520 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:37:40,992 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 8520 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:37:41,002 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:37:41,002 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:37:41,004 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:37:41,004 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:37:41,587 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:37:41,587 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 8080 (http)
+2023-02-21 19:37:41,602 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:37:41,602 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:37:41,603 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:37:41,603 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:37:41,603 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:37:41,603 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:37:41,703 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:37:41,703 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:37:41,703 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 655 ms
+2023-02-21 19:37:41,703 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 655 ms
+2023-02-21 19:37:41,874 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:37:41,874 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:37:41,877 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:37:41,877 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:37:41,882 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:37:41,882 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:37:41,923 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-02-21 19:37:41,923 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-02-21 19:37:41,964 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:37:41,964 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+2023-02-21 19:37:41,976 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:37:41,976 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-21 19:37:41,983 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.406 seconds (JVM running for 2.425)
+2023-02-21 19:37:41,983 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.406 seconds (JVM running for 2.425)
+2023-02-21 19:39:46,931 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 15160 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:39:46,931 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 15160 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:39:46,940 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:39:46,940 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:39:46,940 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:39:46,940 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:39:47,502 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
+2023-02-21 19:39:47,502 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
+2023-02-21 19:39:47,514 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:39:47,514 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:39:47,515 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:39:47,515 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:39:47,515 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:39:47,515 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:39:47,612 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:39:47,612 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:39:47,613 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 643 ms
+2023-02-21 19:39:47,613 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 643 ms
+2023-02-21 19:39:47,782 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:39:47,782 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:39:47,786 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:39:47,786 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:39:47,790 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:39:47,790 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:39:47,831 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-02-21 19:39:47,831 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-02-21 19:39:47,876 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:39:47,876 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:39:47,890 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
+2023-02-21 19:39:47,890 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
+2023-02-21 19:39:47,897 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.39 seconds (JVM running for 2.478)
+2023-02-21 19:39:47,897 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.39 seconds (JVM running for 2.478)
+2023-02-21 19:40:47,887 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 15020 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:40:47,887 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 15020 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:40:47,894 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:40:47,894 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:40:47,895 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:40:47,895 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:40:48,485 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
+2023-02-21 19:40:48,485 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
+2023-02-21 19:40:48,497 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:40:48,497 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:40:48,497 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:40:48,497 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:40:48,498 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:40:48,498 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:40:48,583 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:40:48,583 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:40:48,584 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 657 ms
+2023-02-21 19:40:48,584 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 657 ms
+2023-02-21 19:40:48,756 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:40:48,756 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:40:48,760 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:40:48,760 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:40:48,764 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:40:48,764 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:40:48,773 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-02-21 19:40:48,773 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-02-21 19:40:48,817 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:40:48,817 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:40:48,891 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
+2023-02-21 19:40:48,891 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
+2023-02-21 19:40:48,898 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.461 seconds (JVM running for 2.466)
+2023-02-21 19:40:48,898 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.461 seconds (JVM running for 2.466)
+2023-02-21 19:44:00,490 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 6808 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:44:00,490 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 6808 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-21 19:44:00,497 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:44:00,497 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-21 19:44:00,498 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:44:00,498 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-21 19:44:01,094 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:44:01,094 INFO [main][ConfigurationClassEnhancer.java:323] - @Bean method SwaggerAutoConfiguration.docketBeanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-02-21 19:44:01,294 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
+2023-02-21 19:44:01,294 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
+2023-02-21 19:44:01,301 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:01,301 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:01,301 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:44:01,301 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-21 19:44:01,302 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:44:01,302 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-21 19:44:01,397 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:44:01,397 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-21 19:44:01,398 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 870 ms
+2023-02-21 19:44:01,398 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 870 ms
+2023-02-21 19:44:01,654 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:44:01,654 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-21 19:44:01,657 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:44:01,657 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.o.w.OpenApiControllerWebMvc:
+	{GET [/v3/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:44:01,661 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:44:01,661 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.ApiResourceController:
+	{GET [/swagger-resources/configuration/ui], produces [application/json]}: uiConfiguration()
+	{GET [/swagger-resources], produces [application/json]}: swaggerResources()
+	{GET [/swagger-resources/configuration/security], produces [application/json]}: securityConfiguration()
+2023-02-21 19:44:01,662 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:44:01,662 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	s.d.s.w.Swagger2ControllerWebMvc:
+	{GET [/v2/api-docs], produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2023-02-21 19:44:01,665 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:44:01,665 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-21 19:44:01,809 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:44:01,809 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'viewControllerHandlerMapping' {/swagger-ui/=ParameterizableViewController [view="forward:/swagger-ui/index.html"]}
+2023-02-21 19:44:01,812 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:44:01,812 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-21 19:44:01,821 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:44:01,821 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/springfox-swagger-ui/]]}
+2023-02-21 19:44:01,862 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:01,862 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:01,875 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
+2023-02-21 19:44:01,875 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
+2023-02-21 19:44:01,876 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:44:01,876 DEBUG [main][DocumentationPluginsBootstrapper.java:99] - Documentation plugins bootstrapped
+2023-02-21 19:44:01,878 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:44:01,878 DEBUG [main][AbstractDocumentationPluginsBootstrapper.java:78] - Found 1 custom documentation plugin(s)
+2023-02-21 19:44:01,881 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:44:01,881 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-02-21 19:44:02,161 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:02,161 INFO [main][DirectJDKLog.java:173] - Pausing ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:02,161 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:44:02,161 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-21 19:44:02,165 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:02,165 INFO [main][DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:02,166 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:02,166 INFO [main][DirectJDKLog.java:173] - Destroying ProtocolHandler ["http-nio-1001"]
+2023-02-21 19:44:02,171 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:44:02,171 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-21 19:44:02,189 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more
+2023-02-21 19:44:02,189 ERROR [main][SpringApplication.java:821] - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.zkc.xcplus.content.api.ContentApiApplication.main(ContentApiApplication.java:11)
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:387)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 more

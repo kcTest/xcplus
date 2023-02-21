@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 import lombok.Data;
 
 /**
@@ -91,13 +91,13 @@ public class CourseBase implements Serializable {
      * 创建时间
      */
     @TableField(value = "create_date")
-    private Date createDate;
+    private LocalDateTime createDate;
 
     /**
      * 修改时间
      */
     @TableField(value = "change_date")
-    private Date changeDate;
+    private LocalDateTime changeDate;
 
     /**
      * 创建人
