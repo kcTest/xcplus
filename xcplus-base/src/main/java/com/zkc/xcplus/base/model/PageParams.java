@@ -1,5 +1,6 @@
 package com.zkc.xcplus.base.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,10 +25,12 @@ public class PageParams {
 	/**
 	 * 当前页页码
 	 */
+	@Schema(description = "当前页页码")
 	private Long pageNo = DEFAULT_PAGE_CURRENT;
 	
 	/**
 	 * 每页记录数
 	 */
+	@Schema(description = "每页记录数")
 	private Long pageSize = DEFAULT_PAGE_SIZE;
 }

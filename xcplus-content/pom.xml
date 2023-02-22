@@ -18,12 +18,4 @@
         <module>xcplus-conente-service</module>
         <module>xcplus-content-model</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.zkc</groupId>
-            <artifactId>xcplus-base</artifactId>
-        </dependency>
-    </dependencies>
-
 </project>

@@ -8,15 +8,27 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "CourseBaseController", description = "课程查询")
-@RestController("/coursebase")
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+@Tag(name = "CourseBaseController", description = "课程管理")
+@RestController
+@RequestMapping("/coursebase")
 public class CourseBaseController {
 	
-	@Operation(summary = "获取课程列表")
+	@Operation(summary = "课程查询")
 	@PostMapping("/list")
 	public PageResult<CourseBase> list(PageParams pageParams, @RequestBody CourseQueryParamsDto queryParamsDto) {
-		return null;
+		CourseBase courseBase = new CourseBase();
+		courseBase.setName("测试名称");
+		courseBase.setCreateDate(LocalDateTime.now());
+		List<CourseBase> courseBases = new ArrayList<>();
+		courseBases.add(courseBase);
+		PageResult<CourseBase> pageResult = new PageResult<>(courseBases, 1, 1, 10);
+		return pageResult;
 	}
 }
