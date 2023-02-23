@@ -26,11 +26,12 @@
         <springboot.starter.version>2.7.8</springboot.starter.version>
         <springboot.starter.test.version>2.7.8</springboot.starter.test.version>
         <lombok.version>1.18.26</lombok.version>
-        <mybatisplus-core.version>3.5.1</mybatisplus-core.version>
+        <mybatisplus.version>3.5.1</mybatisplus.version>
         <xcplus-base.version>0.0.1-SNAPSHOT</xcplus-base.version>
         <xcplus-content.service.version>0.0.1-SNAPSHOT</xcplus-content.service.version>
         <xcplus-content.model.version>0.0.1-SNAPSHOT</xcplus-content.model.version>
         <springdoc-openapi-ui.version>1.6.4</springdoc-openapi-ui.version>
+        <mysql-connector-java.version>8.0.26</mysql-connector-java.version>
     </properties>
 
     <dependencies>
@@ -47,7 +48,6 @@
         </dependency>
     </dependencies>
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -57,8 +57,8 @@
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-core</artifactId>
-                <version>${mybatisplus-core.version}</version>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatisplus.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zkc</groupId>
@@ -79,6 +79,17 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc-openapi-ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+            <!--            配置驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
             </dependency>
         </dependencies>
 

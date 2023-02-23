@@ -1,0 +1,280 @@
+2023-02-23 16:00:00,045 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 16:00:00,045 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 16:00:00,307 INFO [main][StartupInfoLogger.java:61] - Started ServiceTest in 3.259 seconds (JVM running for 4.245)
+2023-02-23 16:00:00,307 INFO [main][StartupInfoLogger.java:61] - Started ServiceTest in 3.259 seconds (JVM running for 4.245)
+2023-02-23 16:00:00,510 DEBUG [main][Logger.java:49] - Creating a new SqlSession
+2023-02-23 16:00:00,510 DEBUG [main][Logger.java:49] - Creating a new SqlSession
+2023-02-23 16:00:00,519 DEBUG [main][Logger.java:49] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6401188a] was not registered for synchronization because synchronization is not active
+2023-02-23 16:00:00,519 DEBUG [main][Logger.java:49] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6401188a] was not registered for synchronization because synchronization is not active
+2023-02-23 16:00:00,607 DEBUG [main][HikariConfig.java:1103] - HikariPool-1 - configuration:
+2023-02-23 16:00:00,607 DEBUG [main][HikariConfig.java:1103] - HikariPool-1 - configuration:
+2023-02-23 16:00:00,608 DEBUG [main][HikariConfig.java:1135] - allowPoolSuspension................................false
+2023-02-23 16:00:00,608 DEBUG [main][HikariConfig.java:1135] - allowPoolSuspension................................false
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - autoCommit................................true
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - autoCommit................................true
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - catalog................................none
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - catalog................................none
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - connectionInitSql................................none
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - connectionInitSql................................none
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - connectionTestQuery................................none
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - connectionTestQuery................................none
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - connectionTimeout................................30000
+2023-02-23 16:00:00,609 DEBUG [main][HikariConfig.java:1135] - connectionTimeout................................30000
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSource................................none
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSource................................none
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSourceClassName................................none
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSourceClassName................................none
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSourceJNDI................................none
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSourceJNDI................................none
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSourceProperties................................{password=<masked>}
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - dataSourceProperties................................{password=<masked>}
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2023-02-23 16:00:00,610 DEBUG [main][HikariConfig.java:1135] - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2023-02-23 16:00:00,611 DEBUG [main][HikariConfig.java:1135] - exceptionOverrideClassName................................none
+2023-02-23 16:00:00,611 DEBUG [main][HikariConfig.java:1135] - exceptionOverrideClassName................................none
+2023-02-23 16:00:00,611 DEBUG [main][HikariConfig.java:1135] - healthCheckProperties................................{}
+2023-02-23 16:00:00,611 DEBUG [main][HikariConfig.java:1135] - healthCheckProperties................................{}
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - healthCheckRegistry................................none
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - healthCheckRegistry................................none
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - idleTimeout................................600000
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - idleTimeout................................600000
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - initializationFailTimeout................................1
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - initializationFailTimeout................................1
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - isolateInternalQueries................................false
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - isolateInternalQueries................................false
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - jdbcUrl................................jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+2023-02-23 16:00:00,612 DEBUG [main][HikariConfig.java:1135] - jdbcUrl................................jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - keepaliveTime................................0
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - keepaliveTime................................0
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - leakDetectionThreshold................................0
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - leakDetectionThreshold................................0
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - maxLifetime................................1800000
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - maxLifetime................................1800000
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - maximumPoolSize................................10
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - maximumPoolSize................................10
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - metricRegistry................................none
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - metricRegistry................................none
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - metricsTrackerFactory................................none
+2023-02-23 16:00:00,613 DEBUG [main][HikariConfig.java:1135] - metricsTrackerFactory................................none
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - minimumIdle................................10
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - minimumIdle................................10
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - password................................<masked>
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - password................................<masked>
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - poolName................................"HikariPool-1"
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - poolName................................"HikariPool-1"
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - readOnly................................false
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - readOnly................................false
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - registerMbeans................................false
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - registerMbeans................................false
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - scheduledExecutor................................none
+2023-02-23 16:00:00,614 DEBUG [main][HikariConfig.java:1135] - scheduledExecutor................................none
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - schema................................none
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - schema................................none
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - threadFactory................................internal
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - threadFactory................................internal
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - transactionIsolation................................default
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - transactionIsolation................................default
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - username................................"root"
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - username................................"root"
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - validationTimeout................................5000
+2023-02-23 16:00:00,615 DEBUG [main][HikariConfig.java:1135] - validationTimeout................................5000
+2023-02-23 16:00:00,615 INFO [main][HikariDataSource.java:110] - HikariPool-1 - Starting...
+2023-02-23 16:00:00,615 INFO [main][HikariDataSource.java:110] - HikariPool-1 - Starting...
+2023-02-23 16:00:01,613 DEBUG [main][HikariPool.java:565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c74d19
+2023-02-23 16:00:01,613 DEBUG [main][HikariPool.java:565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c74d19
+2023-02-23 16:00:01,615 INFO [main][HikariDataSource.java:123] - HikariPool-1 - Start completed.
+2023-02-23 16:00:01,615 INFO [main][HikariDataSource.java:123] - HikariPool-1 - Start completed.
+2023-02-23 16:00:01,618 DEBUG [main][Logger.java:49] - JDBC Connection [HikariProxyConnection@1794893473 wrapping com.mysql.cj.jdbc.ConnectionImpl@1c74d19] will not be managed by Spring
+2023-02-23 16:00:01,618 DEBUG [main][Logger.java:49] - JDBC Connection [HikariProxyConnection@1794893473 wrapping com.mysql.cj.jdbc.ConnectionImpl@1c74d19] will not be managed by Spring
+2023-02-23 16:00:01,621 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT COUNT(*) AS total FROM course_base
+2023-02-23 16:00:01,621 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT COUNT(*) AS total FROM course_base
+2023-02-23 16:00:01,645 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 
+2023-02-23 16:00:01,645 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 
+2023-02-23 16:00:01,667 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 1
+2023-02-23 16:00:01,667 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 1
+2023-02-23 16:00:01,674 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,company_id,company_name,`name`,users,tags,mt,st,grade,teachmode,description,pic,create_date,change_date,create_people,change_people,audit_status,`status` FROM course_base LIMIT ?
+2023-02-23 16:00:01,674 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,company_id,company_name,`name`,users,tags,mt,st,grade,teachmode,description,pic,create_date,change_date,create_people,change_people,audit_status,`status` FROM course_base LIMIT ?
+2023-02-23 16:00:01,675 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 10(Long)
+2023-02-23 16:00:01,675 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 10(Long)
+2023-02-23 16:00:01,684 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 10
+2023-02-23 16:00:01,684 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 10
+2023-02-23 16:00:01,684 DEBUG [main][Logger.java:49] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6401188a]
+2023-02-23 16:00:01,684 DEBUG [main][Logger.java:49] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6401188a]
+2023-02-23 16:00:01,704 INFO [SpringApplicationShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-02-23 16:00:01,704 INFO [SpringApplicationShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-02-23 16:00:01,705 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-02-23 16:00:01,705 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-02-23 16:00:01,706 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c74d19: (connection evicted)
+2023-02-23 16:00:01,706 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c74d19: (connection evicted)
+2023-02-23 16:00:01,708 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-02-23 16:00:01,708 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-02-23 16:00:01,708 INFO [SpringApplicationShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-02-23 16:00:01,708 INFO [SpringApplicationShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-02-23 16:01:31,641 INFO [main][StartupInfoLogger.java:55] - Starting ServiceTest using Java 1.8.0_301 on PZZKC with PID 10460 (started by pczkc in D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api)
+2023-02-23 16:01:31,641 INFO [main][StartupInfoLogger.java:55] - Starting ServiceTest using Java 1.8.0_301 on PZZKC with PID 10460 (started by pczkc in D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api)
+2023-02-23 16:01:31,650 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 16:01:31,650 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 16:01:31,651 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 16:01:31,651 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 16:01:32,221 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 16:01:32,221 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 16:01:32,223 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 16:01:32,223 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 16:01:32,224 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 16:01:32,224 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 16:01:32,224 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 16:01:32,224 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 16:01:32,484 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 16:01:32,484 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 16:01:32,545 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@73d3e555'
+2023-02-23 16:01:32,545 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@73d3e555'
+2023-02-23 16:01:32,547 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 16:01:32,547 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 16:01:33,791 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 16:01:33,791 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 16:01:33,793 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-23 16:01:33,793 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-23 16:01:33,806 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+2023-02-23 16:01:33,806 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+2023-02-23 16:01:33,808 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 16:01:33,808 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 16:01:33,808 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 16:01:33,808 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 16:01:33,823 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 16:01:33,823 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 16:01:34,373 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 16:01:34,373 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 16:01:34,592 INFO [main][StartupInfoLogger.java:61] - Started ServiceTest in 3.296 seconds (JVM running for 4.215)
+2023-02-23 16:01:34,592 INFO [main][StartupInfoLogger.java:61] - Started ServiceTest in 3.296 seconds (JVM running for 4.215)
+2023-02-23 16:01:34,833 DEBUG [main][Logger.java:49] - Creating a new SqlSession
+2023-02-23 16:01:34,833 DEBUG [main][Logger.java:49] - Creating a new SqlSession
+2023-02-23 16:01:34,842 DEBUG [main][Logger.java:49] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24dd44f9] was not registered for synchronization because synchronization is not active
+2023-02-23 16:01:34,842 DEBUG [main][Logger.java:49] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24dd44f9] was not registered for synchronization because synchronization is not active
+2023-02-23 16:01:34,919 DEBUG [main][HikariConfig.java:1103] - HikariPool-1 - configuration:
+2023-02-23 16:01:34,919 DEBUG [main][HikariConfig.java:1103] - HikariPool-1 - configuration:
+2023-02-23 16:01:34,920 DEBUG [main][HikariConfig.java:1135] - allowPoolSuspension................................false
+2023-02-23 16:01:34,920 DEBUG [main][HikariConfig.java:1135] - allowPoolSuspension................................false
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - autoCommit................................true
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - autoCommit................................true
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - catalog................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - catalog................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - connectionInitSql................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - connectionInitSql................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - connectionTestQuery................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - connectionTestQuery................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - connectionTimeout................................30000
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - connectionTimeout................................30000
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - dataSource................................none
+2023-02-23 16:01:34,921 DEBUG [main][HikariConfig.java:1135] - dataSource................................none
+2023-02-23 16:01:34,922 DEBUG [main][HikariConfig.java:1135] - dataSourceClassName................................none
+2023-02-23 16:01:34,922 DEBUG [main][HikariConfig.java:1135] - dataSourceClassName................................none
+2023-02-23 16:01:34,922 DEBUG [main][HikariConfig.java:1135] - dataSourceJNDI................................none
+2023-02-23 16:01:34,922 DEBUG [main][HikariConfig.java:1135] - dataSourceJNDI................................none
+2023-02-23 16:01:34,922 DEBUG [main][HikariConfig.java:1135] - dataSourceProperties................................{password=<masked>}
+2023-02-23 16:01:34,922 DEBUG [main][HikariConfig.java:1135] - dataSourceProperties................................{password=<masked>}
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - exceptionOverrideClassName................................none
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - exceptionOverrideClassName................................none
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - healthCheckProperties................................{}
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - healthCheckProperties................................{}
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - healthCheckRegistry................................none
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - healthCheckRegistry................................none
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - idleTimeout................................600000
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - idleTimeout................................600000
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - initializationFailTimeout................................1
+2023-02-23 16:01:34,923 DEBUG [main][HikariConfig.java:1135] - initializationFailTimeout................................1
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - isolateInternalQueries................................false
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - isolateInternalQueries................................false
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - jdbcUrl................................jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - jdbcUrl................................jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - keepaliveTime................................0
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - keepaliveTime................................0
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - leakDetectionThreshold................................0
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - leakDetectionThreshold................................0
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - maxLifetime................................1800000
+2023-02-23 16:01:34,924 DEBUG [main][HikariConfig.java:1135] - maxLifetime................................1800000
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - maximumPoolSize................................10
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - maximumPoolSize................................10
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - metricRegistry................................none
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - metricRegistry................................none
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - metricsTrackerFactory................................none
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - metricsTrackerFactory................................none
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - minimumIdle................................10
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - minimumIdle................................10
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - password................................<masked>
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - password................................<masked>
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - poolName................................"HikariPool-1"
+2023-02-23 16:01:34,925 DEBUG [main][HikariConfig.java:1135] - poolName................................"HikariPool-1"
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - readOnly................................false
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - readOnly................................false
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - registerMbeans................................false
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - registerMbeans................................false
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - scheduledExecutor................................none
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - scheduledExecutor................................none
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - schema................................none
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - schema................................none
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - threadFactory................................internal
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - threadFactory................................internal
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - transactionIsolation................................default
+2023-02-23 16:01:34,926 DEBUG [main][HikariConfig.java:1135] - transactionIsolation................................default
+2023-02-23 16:01:34,927 DEBUG [main][HikariConfig.java:1135] - username................................"root"
+2023-02-23 16:01:34,927 DEBUG [main][HikariConfig.java:1135] - username................................"root"
+2023-02-23 16:01:34,927 DEBUG [main][HikariConfig.java:1135] - validationTimeout................................5000
+2023-02-23 16:01:34,927 DEBUG [main][HikariConfig.java:1135] - validationTimeout................................5000
+2023-02-23 16:01:34,927 INFO [main][HikariDataSource.java:110] - HikariPool-1 - Starting...
+2023-02-23 16:01:34,927 INFO [main][HikariDataSource.java:110] - HikariPool-1 - Starting...
+2023-02-23 16:01:35,930 DEBUG [main][HikariPool.java:565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18cf5c52
+2023-02-23 16:01:35,930 DEBUG [main][HikariPool.java:565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18cf5c52
+2023-02-23 16:01:35,932 INFO [main][HikariDataSource.java:123] - HikariPool-1 - Start completed.
+2023-02-23 16:01:35,932 INFO [main][HikariDataSource.java:123] - HikariPool-1 - Start completed.
+2023-02-23 16:01:35,935 DEBUG [main][Logger.java:49] - JDBC Connection [HikariProxyConnection@609232239 wrapping com.mysql.cj.jdbc.ConnectionImpl@18cf5c52] will not be managed by Spring
+2023-02-23 16:01:35,935 DEBUG [main][Logger.java:49] - JDBC Connection [HikariProxyConnection@609232239 wrapping com.mysql.cj.jdbc.ConnectionImpl@18cf5c52] will not be managed by Spring
+2023-02-23 16:01:35,938 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT COUNT(*) AS total FROM course_base
+2023-02-23 16:01:35,938 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT COUNT(*) AS total FROM course_base
+2023-02-23 16:01:35,960 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 
+2023-02-23 16:01:35,960 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 
+2023-02-23 16:01:35,979 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 1
+2023-02-23 16:01:35,979 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 1
+2023-02-23 16:01:35,986 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,company_id,company_name,`name`,users,tags,mt,st,grade,teachmode,description,pic,create_date,change_date,create_people,change_people,audit_status,`status` FROM course_base LIMIT ?
+2023-02-23 16:01:35,986 DEBUG [main][BaseJdbcLogger.java:137] - ==>  Preparing: SELECT id,company_id,company_name,`name`,users,tags,mt,st,grade,teachmode,description,pic,create_date,change_date,create_people,change_people,audit_status,`status` FROM course_base LIMIT ?
+2023-02-23 16:01:35,986 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 10(Long)
+2023-02-23 16:01:35,986 DEBUG [main][BaseJdbcLogger.java:137] - ==> Parameters: 10(Long)
+2023-02-23 16:01:35,994 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 10
+2023-02-23 16:01:35,994 DEBUG [main][BaseJdbcLogger.java:137] - <==      Total: 10
+2023-02-23 16:01:35,995 DEBUG [main][Logger.java:49] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24dd44f9]
+2023-02-23 16:01:35,995 DEBUG [main][Logger.java:49] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24dd44f9]
+2023-02-23 16:01:36,015 INFO [SpringApplicationShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-02-23 16:01:36,015 INFO [SpringApplicationShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2023-02-23 16:01:36,015 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-02-23 16:01:36,015 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-02-23 16:01:36,016 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@18cf5c52: (connection evicted)
+2023-02-23 16:01:36,016 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@18cf5c52: (connection evicted)
+2023-02-23 16:01:36,018 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-02-23 16:01:36,018 DEBUG [SpringApplicationShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-02-23 16:01:36,019 INFO [SpringApplicationShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2023-02-23 16:01:36,019 INFO [SpringApplicationShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.

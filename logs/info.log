@@ -1,132 +1,598 @@
-2023-02-22 18:18:34,126 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 13252 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
-2023-02-22 18:18:34,126 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 13252 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
-2023-02-22 18:18:34,139 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
-2023-02-22 18:18:34,139 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
-2023-02-22 18:18:34,140 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
-2023-02-22 18:18:34,140 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
-2023-02-22 18:18:34,851 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
-2023-02-22 18:18:34,851 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1001 (http)
-2023-02-22 18:18:34,866 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
-2023-02-22 18:18:34,866 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1001"]
-2023-02-22 18:18:34,866 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
-2023-02-22 18:18:34,866 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
-2023-02-22 18:18:34,866 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-02-22 18:18:34,866 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
-2023-02-22 18:18:34,975 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
-2023-02-22 18:18:34,975 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
-2023-02-22 18:18:34,975 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 800 ms
-2023-02-22 18:18:34,975 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 800 ms
-2023-02-22 18:18:35,272 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:41:56,775 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 11056 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:41:56,775 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 11056 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:41:56,785 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:41:56,785 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:41:56,786 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:41:56,786 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:41:57,124 DEBUG [main][MybatisPlusAutoConfiguration.java:295] - Searching for mappers annotated with @Mapper
+2023-02-23 15:41:57,124 DEBUG [main][MybatisPlusAutoConfiguration.java:295] - Searching for mappers annotated with @Mapper
+2023-02-23 15:41:57,125 DEBUG [main][MybatisPlusAutoConfiguration.java:299] - Using auto-configuration base package 'com.zkc.xcplus.content.api'
+2023-02-23 15:41:57,125 DEBUG [main][MybatisPlusAutoConfiguration.java:299] - Using auto-configuration base package 'com.zkc.xcplus.content.api'
+2023-02-23 15:41:57,220 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:41:57,220 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:41:57,222 WARN [main][Logger.java:44] - No MyBatis mapper was found in '[com.zkc.xcplus.content.api]' package. Please check your configuration.
+2023-02-23 15:41:57,222 WARN [main][Logger.java:44] - No MyBatis mapper was found in '[com.zkc.xcplus.content.api]' package. Please check your configuration.
+2023-02-23 15:41:57,224 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:41:57,224 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:41:57,224 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:41:57,224 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:41:57,225 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:41:57,225 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:41:57,466 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:41:57,466 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:41:57,472 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:41:57,472 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:41:57,473 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:41:57,473 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:41:57,473 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:41:57,473 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:41:57,555 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:41:57,555 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:41:57,555 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 740 ms
+2023-02-23 15:41:57,555 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 740 ms
+2023-02-23 15:41:57,591 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseBaseController': Unsatisfied dependency expressed through field 'courseBaseInfoService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zkc.xcplus.content.service.CourseBaseInfoService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-02-23 15:41:57,591 WARN [main][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseBaseController': Unsatisfied dependency expressed through field 'courseBaseInfoService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zkc.xcplus.content.service.CourseBaseInfoService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-02-23 15:41:57,593 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-23 15:41:57,593 INFO [main][DirectJDKLog.java:173] - Stopping service [Tomcat]
+2023-02-23 15:41:57,603 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-23 15:41:57,603 INFO [main][ConditionEvaluationReportLoggingListener.java:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-23 15:41:57,619 ERROR [main][LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field courseBaseInfoService in com.zkc.xcplus.content.api.controller.CourseBaseController required a bean of type 'com.zkc.xcplus.content.service.CourseBaseInfoService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zkc.xcplus.content.service.CourseBaseInfoService' in your configuration.
+
+2023-02-23 15:41:57,619 ERROR [main][LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field courseBaseInfoService in com.zkc.xcplus.content.api.controller.CourseBaseController required a bean of type 'com.zkc.xcplus.content.service.CourseBaseInfoService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zkc.xcplus.content.service.CourseBaseInfoService' in your configuration.
+
+2023-02-23 15:44:58,125 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 2388 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:44:58,125 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 2388 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:44:58,153 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:44:58,153 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:44:58,157 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:44:58,157 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:44:58,586 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:44:58,586 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:44:58,590 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:44:58,590 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:44:58,590 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:44:58,590 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:44:58,590 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:44:58,590 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:44:58,824 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:44:58,824 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:44:58,832 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:44:58,832 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:44:58,832 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:44:58,832 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:44:58,832 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:44:58,832 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:44:58,910 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:44:58,910 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:44:58,910 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 726 ms
+2023-02-23 15:44:58,910 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 726 ms
+2023-02-23 15:44:58,965 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:44:58,965 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:44:59,027 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@5d7835a8'
+2023-02-23 15:44:59,027 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@5d7835a8'
+2023-02-23 15:44:59,027 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:44:59,027 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:44:59,765 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	c.z.x.c.a.c.CourseBaseController:
 	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
-2023-02-22 18:18:35,272 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,765 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	c.z.x.c.a.c.CourseBaseController:
 	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
-2023-02-22 18:18:35,276 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,765 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
-2023-02-22 18:18:35,276 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,765 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error]}: error(HttpServletRequest)
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
-2023-02-22 18:18:35,288 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,777 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
 	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-2023-02-22 18:18:35,288 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:44:59,777 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.w.a.OpenApiWebMvcResource:
-	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
 	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
-2023-02-22 18:18:35,288 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:44:59,777 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.w.u.SwaggerWelcomeWebMvc:
 	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
-2023-02-22 18:18:35,288 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,777 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.w.u.SwaggerWelcomeWebMvc:
 	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
-2023-02-22 18:18:35,289 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,777 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.w.u.SwaggerConfigResource:
 	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
-2023-02-22 18:18:35,289 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+2023-02-23 15:44:59,777 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
 	o.s.w.u.SwaggerConfigResource:
 	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
-2023-02-22 18:18:35,294 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
-2023-02-22 18:18:35,294 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
-2023-02-22 18:18:35,491 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
-2023-02-22 18:18:35,491 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
-2023-02-22 18:18:35,585 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
-2023-02-22 18:18:35,585 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1001"]
-2023-02-22 18:18:35,599 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
-2023-02-22 18:18:35,599 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1001 (http) with context path ''
-2023-02-22 18:18:35,607 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.952 seconds (JVM running for 3.046)
-2023-02-22 18:18:35,607 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 1.952 seconds (JVM running for 3.046)
-2023-02-22 18:18:52,525 INFO [http-nio-1001-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-22 18:18:52,525 INFO [http-nio-1001-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-22 18:18:52,525 INFO [http-nio-1001-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
-2023-02-22 18:18:52,525 INFO [http-nio-1001-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
-2023-02-22 18:18:52,527 INFO [http-nio-1001-exec-1][FrameworkServlet.java:547] - Completed initialization in 2 ms
-2023-02-22 18:18:52,527 INFO [http-nio-1001-exec-1][FrameworkServlet.java:547] - Completed initialization in 2 ms
-2023-02-22 18:18:52,971 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.base.model.PageParams
-2023-02-22 18:18:52,971 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.base.model.PageParams
-2023-02-22 18:18:52,975 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:52,975 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:52,988 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:52,988 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:52,991 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.content.model.dto.CourseQueryParamsDto
-2023-02-22 18:18:52,991 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.content.model.dto.CourseQueryParamsDto
-2023-02-22 18:18:52,992 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:52,992 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:52,997 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:52,997 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:52,998 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:52,998 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,002 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve com.zkc.xcplus.base.model.PageResult<com.zkc.xcplus.content.model.po.CourseBase>
-2023-02-22 18:18:53,002 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve com.zkc.xcplus.base.model.PageResult<com.zkc.xcplus.content.model.po.CourseBase>
-2023-02-22 18:18:53,004 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [collection type; class java.util.List, contains [simple type, class com.zkc.xcplus.content.model.po.CourseBase]]
-2023-02-22 18:18:53,004 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [collection type; class java.util.List, contains [simple type, class com.zkc.xcplus.content.model.po.CourseBase]]
-2023-02-22 18:18:53,006 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class com.zkc.xcplus.content.model.po.CourseBase]
-2023-02-22 18:18:53,006 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class com.zkc.xcplus.content.model.po.CourseBase]
-2023-02-22 18:18:53,013 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:53,013 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:53,015 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:53,015 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
-2023-02-22 18:18:53,016 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,016 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,017 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,017 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,018 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,018 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,019 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,019 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,019 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,019 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,020 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,020 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,021 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,021 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,022 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,022 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,022 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,022 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,026 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,026 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,027 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
-2023-02-22 18:18:53,027 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
-2023-02-22 18:18:53,032 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
-2023-02-22 18:18:53,032 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
-2023-02-22 18:18:53,033 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,033 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,034 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,034 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,035 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,035 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,036 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,036 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
-2023-02-22 18:18:53,040 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
-2023-02-22 18:18:53,040 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
-2023-02-22 18:18:53,041 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
-2023-02-22 18:18:53,041 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
-2023-02-22 18:18:53,041 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
-2023-02-22 18:18:53,041 DEBUG [http-nio-1001-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
-2023-02-22 18:18:53,050 INFO [http-nio-1001-exec-3][AbstractOpenApiResource.java:359] - Init duration for springdoc-openapi is: 208 ms
-2023-02-22 18:18:53,050 INFO [http-nio-1001-exec-3][AbstractOpenApiResource.java:359] - Init duration for springdoc-openapi is: 208 ms
+2023-02-23 15:44:59,781 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:44:59,781 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:44:59,945 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:44:59,945 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:45:00,050 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:45:00,050 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:45:00,062 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:45:00,062 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:45:00,070 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.275 seconds (JVM running for 3.154)
+2023-02-23 15:45:00,070 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.275 seconds (JVM running for 3.154)
+2023-02-23 15:50:17,413 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 11020 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:50:17,413 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 11020 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:50:17,423 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:50:17,423 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:50:17,424 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:50:17,424 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:50:17,896 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:50:17,896 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:50:17,898 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:50:17,898 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:50:17,898 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:50:17,898 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:50:17,899 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:50:17,899 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:50:18,160 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:50:18,160 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:50:18,166 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:50:18,166 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:50:18,167 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:50:18,167 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:50:18,167 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:50:18,167 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:50:18,251 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:50:18,251 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:50:18,252 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 790 ms
+2023-02-23 15:50:18,252 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 790 ms
+2023-02-23 15:50:18,316 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:50:18,316 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:50:18,385 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@c1fca2a'
+2023-02-23 15:50:18,385 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@c1fca2a'
+2023-02-23 15:50:18,386 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:50:18,386 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:50:19,239 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:50:19,239 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:50:19,242 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-23 15:50:19,242 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-23 15:50:19,253 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:50:19,253 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:50:19,254 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:50:19,254 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:50:19,255 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:50:19,255 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:50:19,260 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:50:19,260 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:50:19,443 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:50:19,443 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:50:19,547 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:50:19,547 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:50:19,560 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:50:19,560 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:50:19,568 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.625 seconds (JVM running for 3.598)
+2023-02-23 15:50:19,568 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.625 seconds (JVM running for 3.598)
+2023-02-23 15:51:22,082 INFO [http-nio-1002-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-23 15:51:22,082 INFO [http-nio-1002-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-23 15:51:22,082 INFO [http-nio-1002-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-02-23 15:51:22,082 INFO [http-nio-1002-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-02-23 15:51:22,083 INFO [http-nio-1002-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2023-02-23 15:51:22,083 INFO [http-nio-1002-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2023-02-23 15:51:22,265 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.base.model.PageParams
+2023-02-23 15:51:22,265 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.base.model.PageParams
+2023-02-23 15:51:22,268 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,268 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,278 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,278 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,281 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.content.model.dto.CourseQueryParamsDto
+2023-02-23 15:51:22,281 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.content.model.dto.CourseQueryParamsDto
+2023-02-23 15:51:22,282 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,282 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,286 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,286 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,286 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,286 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,289 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve com.zkc.xcplus.base.model.PageResult<com.zkc.xcplus.content.model.po.CourseBase>
+2023-02-23 15:51:22,289 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve com.zkc.xcplus.base.model.PageResult<com.zkc.xcplus.content.model.po.CourseBase>
+2023-02-23 15:51:22,290 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [collection type; class java.util.List, contains [simple type, class com.zkc.xcplus.content.model.po.CourseBase]]
+2023-02-23 15:51:22,290 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [collection type; class java.util.List, contains [simple type, class com.zkc.xcplus.content.model.po.CourseBase]]
+2023-02-23 15:51:22,291 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class com.zkc.xcplus.content.model.po.CourseBase]
+2023-02-23 15:51:22,291 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class com.zkc.xcplus.content.model.po.CourseBase]
+2023-02-23 15:51:22,293 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,293 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,294 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,294 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,295 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,299 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,302 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,302 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,302 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:51:22,302 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:51:22,306 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:51:22,306 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,311 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:51:22,314 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:51:22,314 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:51:22,314 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:51:22,314 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:51:22,314 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:51:22,314 DEBUG [http-nio-1002-exec-2][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:51:22,322 INFO [http-nio-1002-exec-2][AbstractOpenApiResource.java:359] - Init duration for springdoc-openapi is: 164 ms
+2023-02-23 15:51:22,322 INFO [http-nio-1002-exec-2][AbstractOpenApiResource.java:359] - Init duration for springdoc-openapi is: 164 ms
+2023-02-23 15:52:14,715 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 5264 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:52:14,715 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 5264 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:52:14,722 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:52:14,722 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:52:14,723 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:52:14,723 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:52:15,237 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:52:15,237 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:52:15,237 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:52:15,237 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:52:15,237 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:52:15,237 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:52:15,237 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:52:15,237 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:52:15,531 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:52:15,531 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:52:15,547 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:52:15,547 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:52:15,547 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:52:15,547 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:52:15,547 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:52:15,547 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:52:15,625 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:52:15,625 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:52:15,625 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 871 ms
+2023-02-23 15:52:15,625 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 871 ms
+2023-02-23 15:52:20,011 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:52:20,011 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:52:20,058 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@7a682d35'
+2023-02-23 15:52:20,058 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@7a682d35'
+2023-02-23 15:52:20,058 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:52:20,058 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:52:30,023 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:52:30,023 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:52:30,027 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-23 15:52:30,027 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-02-23 15:52:30,035 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:52:30,035 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:52:30,038 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:52:30,038 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:52:30,038 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:52:30,038 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:52:30,042 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:52:30,042 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:52:30,253 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:52:30,253 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:52:30,351 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:52:30,351 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:52:30,371 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:52:30,371 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:52:30,378 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 16.054 seconds (JVM running for 17.165)
+2023-02-23 15:52:30,378 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 16.054 seconds (JVM running for 17.165)
+2023-02-23 15:53:25,340 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 14164 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:53:25,340 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 14164 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:53:25,368 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:53:25,368 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:53:25,368 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:53:25,368 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:53:25,782 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:53:25,782 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:53:25,782 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:53:25,782 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:53:25,782 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:53:25,782 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:53:25,786 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:53:25,786 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:53:26,012 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:53:26,012 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:53:26,020 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:53:26,020 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:53:26,020 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:53:26,020 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:53:26,020 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:53:26,020 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:53:26,110 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:53:26,110 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:53:26,110 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 719 ms
+2023-02-23 15:53:26,110 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 719 ms
+2023-02-23 15:53:26,180 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:53:26,180 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:53:26,223 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2a32fb6'
+2023-02-23 15:53:26,223 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2a32fb6'
+2023-02-23 15:53:26,223 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:53:26,223 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:53:27,053 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:53:27,053 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:53:27,057 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-23 15:53:27,057 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-23 15:53:27,065 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:53:27,065 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:53:27,065 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:53:27,065 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:53:27,069 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:53:27,069 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:53:27,073 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:53:27,073 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:53:27,241 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:53:27,241 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:53:27,331 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:53:27,331 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:53:27,342 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:53:27,342 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:53:27,350 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.329 seconds (JVM running for 3.347)
+2023-02-23 15:53:27,350 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.329 seconds (JVM running for 3.347)
+2023-02-23 15:53:31,452 INFO [http-nio-1002-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-23 15:53:31,452 INFO [http-nio-1002-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-02-23 15:53:31,452 INFO [http-nio-1002-exec-1][DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-23 15:53:31,452 INFO [http-nio-1002-exec-1][FrameworkServlet.java:525] - Initializing Servlet 'dispatcherServlet'
+2023-02-23 15:53:31,453 INFO [http-nio-1002-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2023-02-23 15:53:31,453 INFO [http-nio-1002-exec-1][FrameworkServlet.java:547] - Completed initialization in 1 ms
+2023-02-23 15:53:31,760 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.base.model.PageParams
+2023-02-23 15:53:31,760 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.base.model.PageParams
+2023-02-23 15:53:31,766 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,766 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,775 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,775 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,779 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.content.model.dto.CourseQueryParamsDto
+2023-02-23 15:53:31,779 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve class com.zkc.xcplus.content.model.dto.CourseQueryParamsDto
+2023-02-23 15:53:31,779 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,779 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,786 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,786 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,786 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,786 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,789 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve com.zkc.xcplus.base.model.PageResult<com.zkc.xcplus.content.model.po.CourseBase>
+2023-02-23 15:53:31,789 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve com.zkc.xcplus.base.model.PageResult<com.zkc.xcplus.content.model.po.CourseBase>
+2023-02-23 15:53:31,789 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [collection type; class java.util.List, contains [simple type, class com.zkc.xcplus.content.model.po.CourseBase]]
+2023-02-23 15:53:31,789 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [collection type; class java.util.List, contains [simple type, class com.zkc.xcplus.content.model.po.CourseBase]]
+2023-02-23 15:53:31,789 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class com.zkc.xcplus.content.model.po.CourseBase]
+2023-02-23 15:53:31,789 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class com.zkc.xcplus.content.model.po.CourseBase]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.Long]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,793 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,797 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,799 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,799 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,800 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,800 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,801 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,801 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,805 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,805 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,805 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:53:31,805 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.time.LocalDateTime]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,809 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class java.lang.String]
+2023-02-23 15:53:31,817 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:53:31,817 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:53:31,819 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:53:31,819 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:53:31,819 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:53:31,819 DEBUG [http-nio-1002-exec-3][ModelConverterContextImpl.java:90] - resolve [simple type, class long]
+2023-02-23 15:53:31,823 INFO [http-nio-1002-exec-3][AbstractOpenApiResource.java:359] - Init duration for springdoc-openapi is: 171 ms
+2023-02-23 15:53:31,823 INFO [http-nio-1002-exec-3][AbstractOpenApiResource.java:359] - Init duration for springdoc-openapi is: 171 ms
+2023-02-23 15:54:56,992 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 10144 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:54:56,992 INFO [main][StartupInfoLogger.java:55] - Starting ContentApiApplication using Java 1.8.0_301 on PZZKC with PID 10144 (D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-content-api\target\classes started by pczkc in D:\Java\ideaProjects\xcplus)
+2023-02-23 15:54:57,000 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:54:57,000 DEBUG [main][StartupInfoLogger.java:56] - Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-23 15:54:57,000 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:54:57,000 INFO [main][SpringApplication.java:631] - No active profile set, falling back to 1 default profile: "default"
+2023-02-23 15:54:57,484 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:54:57,484 DEBUG [main][LogFactory.java:109] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-02-23 15:54:57,488 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:54:57,488 DEBUG [main][ClassPathScanningCandidateComponentProvider.java:435] - Identified candidate component class: file [D:\Java\ideaProjects\xcplus\xcplus-content\xcplus-conente-service\target\classes\com\zkc\xcplus\content\service\dao\CourseBaseMapper.class]
+2023-02-23 15:54:57,488 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:54:57,488 DEBUG [main][Logger.java:49] - Creating MapperFactoryBean with name 'courseBaseMapper' and 'com.zkc.xcplus.content.service.dao.CourseBaseMapper' mapperInterface
+2023-02-23 15:54:57,488 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:54:57,488 DEBUG [main][Logger.java:49] - Enabling autowire by type for MapperFactoryBean with name 'courseBaseMapper'.
+2023-02-23 15:54:57,769 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:54:57,769 INFO [main][TomcatWebServer.java:108] - Tomcat initialized with port(s): 1002 (http)
+2023-02-23 15:54:57,777 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:54:57,777 INFO [main][DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:54:57,777 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:54:57,777 INFO [main][DirectJDKLog.java:173] - Starting service [Tomcat]
+2023-02-23 15:54:57,777 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:54:57,777 INFO [main][DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-23 15:54:57,866 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:54:57,866 INFO [main][DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+2023-02-23 15:54:57,866 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 835 ms
+2023-02-23 15:54:57,866 INFO [main][ServletWebServerApplicationContext.java:292] - Root WebApplicationContext: initialization completed in 835 ms
+2023-02-23 15:54:57,972 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:54:57,972 DEBUG [main][HikariConfig.java:971] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-02-23 15:54:58,015 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2287395'
+2023-02-23 15:54:58,015 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2287395'
+2023-02-23 15:54:58,015 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:54:58,015 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2023-02-23 15:54:58,807 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:54:58,807 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	c.z.x.c.a.c.CourseBaseController:
+	{POST [/coursebase/list]}: list(PageParams,CourseQueryParamsDto)
+2023-02-23 15:54:58,811 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-23 15:54:58,811 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-02-23 15:54:58,818 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:54:58,818 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2023-02-23 15:54:58,822 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:54:58,822 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2023-02-23 15:54:58,822 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:54:58,822 DEBUG [main][AbstractHandlerMethodMapping.java:295] - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2023-02-23 15:54:58,826 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:54:58,826 DEBUG [main][AbstractDetectingUrlHandlerMapping.java:86] - 'beanNameHandlerMapping' {}
+2023-02-23 15:54:59,041 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:54:59,041 DEBUG [main][SimpleUrlHandlerMapping.java:177] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2023-02-23 15:54:59,147 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:54:59,147 INFO [main][DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-1002"]
+2023-02-23 15:54:59,163 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:54:59,163 INFO [main][TomcatWebServer.java:220] - Tomcat started on port(s): 1002 (http) with context path ''
+2023-02-23 15:54:59,170 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.568 seconds (JVM running for 3.53)
+2023-02-23 15:54:59,170 INFO [main][StartupInfoLogger.java:61] - Started ContentApiApplication in 2.568 seconds (JVM running for 3.53)

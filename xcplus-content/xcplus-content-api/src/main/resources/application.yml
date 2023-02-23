@@ -1,13 +1,13 @@
 spring:
   application:
     name: xcplus-content-api
+  datasource:
+#    //ip 
+    url: jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456xxx
+    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
-  port: 1001
+  port: 1002
 logging:
   config: classpath:log4j2-dev.xml
-#swagger:
-#  title: "在线内容管理系统"
-#  description: "对课程相关信息进行管理"
-#  base-package: com.zkc.xcplus.content
-
-#  version: 1.0.0
