@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zkc.xcplus.system.service.dao.DictionaryMapper">
+  <resultMap id="BaseResultMap" type="com.zkc.xcplus.system.model.po.Dictionary">
+    <!--@mbg.generated-->
+    <!--@Table `dictionary`-->
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="code" property="code" />
+    <result column="item_values" property="itemValues" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, code, item_values
+  </sql>
+</mapper>

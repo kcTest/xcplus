@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: xcplus-system-api
+server:
+  port: 1003
+logging:
+  config: classpath:log4j2-dev.xml
