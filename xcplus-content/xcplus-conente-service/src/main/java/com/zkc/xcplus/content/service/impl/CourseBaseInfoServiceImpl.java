@@ -31,11 +31,11 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		LambdaQueryWrapper<CourseBase> wrapper = new LambdaQueryWrapper<>();
 		String courseName = courseQueryParamsDto.getCourseName();
 		String auditStatus = courseQueryParamsDto.getAuditStatus();
-//		String publishStatus = courseQueryParamsDto.getPublishStatus();
+		String status = courseQueryParamsDto.getPublishStatus();
 		//条件,列,值
 		wrapper.like(StringUtils.hasText(courseName), CourseBase::getName, courseName);
-		wrapper.eq(StringUtils.hasText(auditStatus), CourseBase::getName, auditStatus);
-//		wrapper.eq(StringUtils.hasText(publishStatus), CourseBase::getName, publishStatus);
+		wrapper.eq(StringUtils.hasText(auditStatus), CourseBase::getAuditStatus, auditStatus);
+		wrapper.eq(StringUtils.hasText(status), CourseBase::getStatus, status);
 		
 		//返回
 		Page<CourseBase> selectPage = courseBaseMapper.selectPage(page, wrapper);
