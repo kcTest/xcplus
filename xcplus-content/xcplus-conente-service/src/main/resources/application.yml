@@ -2,8 +2,12 @@ spring:
   application:
     name: xcplus-content-service
   datasource:
-#    //ip 
+    #    //ip 
     url: jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123456xxx
     driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  mapper-locations:
+#    修改默认文件后 指定自定义位置
+    - classpath*:dao/*.xml

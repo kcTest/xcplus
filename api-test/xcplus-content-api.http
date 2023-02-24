@@ -1,5 +1,5 @@
 
-###
+### 获取课程列表
 POST {{content_host}}/coursebase/list?pageno=1&pagesize=2
 Content-Type: application/json
 
@@ -9,4 +9,7 @@ Content-Type: application/json
   "publishStatus": ""
 }
 
-<> 2023-02-23T174823.200.json
+
+### 获取课程分类
+GET {{content_host}}/coursecategory/treeNodes?parentId=1
+

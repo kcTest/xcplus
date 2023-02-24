@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zkc.xcplus.content.service.dao.CourseCategoryMapper">
+    <resultMap id="BaseResultMap" type="com.zkc.xcplus.content.model.po.CourseCategory">
+        <!--@mbg.generated-->
+        <!--@Table course_category-->
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="label" property="label"/>
+        <result column="parentid" property="parentid"/>
+        <result column="is_show" property="isShow"/>
+        <result column="orderby" property="orderby"/>
+        <result column="is_leaf" property="isLeaf"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id,
+        `name`,
+        `label`,
+        parentid,
+        is_show,
+        orderby,
+        is_leaf
+    </sql>
+
+    <select id="getTreeNodes" resultType="com.zkc.xcplus.content.model.dto.CourseCategoryTreeDto">
+        select id, name, label, parentid, is_show, orderby, is_leaf
+        from course_category
+        where is_show = 1
+        order by parentid, orderby
+    </select>
+</mapper>
