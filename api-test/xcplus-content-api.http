@@ -74,3 +74,6 @@ Content-Type: application/json
   "stName": null
 }
 
+###查询课程计划
+GET {{content_host}}/teachplan/117/tree-nodes
+
