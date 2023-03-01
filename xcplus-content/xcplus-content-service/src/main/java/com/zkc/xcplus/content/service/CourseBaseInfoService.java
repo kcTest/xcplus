@@ -5,6 +5,7 @@ import com.zkc.xcplus.base.model.PageResult;
 import com.zkc.xcplus.content.model.dto.AddCourseDto;
 import com.zkc.xcplus.content.model.dto.CourseBaseInfoDto;
 import com.zkc.xcplus.content.model.dto.CourseQueryParamsDto;
+import com.zkc.xcplus.content.model.dto.UpdateCourseDto;
 import com.zkc.xcplus.content.model.po.CourseBase;
 
 public interface CourseBaseInfoService {
@@ -25,4 +26,8 @@ public interface CourseBaseInfoService {
 	 * @return 课程基本信息
 	 */
 	CourseBaseInfoDto add(Long companyId, AddCourseDto addCourseDto);
+	
+	CourseBaseInfoDto get(Long id);
+	
+	CourseBaseInfoDto update(Long companyId,UpdateCourseDto dto);
 }
