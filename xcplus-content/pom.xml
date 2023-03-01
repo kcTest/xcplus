@@ -15,7 +15,7 @@
 
     <modules>
         <module>xcplus-content-api</module>
-        <module>xcplus-conente-service</module>
+        <module>xcplus-content-service</module>
         <module>xcplus-content-model</module>
     </modules>
 </project>

@@ -1,6 +1,6 @@
 
 ### 获取课程列表
-POST {{content_host}}/coursebase/list?pageno=1&pagesize=2
+POST {{content_host}}/coursebaseinfo/list?pageno=1&pagesize=2
 Content-Type: application/json
 
 {
@@ -13,3 +13,26 @@ Content-Type: application/json
 ### 获取课程分类
 GET {{content_host}}/coursecategory/treeNodes?parentId=1
 
+
+### 创建课程
+POST {{content_host}}/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "name": "课程名称2",
+  "users": "适应人群",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "common",
+  "description": "课程介绍",
+  "pic": "",
+  "charge": "201001",
+  "price": "0",
+  "originalPrice": 2,
+  "qq": "111",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 10
+}

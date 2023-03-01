@@ -2,6 +2,8 @@ package com.zkc.xcplus.content.service;
 
 import com.zkc.xcplus.base.model.PageParams;
 import com.zkc.xcplus.base.model.PageResult;
+import com.zkc.xcplus.content.model.dto.AddCourseDto;
+import com.zkc.xcplus.content.model.dto.CourseBaseInfoDto;
 import com.zkc.xcplus.content.model.dto.CourseQueryParamsDto;
 import com.zkc.xcplus.content.model.po.CourseBase;
 
@@ -15,4 +17,12 @@ public interface CourseBaseInfoService {
 	 * @return 课程列表
 	 */
 	PageResult<CourseBase> courseBaseList(PageParams pageParams, CourseQueryParamsDto courseQueryParamsDto);
+	
+	/**
+	 * 
+	 * @param companyId 机构ID
+	 * @param addCourseDto 新增课程信息
+	 * @return 课程基本信息
+	 */
+	CourseBaseInfoDto add(Long companyId, AddCourseDto addCourseDto);
 }
