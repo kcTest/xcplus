@@ -74,9 +74,6 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		if (dto == null) {
 			CustomException.cast(CommonError.OBJECT_NULL);
 		}
-		if ("201001".equals(dto.getCharge()) && (dto.getPrice() == null || dto.getPrice() <= 0)) {
-			CustomException.cast("收费课程价格不能为空");
-		}
 		
 		//组装课程基本信息插入 其余信息页面填写传入
 		CourseBase courseBase = new CourseBase();
@@ -93,28 +90,12 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		CourseMarket courseMarket = new CourseMarket();
 		BeanUtils.copyProperties(dto, courseMarket);
 		courseMarket.setId(courseBase.getId());
-		int countCourseMarket = courseMarketMapper.insert(courseMarket);
-		if (countCourseMarket <= 0) {
+		boolean b = updateCourseMarket(courseMarket);
+		if (!b) {
 			CustomException.cast("课程营销信息插入失败");
 		}
 		
-		//组装返回结果
-		CourseBaseInfoDto baseInfoDto = new CourseBaseInfoDto();
-		BeanUtils.copyProperties(courseBase, baseInfoDto);
-		BeanUtils.copyProperties(courseMarket, baseInfoDto);
-		//根据分类id填充分类名称
-		String mt = courseBase.getMt();
-		String st = courseBase.getSt();
-		CourseCategory categoryMt = courseCategoryMapper.selectById(mt);
-		CourseCategory categorySt = courseCategoryMapper.selectById(st);
-		if (categoryMt != null) {
-			baseInfoDto.setMtName(categoryMt.getName());
-		}
-		if (categorySt != null) {
-			baseInfoDto.setStName(categorySt.getName());
-		}
-		
-		return baseInfoDto;
+		return get(courseBase.getId());
 	}
 	
 	@Override
@@ -168,17 +149,27 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 			CustomException.cast("课程更新失败");
 		}
 		
-		//更新营销信息
-		if ("201001".equals(dto.getCharge()) && (dto.getPrice() == null || dto.getPrice() <= 0)) {
-			CustomException.cast("收费课程价格不能为空");
-		}
 		CourseMarket courseMarket = new CourseMarket();
 		BeanUtils.copyProperties(dto, courseMarket);
-		boolean success = courseMarketService.saveOrUpdate(courseMarket);
-		if (!success) {
+		boolean b = updateCourseMarket(courseMarket);
+		if (!b) {
 			CustomException.cast("课程营销信息更新失败");
 		}
 		
 		return get(courseId);
+	}
+	
+	/**
+	 * 更新营销信息
+	 */
+	private boolean updateCourseMarket(CourseMarket courseMarket) {
+		if ("201001".equals(courseMarket.getCharge()) && (courseMarket.getPrice() == null || courseMarket.getPrice() <= 0)) {
+			CustomException.cast("收费课程价格不能为空");
+		}
+		boolean success = courseMarketService.saveOrUpdate(courseMarket);
+		if (!success) {
+			CustomException.cast("课程营销信息更新失败");
+		}
+		return true;
 	}
 }

@@ -19,7 +19,7 @@ POST {{content_host}}/coursebaseinfo/add
 Content-Type: application/json
 
 {
-  "name": "新增测试1734",
+  "name": "新增测试1748",
   "users": "xxxxxx",
   "tags": "标签",
   "mt": "1-3",
@@ -31,10 +31,10 @@ Content-Type: application/json
   "charge": "201001",
   "price": "11",
   "originalPrice": 2,
-  "qq": "111",
+  "qq": "8888888",
   "wechat": "222",
   "phone": "333",
-  "validDays": 10
+  "validDays": 1000
 }
 
 ###查询课程
@@ -48,9 +48,9 @@ Content-Type: application/json
   "id": 1,
   "companyId": 1232141425,
   "companyName": null,
-  "name": "JAVA8/9/10新特性讲解",
-  "users": "java爱好者,有一定java基础2",
-  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具",
+  "name": "JAVA8/9/10新特性讲解23",
+  "users": "java爱好者,有一定java基础23",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具23",
   "mt": "1",
   "st": "1-3-2",
   "grade": "204002",
@@ -64,7 +64,7 @@ Content-Type: application/json
   "auditStatus": "202004",
   "status": "203001",
   "charge": "201001",
-  "price": 2.0,
+  "price": 5.0,
   "originalPrice": 11.0,
   "qq": "1",
   "wechat": "1",
