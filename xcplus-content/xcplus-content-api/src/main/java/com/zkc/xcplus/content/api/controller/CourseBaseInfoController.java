@@ -1,5 +1,6 @@
 package com.zkc.xcplus.content.api.controller;
 
+import com.zkc.xcplus.base.exception.ValidationGroups;
 import com.zkc.xcplus.base.model.PageParams;
 import com.zkc.xcplus.base.model.PageResult;
 import com.zkc.xcplus.content.model.dto.AddCourseDto;
@@ -10,14 +11,12 @@ import com.zkc.xcplus.content.service.CourseBaseInfoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author pczkc
- */
 @Tag(name = "CourseBaseInfoController", description = "课程基本信息管理")
 @RestController
 @RequestMapping("/coursebaseinfo")
@@ -34,7 +33,7 @@ public class CourseBaseInfoController {
 	
 	@Operation(summary = "新增课程")
 	@PostMapping("/add")
-	public CourseBaseInfoDto add(@RequestBody AddCourseDto addCourseDto) {
+	public CourseBaseInfoDto add(@RequestBody @Validated(ValidationGroups.Insert.class) AddCourseDto addCourseDto) {
 		
 		//TODO 获取机构名称和ID
 		

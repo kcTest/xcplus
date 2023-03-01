@@ -19,13 +19,13 @@ POST {{content_host}}/coursebaseinfo/add
 Content-Type: application/json
 
 {
-  "name": "课程名称2",
-  "users": "适应人群",
+  "name": "",
+  "users": "",
   "tags": "标签",
   "mt": "1-3",
   "st": "1-3-2",
   "grade": "204002",
-  "teachmode": "common",
+  "teachmode": "",
   "description": "课程介绍",
   "pic": "",
   "charge": "201001",

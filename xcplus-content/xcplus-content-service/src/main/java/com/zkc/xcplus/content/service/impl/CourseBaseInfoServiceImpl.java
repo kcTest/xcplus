@@ -66,24 +66,6 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		if (companyId == null) {
 			CustomException.cast(CommonError.OBJECT_NULL);
 		}
-		if (StringUtils.isEmpty(dto.getName())) {
-			CustomException.cast("课程名称为空");
-		}
-		if (StringUtils.isEmpty(dto.getMt()) || StringUtils.isEmpty(dto.getSt())) {
-			CustomException.cast("课程分类为空");
-		}
-		if (StringUtils.isEmpty(dto.getGrade())) {
-			CustomException.cast("课程等级为空");
-		}
-		if (StringUtils.isEmpty(dto.getTeachmode())) {
-			CustomException.cast("教育模式为空");
-		}
-		if (StringUtils.isEmpty(dto.getUsers())) {
-			CustomException.cast("适应人群为空");
-		}
-		if (StringUtils.isEmpty(dto.getCharge())) {
-			CustomException.cast("收费规则为空");
-		}
 		if ("201001".equals(dto.getCharge()) && (dto.getPrice() == null || dto.getPrice() <= 0)) {
 			CustomException.cast("价格为空");
 		}
