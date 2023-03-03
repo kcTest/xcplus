@@ -1,6 +1,12 @@
 spring:
   application:
     name: xcplus-content-api
+  cloud:
+    nacos:
+      discovery:
+        server-addr: centos006:1005
+        namespace: ns-xcplus-dev
+        group: content
 server:
   port: 1002
 logging:

@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: xcplus-content-service
   datasource:
     #    //ip 
     url: jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
