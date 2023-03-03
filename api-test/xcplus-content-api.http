@@ -75,5 +75,46 @@ Content-Type: application/json
 }
 
 ###查询课程计划
-GET {{content_host}}/teachplan/117/tree-nodes
+GET {{content_host}}/teachplan/124/tree-nodes
 
+### 新增课程计划
+POST {{content_host}}/teachplan/save
+Content-Type: application/json
+
+//{
+//  "id": null,
+//  "pname": "第一章",
+//  "parentid": 0,
+//  "grade": 1,
+//  "mediaType": "2",
+//  "startTime": "2023-03-03 06:39:26",
+//  "endTime": "2023-04-03 06:39:26",
+//  "courseId": 124,
+//  "coursePubId": null,
+//  "isPreview": "0"
+//}
+
+//{
+//  "id": null,
+//  "pname": "第二节",
+//  "parentid": 279,
+//  "grade": 2,
+//  "mediaType": "2",
+//  "startTime": "2023-03-03 06:39:26",
+//  "endTime": "2023-04-03 06:39:26",
+//  "courseId": 124,
+//  "coursePubId": null,
+//  "isPreview": "0"
+//}
+{
+  "id": 281,
+  "pname": "第二节修改",
+  "parentid": 279,
+  "grade": 2,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
@@ -53,14 +54,14 @@ public class Teachplan implements Serializable {
 	 */
 	@TableField(value = "start_time")
 	@Schema(description = "开始直播时间")
-	private Date startTime;
+	private LocalDateTime startTime;
 	
 	/**
 	 * 直播结束时间
 	 */
 	@TableField(value = "end_time")
 	@Schema(description = "直播结束时间")
-	private Date endTime;
+	private LocalDateTime endTime;
 	
 	/**
 	 * 章节及课程时介绍
