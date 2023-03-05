@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: system-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: centos006:1005
+      config:
+        namespace: ns-xcplus-${spring.profiles.active}
+        group: system
+        file-extension: yaml
+        refresh-enabled: true

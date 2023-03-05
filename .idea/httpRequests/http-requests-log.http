@@ -1,5 +1,17 @@
 GET http://localhost:1002/content/teachplan/124/tree-nodes
 
+<> 2023-03-05T233630.200.json
+
+###
+
+GET http://localhost:1002/content/teachplan/124/tree-nodes
+
+<> 2023-03-05T231607.200.json
+
+###
+
+GET http://localhost:1002/content/teachplan/124/tree-nodes
+
 <> 2023-03-05T211534.200.json
 
 ###
@@ -430,46 +442,6 @@ Content-Type: application/json
 }
 
 <> 2023-03-03T144248.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": 0,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03T06:39:26.712Z",
-  "endTime": "2023-04-03T06:39:26.712Z",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T144227.500.json
-
-###
-
-POST http://localhost:1002/coursebaseinfo/add
-Content-Type: application/json
-
-{
-  "id": 0,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03T06:39:26.712Z",
-  "endTime": "2023-04-03T06:39:26.712Z",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T144209.500.json
 
 ###
 

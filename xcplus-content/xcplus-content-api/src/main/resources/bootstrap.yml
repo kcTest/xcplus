@@ -7,16 +7,20 @@ spring:
     nacos:
       server-addr: centos006:1005
       discovery:
-        namespace: ns-xcplus-dev
+        namespace: ns-xcplus-${spring.profiles.active}
         group: content
       config:
-        namespace: ns-xcplus-dev
+        namespace: ns-xcplus-${spring.profiles.active}
         group: content
         file-extension: yaml
         refresh-enabled: true
-        extension-configs:  #使用拓展配置 依赖项目的配置  
+        extension-configs: #使用拓展配置 依赖项目的配置     a.yaml>ext.yaml>share.yaml>  local.yaml
           - data-id: content-service-${spring.profiles.active}.yaml
             group: content
             refresh: true
-logging:
-  config: classpath:log4j2-dev.xml
+        shared-configs: #使用公共配置
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: common
+            refresh: true
+#logging: 公共配置从nacos读取
+#  config: classpath:log4j2-dev.xml

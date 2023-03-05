@@ -1,21 +1,24 @@
 spring:
   application:
     name: system-api
+  profiles:
+    active: dev
   cloud:
     nacos:
+      server-addr: centos006:1005
       discovery:
-        server-addr: centos006:1005
-        namespace: ns-xcplus-dev
+        namespace: ns-xcplus-${spring.profiles.active}
         group: system
-#  datasource:
-#    #    //ip 
-#    url: jdbc:mysql://centos006:1001/xcplus_system?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-#    username: root
-#    password: 123456xxx
-#    driver-class-name: com.mysql.cj.jdbc.Driver     
-server:
-  port: 1003
-  servlet:
-    context-path: /system
-logging:
-  config: classpath:log4j2-dev.xml
+      config:
+        namespace: ns-xcplus-${spring.profiles.active}
+        group: system
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: system-service-${spring.profiles.active}.yaml
+            group: system
+            refresh: true
+        shared-configs: #使用公共配置
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: common
+            refresh: true
