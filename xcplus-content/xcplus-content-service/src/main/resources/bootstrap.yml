@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: content-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: centos006:1005
+      config:
+        namespace: ns-xcplus-dev
+        group: content
+        file-extension: yaml
+        refresh-enabled: true
+  #  在nacos中配置
+#  datasource:
+#    #    //ip 
+#    url: jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 123456xxx
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#mybatis-plus:
+#  mapper-locations:
+#    - classpath*:dao/*.xml     #修改默认文件后 指定自定义位置
+
+    

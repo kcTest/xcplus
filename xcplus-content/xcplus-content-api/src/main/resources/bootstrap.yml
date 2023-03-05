@@ -1,15 +1,22 @@
 spring:
   application:
-    name: xcplus-content-api
+    name: content-api
+  profiles:
+    active: dev
   cloud:
     nacos:
+      server-addr: centos006:1005
       discovery:
-        server-addr: centos006:1005
         namespace: ns-xcplus-dev
         group: content
-server:
-  port: 1002
-  servlet:
-    context-path: /content #项目路径，构成url地址的一部分。
+      config:
+        namespace: ns-xcplus-dev
+        group: content
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:  #使用拓展配置 依赖项目的配置  
+          - data-id: content-service-${spring.profiles.active}.yaml
+            group: content
+            refresh: true
 logging:
   config: classpath:log4j2-dev.xml
