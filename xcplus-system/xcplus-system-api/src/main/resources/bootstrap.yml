@@ -9,5 +9,7 @@ spring:
         group: system
 server:
   port: 1003
+  servlet:
+    context-path: /system
 logging:
   config: classpath:log4j2-dev.xml

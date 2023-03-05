@@ -1,4 +1,3 @@
 
 ###
-GET {{system_host}}/dictionary/all
-
+GET {{system_host}}/system/dictionary/all

@@ -1,0 +1,810 @@
+GET http://localhost:1003/system/dictionary/all
+Content-Type: application/json
+
+<> 2023-03-05T152546.200.json
+
+###
+
+GET http://localhost:1003/system/dictionary/all
+
+<> 2023-03-05T152535.200.json
+
+###
+
+GET http://localhost:1003/dictionary/all
+
+<> 2023-03-05T152526.404.html
+
+###
+
+GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-05T152522.200.json
+
+###
+
+GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-05T152419.404.html
+
+###
+
+GET http://localhost:1002/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-05T152258.404.html
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": 281,
+  "pname": "第二节修改",
+  "parentid": 279,
+  "grade": 2,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+###
+
+GET http://localhost:1002/teachplan/124/tree-nodes
+
+<> 2023-03-03T145503.200.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第二节",
+  "parentid": 279,
+  "grade": 2,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+###
+
+GET http://localhost:1002/teachplan/124/tree-nodes
+
+<> 2023-03-03T145437.200.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一节",
+  "parentid": 279,
+  "grade": 2,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentid": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentid": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T145205.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T145144.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T145127.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T144937.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03 06:39:26",
+  "endTime": "2023-04-03 06:39:26",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T144846.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03T06:39:26.712Z",
+  "endTime": "2023-04-03T06:39:26.712Z",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T144818.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": null,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03T06:39:26.712Z",
+  "endTime": "2023-04-03T06:39:26.712Z",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T144248.500.json
+
+###
+
+POST http://localhost:1002/teachplan/save
+Content-Type: application/json
+
+{
+  "id": 0,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03T06:39:26.712Z",
+  "endTime": "2023-04-03T06:39:26.712Z",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T144227.500.json
+
+###
+
+POST http://localhost:1002/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "id": 0,
+  "pname": "第一章",
+  "parentId": 0,
+  "grade": 1,
+  "mediaType": "2",
+  "startTime": "2023-03-03T06:39:26.712Z",
+  "endTime": "2023-04-03T06:39:26.712Z",
+  "courseId": 124,
+  "coursePubId": null,
+  "isPreview": "0"
+}
+
+<> 2023-03-03T144209.500.json
+
+###
+
+GET http://localhost:1002/teachplan/117/tree-nodes
+
+<> 2023-03-01T193557.200.json
+
+###
+
+GET http://localhost:1002/teachplan/117/tree-nodes
+
+<> 2023-03-01T193357.200.json
+
+###
+
+GET http://localhost:1002/teachplan/1/tree-nodes
+
+<> 2023-03-01T193345.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T174946.200.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "companyId": 1232141425,
+  "companyName": null,
+  "name": "JAVA8/9/10新特性讲解23",
+  "users": "java爱好者,有一定java基础23",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具23",
+  "mt": "1",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "live",
+  "description": null,
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "createDate": "2019-09-03 17:48:19",
+  "changeDate": "2022-09-17 16:47:29",
+  "createPeople": "1",
+  "changePeople": null,
+  "auditStatus": "202004",
+  "status": "203001",
+  "charge": "201001",
+  "price": 5.0,
+  "originalPrice": 11.0,
+  "qq": "1",
+  "wechat": "1",
+  "phone": "1",
+  "validDays": 1,
+  "mtName": null,
+  "stName": null
+}
+
+<> 2023-03-01T174936.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/124
+
+<> 2023-03-01T174913.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T174904.200.json
+
+###
+
+POST http://localhost:1002/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "name": "新增测试1748",
+  "users": "xxxxxx",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "",
+  "description": "课程介绍",
+  "pic": "",
+  "charge": "201001",
+  "price": "11",
+  "originalPrice": 2,
+  "qq": "8888888",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 1000
+}
+
+<> 2023-03-01T174851.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T174816.200.json
+
+###
+
+POST http://localhost:1002/coursebaseinfo/list?pageno=1&pagesize=2
+Content-Type: application/json
+
+{
+  "auditStatus": "",
+  "courseName": "java",
+  "publishStatus": ""
+}
+
+<> 2023-03-01T174811.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T173742.200.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "companyId": 1232141425,
+  "companyName": null,
+  "name": "JAVA8/9/10新特性讲解",
+  "users": "java爱好者,有一定java基础2",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具",
+  "mt": "1",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "live",
+  "description": null,
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "createDate": "2019-09-03 17:48:19",
+  "changeDate": "2022-09-17 16:47:29",
+  "createPeople": "1",
+  "changePeople": null,
+  "auditStatus": "202004",
+  "status": "203001",
+  "charge": "201001",
+  "price": 2.0,
+  "originalPrice": 11.0,
+  "qq": "1",
+  "wechat": "1",
+  "phone": "1",
+  "validDays": 1,
+  "mtName": null,
+  "stName": null
+}
+
+<> 2023-03-01T173732.200.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 123,
+  "companyId": 1,
+  "companyName": null,
+  "name": "新增测试1734",
+  "users": "xxxxxxxxxxxxx",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "common",
+  "description": "课程介绍",
+  "pic": "",
+  "createDate": "2023-03-01 17:35:14",
+  "changeDate": null,
+  "createPeople": null,
+  "changePeople": null,
+  "auditStatus": "202002",
+  "status": "203001",
+  "charge": "201001",
+  "price": 11.0,
+  "originalPrice": 2.0,
+  "qq": "111222333",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 10,
+  "mtName": "编程开发",
+  "stName": "Java"
+}
+
+<> 2023-03-01T173647.500.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 123,
+  "companyId": 1,
+  "companyName": null,
+  "name": "新增测试1734",
+  "users": "xxxxxx",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "",
+  "description": "课程介绍",
+  "pic": "",
+  "createDate": "2023-03-01 17:35:14",
+  "changeDate": null,
+  "createPeople": null,
+  "changePeople": null,
+  "auditStatus": "202002",
+  "status": "203001",
+  "charge": "201001",
+  "price": 11.0,
+  "originalPrice": 2.0,
+  "qq": "111222333",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 10,
+  "mtName": "编程开发",
+  "stName": "Java"
+}
+
+<> 2023-03-01T173616.500.json
+
+###
+
+POST http://localhost:1002/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "name": "新增测试1734",
+  "users": "xxxxxx",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "",
+  "description": "课程介绍",
+  "pic": "",
+  "charge": "201001",
+  "price": "11",
+  "originalPrice": 2,
+  "qq": "111",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 10
+}
+
+<> 2023-03-01T173514.200.json
+
+###
+
+POST http://localhost:1002/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "name": "新增测试1734",
+  "users": "xxxxxx",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "",
+  "description": "课程介绍",
+  "pic": "",
+  "charge": "201001",
+  "price": "0",
+  "originalPrice": 2,
+  "qq": "111",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 10
+}
+
+<> 2023-03-01T173508.500.json
+
+###
+
+POST http://localhost:1002/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "name": "",
+  "users": "",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "",
+  "description": "课程介绍",
+  "pic": "",
+  "charge": "201001",
+  "price": "0",
+  "originalPrice": 2,
+  "qq": "111",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 10
+}
+
+<> 2023-03-01T173452.500.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T173343.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T173337.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T173322.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T173003.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T172731.200.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "companyId": 1232141425,
+  "companyName": null,
+  "name": "JAVA8/9/10新特性讲解",
+  "users": "java爱好者,有一定java基础2",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具",
+  "mt": "1",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "200002",
+  "description": null,
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "createDate": "2019-09-03 17:48:19",
+  "changeDate": "2022-09-17 16:47:29",
+  "createPeople": "1",
+  "changePeople": "zkc",
+  "auditStatus": "202004",
+  "status": "203001",
+  "charge": "201001",
+  "price": 2.0,
+  "originalPrice": 11.0,
+  "qq": "1",
+  "wechat": "1",
+  "phone": "1",
+  "validDays": 1,
+  "mtName": null,
+  "stName": null
+}
+
+<> 2023-03-01T172717.200.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T172600.200.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "companyId": 1232141425,
+  "companyName": null,
+  "name": "JAVA8/9/10新特性讲解",
+  "users": "java爱好者,有一定java基础2",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具",
+  "mt": "1",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "200002",
+  "description": null,
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "createDate": "2019-09-03 17:48:19",
+  "changeDate": "2022-09-17 16:47:29",
+  "createPeople": "1",
+  "changePeople": null,
+  "auditStatus": "202004",
+  "status": "203001",
+  "charge": "201001",
+  "price": 2.0,
+  "originalPrice": 11.0,
+  "qq": "1",
+  "wechat": "1",
+  "phone": "1",
+  "validDays": 1,
+  "mtName": null,
+  "stName": null
+}
+
+<> 2023-03-01T172555.200.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "companyId": 1232141425,
+  "companyName": null,
+  "name": "JAVA8/9/10新特性讲解",
+  "users": "java爱好者,有一定java基础2",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具",
+  "mt": "1",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "200002",
+  "description": null,
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "createDate": "2019-09-03 17:48:19",
+  "changeDate": "2022-09-17 16:47:29",
+  "createPeople": "1",
+  "changePeople": null,
+  "auditStatus": "202004",
+  "status": "203001",
+  "charge": "201001",
+  "price": 2.0,
+  "originalPrice": 11.0,
+  "qq": "1",
+  "wechat": "1",
+  "phone": "1",
+  "validDays": 1,
+  "mtName": null,
+  "stName": null
+}
+
+<> 2023-03-01T172457.500.json
+
+###
+
+PUT http://localhost:1002/coursebaseinfo/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "companyId": 1232141425,
+  "companyName": null,
+  "name": "JAVA8/9/10新特性讲解",
+  "users": "java爱好者,有一定java基础2",
+  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具",
+  "mt": "1",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "200002",
+  "description": null,
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "createDate": "2019-09-03 17:48:19",
+  "changeDate": "2022-09-17 16:47:29",
+  "createPeople": "1",
+  "changePeople": null,
+  "auditStatus": "202004",
+  "status": "203001",
+  "charge": "201001",
+  "price": 2.0,
+  "originalPrice": 11.0,
+  "qq": "1",
+  "wechat": "1",
+  "phone": "1",
+  "validDays": 1,
+  "mtName": null,
+  "stName": null
+}
+
+<> 2023-03-01T172144.500.json
+
+###
+
+GET http://localhost:1002/coursebaseinfo/1
+
+<> 2023-03-01T171929.200.json
+
+###
+
+GET http://localhost:1002/coursebase/1
+
+<> 2023-03-01T171908.404.json
+
+###
+

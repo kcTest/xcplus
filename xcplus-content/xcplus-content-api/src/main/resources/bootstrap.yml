@@ -9,5 +9,7 @@ spring:
         group: content
 server:
   port: 1002
+  servlet:
+    context-path: /content #项目路径，构成url地址的一部分。
 logging:
   config: classpath:log4j2-dev.xml
