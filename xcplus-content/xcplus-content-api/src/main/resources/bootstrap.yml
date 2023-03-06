@@ -20,7 +20,7 @@ spring:
             refresh: true
         shared-configs: #使用公共配置
           - data-id: logging-${spring.profiles.active}.yaml
-            group: content
+            group: common
             refresh: true
 #logging: 公共配置从nacos读取
 #  config: classpath:log4j2-dev.xml
