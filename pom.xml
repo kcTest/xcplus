@@ -38,6 +38,8 @@
         <xcplus-system.model.version>0.0.1-SNAPSHOT</xcplus-system.model.version>
         <spring-cloud-dependencies.version>2021.0.4</spring-cloud-dependencies.version>
         <spring-cloud-alibaba-dependencies.version>2021.0.1.0</spring-cloud-alibaba-dependencies.version>
+        <xcplus-media.service.version>0.0.1-SNAPSHOT</xcplus-media.service.version>
+        <xcplus-media.model.version>0.0.1-SNAPSHOT</xcplus-media.model.version>
     </properties>
 
     <dependencies>
@@ -142,6 +144,16 @@
                 <version>${spring-cloud-alibaba-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.zkc</groupId>
+                <artifactId>xcplus-media-service</artifactId>
+                <version>${xcplus-media.service.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zkc</groupId>
+                <artifactId>xcplus-media-model</artifactId>
+                <version>${xcplus-media.model.version}</version>
             </dependency>
         </dependencies>
 
