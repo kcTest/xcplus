@@ -1,6 +1,6 @@
 spring:
   application:
-    name: system-api
+    name: gateway
   profiles:
     active: dev
   cloud:
@@ -8,17 +8,13 @@ spring:
       server-addr: centos006:1005
       discovery:
         namespace: ns-xcplus-${spring.profiles.active}
-        group: xcplus
+        group: xcplus # [服务的组名保持一致 + spring-cloud-starter-loadbalancer]
       config:
         namespace: ns-xcplus-${spring.profiles.active}
-        group: system
+        group: gateway # [配置的组名可以不同]
         file-extension: yaml
         refresh-enabled: true
-        extension-configs:
-          - data-id: system-service-${spring.profiles.active}.yaml
-            group: system
-            refresh: true
-        shared-configs: #使用公共配置
+        shared-configs:
           - data-id: logging-${spring.profiles.active}.yaml
             group: common
             refresh: true

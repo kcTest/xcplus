@@ -20,6 +20,8 @@
         <module>xcplus-base</module>
         <module>xcplus-content</module>
         <module>xcplus-system</module>
+        <module>xcplus-gateway</module>
+        <module>xcplus-media</module>
     </modules>
 
     <properties>
@@ -43,6 +45,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!--            bootstrap.yml 读取生效-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
     </dependencies>
 

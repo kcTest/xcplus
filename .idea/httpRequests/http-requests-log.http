@@ -1,3 +1,207 @@
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T170633.200.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T165225.200.json
+
+###
+
+GET http://localhost:1006/system/dictionary/all
+
+<> 2023-03-06T165220.200.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T163534.503.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T163358.200.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T163327.200.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T163303.200.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T163152.503.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T163033.503.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T162557.503.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T162453.200.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T162444.200.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T161753.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T161627.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T161139.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T161041.503.json
+
+###
+
+GET http://localhost:1006/system/dictionary/all
+
+<> 2023-03-06T160837.503.json
+
+###
+
+GET http://localhost:1006/system/dictionary/all
+
+<> 2023-03-06T160212.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T160138.503.json
+
+###
+
+GET http://localhost:1006/content/coursebaseinfo/1
+
+<> 2023-03-06T155802.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T155758.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T155651.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T155615.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T155322.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T155315.503.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T155312.503.json
+
+###
+
+GET http://localhost:8080/content/coursecategory/treeNodes?parentId=1
+
+###
+
+GET http://localhost:8080/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T154850.404.json
+
+###
+
+GET http://localhost:8080/content/coursecategory/treeNodes?parentId=1
+
+<> 2023-03-06T154610.404.json
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+###
+
+GET http://localhost:1006/content/coursecategory/treeNodes?parentId=1
+
+###
+
+POST http://localhost:1006/content/coursebaseinfo/add
+Content-Type: application/json
+
+{
+  "name": "新增测试1748",
+  "users": "xxxxxx",
+  "tags": "标签",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "204002",
+  "teachmode": "",
+  "description": "课程介绍",
+  "pic": "",
+  "charge": "201001",
+  "price": "11",
+  "originalPrice": 2,
+  "qq": "8888888",
+  "wechat": "222",
+  "phone": "333",
+  "validDays": 1000
+}
+
+###
+
 GET http://localhost:1002/content/teachplan/124/tree-nodes
 
 <> 2023-03-05T233630.200.json
@@ -103,345 +307,6 @@ GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
 GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
 
 <> 2023-03-05T201801.200.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T201722.500.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T201657.500.json
-
-###
-
-GET http://localhost:1002/content/teachplan/124/tree-nodes
-
-<> 2023-03-05T201627.500.json
-
-###
-
-GET http://localhost:1002/content/teachplan/124/tree-nodes
-
-<> 2023-03-05T201625.500.json
-
-###
-
-GET http://localhost:1002/content/teachplan/124/tree-nodes
-
-<> 2023-03-05T200919.500.json
-
-###
-
-GET http://localhost:1002/content/teachplan/124/tree-nodes
-
-<> 2023-03-05T200754.500.json
-
-###
-
-GET http://localhost:1002/content/coursebaseinfo/1
-
-<> 2023-03-05T200709.200.json
-
-###
-
-GET http://localhost:1002/content/coursebaseinfo/1
-
-<> 2023-03-05T200620.200.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T200529.500.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T200339.500.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T192535.500.json
-
-###
-
-GET http://localhost:1002/content/coursebaseinfo/1
-
-<> 2023-03-05T192508.200.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T192451.500.json
-
-###
-
-GET http://localhost:1003/system/dictionary/all
-Content-Type: application/json
-
-<> 2023-03-05T152546.200.json
-
-###
-
-GET http://localhost:1003/system/dictionary/all
-
-<> 2023-03-05T152535.200.json
-
-###
-
-GET http://localhost:1003/dictionary/all
-
-<> 2023-03-05T152526.404.html
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T152522.200.json
-
-###
-
-GET http://localhost:1002/content/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T152419.404.html
-
-###
-
-GET http://localhost:1002/coursecategory/treeNodes?parentId=1
-
-<> 2023-03-05T152258.404.html
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": 281,
-  "pname": "第二节修改",
-  "parentid": 279,
-  "grade": 2,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-###
-
-GET http://localhost:1002/teachplan/124/tree-nodes
-
-<> 2023-03-03T145503.200.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第二节",
-  "parentid": 279,
-  "grade": 2,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-###
-
-GET http://localhost:1002/teachplan/124/tree-nodes
-
-<> 2023-03-03T145437.200.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一节",
-  "parentid": 279,
-  "grade": 2,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentid": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentid": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T145205.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T145144.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T145127.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T144937.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T144846.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03T06:39:26.712Z",
-  "endTime": "2023-04-03T06:39:26.712Z",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T144818.500.json
-
-###
-
-POST http://localhost:1002/teachplan/save
-Content-Type: application/json
-
-{
-  "id": null,
-  "pname": "第一章",
-  "parentId": 0,
-  "grade": 1,
-  "mediaType": "2",
-  "startTime": "2023-03-03T06:39:26.712Z",
-  "endTime": "2023-04-03T06:39:26.712Z",
-  "courseId": 124,
-  "coursePubId": null,
-  "isPreview": "0"
-}
-
-<> 2023-03-03T144248.500.json
 
 ###
 

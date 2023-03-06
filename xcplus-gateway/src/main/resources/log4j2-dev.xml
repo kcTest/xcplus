@@ -2,7 +2,7 @@
 <Configuration monitorInterval="180">
 
     <Properties>
-        <Property name="logdir">logs/system-service</Property>
+        <Property name="logdir">logs/gateway</Property>
         <Property name="pattern">%date{YYYY-MM-dd HH:mm:ss,SSS} %level [%thread][%file:%line] - %msg%n%throwable
         </Property>
     </Properties>
@@ -39,6 +39,7 @@
 
     <Loggers>
         <Logger name="org.springframework" level="info"/>
+        <Logger name="com.alibaba.nacos" level="info"/>
         <Root level="debug" includeLocation="true">
             <AppenderRef ref="console"/>
             <AppenderRef ref="debugAppender"/>

@@ -2,7 +2,7 @@
 <Configuration monitorInterval="180">
 
     <Properties>
-        <Property name="logdir">logs/system</Property>
+        <Property name="logdir">logs/system-api</Property>
         <Property name="pattern">%date{YYYY-MM-dd HH:mm:ss,SSS} %level [%thread][%file:%line] - %msg%n%throwable
         </Property>
     </Properties>

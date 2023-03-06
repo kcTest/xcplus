@@ -8,7 +8,7 @@ spring:
       server-addr: centos006:1005
       discovery:
         namespace: ns-xcplus-${spring.profiles.active}
-        group: content
+        group: xcplus
       config:
         namespace: ns-xcplus-${spring.profiles.active}
         group: content
@@ -20,7 +20,7 @@ spring:
             refresh: true
         shared-configs: #使用公共配置
           - data-id: logging-${spring.profiles.active}.yaml
-            group: common
+            group: content
             refresh: true
 #logging: 公共配置从nacos读取
 #  config: classpath:log4j2-dev.xml
