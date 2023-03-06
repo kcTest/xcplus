@@ -12,7 +12,7 @@
     <artifactId>xcplus-system</artifactId>
     <packaging>pom</packaging>
     <name>xcplus-system</name>
-
+    
     <modules>
         <module>xcplus-system-api</module>
         <module>xcplus-system-service</module>
