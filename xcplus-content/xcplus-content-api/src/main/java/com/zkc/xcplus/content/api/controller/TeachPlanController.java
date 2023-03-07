@@ -18,13 +18,13 @@ public class TeachPlanController {
 	@Autowired
 	private TeachPlanService teachPlanService;
 	
-	@Operation(description = "获取课程计划")
+	@Operation(summary = "获取课程计划")
 	@GetMapping("/{courseId}/tree-nodes")
 	public List<TeachPlanDto> getTreeNodes(@PathVariable Long courseId) {
 		return teachPlanService.getTreeNodes(courseId);
 	}
 	
-	@Operation(description = "添加/修改课程计划")
+	@Operation(summary = "添加/修改课程计划")
 	@PostMapping("/save")
 	public void saveTeachPlan(@RequestBody SaveTeachPlanDto dto) {
 		teachPlanService.saveTeachPlan(dto);

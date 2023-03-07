@@ -1,0 +1,24 @@
+
+### 获取媒资列表
+POST {{gateway_host}}/media/files/list?pageno=1&pagesize=2
+Content-Type: application/json
+
+{
+  "filename": "",
+  "fileType": "",
+  "auditStatus": ""
+}
+
+
+### 上传文件
+POST {{gateway_host}}/media/files/upload
+Content-Type: multipart/form-data;boundary=WebAppBoundary
+
+# 边界线  name 接口定义的参数名  filename 文件名
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="3F192936841.jpg"
+#通用类型
+Content-Type: application/octet-stream
+
+#文件地址 空格
+< C:\Users\pczkc\Desktop\wallpaper\3F192936841.jpg

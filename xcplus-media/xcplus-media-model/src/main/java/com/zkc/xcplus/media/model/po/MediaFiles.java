@@ -19,7 +19,7 @@ public class MediaFiles implements Serializable {
 	/**
 	 * 文件id,md5值
 	 */
-	@TableId(value = "id", type = IdType.AUTO)
+	@TableId(value = "id", type = IdType.INPUT)
 	@Schema(description = "文件id,md5值")
 	private String id;
 	

@@ -7,7 +7,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@MapperScan("com.zkc.xcplus.meida.service.dao")
+@MapperScan("com.zkc.xcplus.media.service.dao")
 @Configuration
 public class MybatisPlusConfig {
 	
