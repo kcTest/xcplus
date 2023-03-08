@@ -29,5 +29,13 @@ public interface MediaFileService {
 	 */
 	UploadFileResultDto upload(Long companyId, UploadFileParamsDto dto, byte[] fileData, String saveFolder, String savePath);
 	
-	void delete(String objectName);
+	/**
+	 * 上传文件到分布式文件系统
+	 */
+	void addFileToMinio(UploadFileParamsDto dto, byte[] fileData, String savePath);
+	
+	/**
+	 * 添加文件信息到数据库
+	 */
+	MediaFiles addFileDbInfo(Long companyId, UploadFileParamsDto dto, String savePath, String oriFileName, String md5Id);
 }
