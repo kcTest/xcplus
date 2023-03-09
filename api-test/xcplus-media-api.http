@@ -22,3 +22,47 @@ Content-Type: application/octet-stream
 
 #文件地址 空格
 < C:\Users\pczkc\Desktop\wallpaper\3F192936841.jpg
+
+### 文件上传前检查文件
+POST {{gateway_host}}/media/bigfile/checkfile?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1
+
+### 分块文件0上传前的检测
+POST {{gateway_host}}/media/bigfile/checkchunk?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&chunkIdx=0
+### 分块文件1上传前的检测
+POST {{gateway_host}}/media/bigfile/checkchunk?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&chunkIdx=0
+### 分块文件2上传前的检测
+POST {{gateway_host}}/media/bigfile/checkchunk?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&chunkIdx=0
+
+### 上传分块文件0
+POST {{gateway_host}}/media/bigfile/uploadchunk?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&chunkIdx=0
+Content-Type: multipart/form-data;boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="0"
+Content-Type: application/octet-stream
+
+< C:\Users\pczkc\Desktop\wallpaper\chunks\0
+
+### 上传分块文件1
+POST {{gateway_host}}/media/bigfile/uploadchunk?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&chunkIdx=1
+Content-Type: multipart/form-data;boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="1"
+Content-Type: application/octet-stream
+
+< C:\Users\pczkc\Desktop\wallpaper\chunks\1
+
+### 上传分块文件2
+POST {{gateway_host}}/media/bigfile/uploadchunk?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&chunkIdx=2
+Content-Type: multipart/form-data;boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="2"
+Content-Type: application/octet-stream
+
+< C:\Users\pczkc\Desktop\wallpaper\chunks\2
+
+
+### 合并文件
+POST {{gateway_host}}/media/bigfile/mergechunks?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&fileName=TEST.MP4&chunkTotal=3

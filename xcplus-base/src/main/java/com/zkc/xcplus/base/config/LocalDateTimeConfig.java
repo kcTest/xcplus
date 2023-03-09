@@ -14,8 +14,6 @@ import java.util.TimeZone;
 
 /**
  * LocalDateTime和json之间的转换格式
- *
- * @author pczkc
  */
 @Configuration
 public class LocalDateTimeConfig {

@@ -24,6 +24,12 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
         </dependency>
+        <!--        根据拓展名获取对应mimeType-->
+        <dependency>
+            <groupId>com.j256.simplemagic</groupId>
+            <artifactId>simplemagic</artifactId>
+            <version>1.17</version>
+        </dependency>
     </dependencies>
 
     <build>
