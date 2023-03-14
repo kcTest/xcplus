@@ -38,7 +38,7 @@ public class BigFilesController {
 	public RestResponse<Boolean> uploadchunk(@RequestParam("file") MultipartFile file,
 											 @RequestParam("fileMd5") String fileMd5,
 											 @RequestParam("chunkIdx") int chunkIdx) throws Exception {
-		return mediaFileService.uploadChunk(fileMd5, chunkIdx, file.getBytes(), file.getContentType());
+		return mediaFileService.uploadChunk(fileMd5, chunkIdx, file.getBytes());
 		
 	}
 	

@@ -8,6 +8,8 @@ import com.zkc.xcplus.media.model.dto.UploadFileParamsDto;
 import com.zkc.xcplus.media.model.dto.UploadFileResultDto;
 import com.zkc.xcplus.media.model.po.MediaFiles;
 
+import java.io.File;
+
 public interface MediaFileService {
 	
 	/**
@@ -41,6 +43,11 @@ public interface MediaFileService {
 	void addFileToMinio(String bucketName, String contentType, byte[] fileData, String savePath);
 	
 	/**
+	 * 上传本地文件到分布式文件系统
+	 */
+	boolean addLocalFileToMinio(String bucketName, String contentType, String sourcePath, String savePath);
+	
+	/**
 	 * 添加文件信息到数据库
 	 *
 	 * @param companyId   机构id
@@ -72,13 +79,12 @@ public interface MediaFileService {
 	/**
 	 * 上传分块文件
 	 *
-	 * @param fileMd5     文件的md5
-	 * @param chunkIdx    分块文件序号
-	 * @param bytes       文件字节数组
-	 * @param contentType mime类型
+	 * @param fileMd5  文件的md5
+	 * @param chunkIdx 分块文件序号
+	 * @param bytes    文件字节数组
 	 * @return 上传是否成功
 	 */
-	RestResponse<Boolean> uploadChunk(String fileMd5, int chunkIdx, byte[] bytes, String contentType);
+	RestResponse<Boolean> uploadChunk(String fileMd5, int chunkIdx, byte[] bytes);
 	
 	/**
 	 * 调用minio sdk 合并已存储的分块文件
@@ -90,4 +96,14 @@ public interface MediaFileService {
 	 * @return 合并是否成功
 	 */
 	RestResponse<Boolean> mergeChunks(Long companyId, String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto);
+	
+	
+	/**
+	 * 从MINIO下载视频
+	 *
+	 * @param bucket     桶
+	 * @param objectName 路径
+	 * @return 文件
+	 */
+	File downloadFileFromMinio(String bucket, String objectName);
 }

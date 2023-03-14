@@ -11,15 +11,13 @@ public class Mp4VideoUtil extends VideoUtil {
 	 */
 	private String ffmpeg_path = "E:\\浏览器下载\\xcplus\\ffmpeg\\ffmpeg.exe";
 	private String video_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\TEST.mp4";
-	private String mp4_name = "TEST.mp4";
-	private String mp4folder_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\";
+	private String mp4_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\";
 	
-	public Mp4VideoUtil(String ffmpeg_path, String video_path, String mp4_name, String mp4folder_path) {
+	public Mp4VideoUtil(String ffmpeg_path, String video_path, String mp4_path) {
 		super(ffmpeg_path);
 		this.ffmpeg_path = ffmpeg_path;
 		this.video_path = video_path;
-		this.mp4_name = mp4_name;
-		this.mp4folder_path = mp4folder_path;
+		this.mp4_path = mp4_path;
 	}
 	
 	/**
@@ -41,33 +39,33 @@ public class Mp4VideoUtil extends VideoUtil {
 	public String generateMp4() {
 		//清除已生成的mp4
 		//        clear_mp4(mp4folder_path+mp4_name);
-		clear_mp4(mp4folder_path);
+		clear_mp4(mp4_path);
         /*
         ffmpeg.exe -i  lucene.avi -c:v libx264 -s 1280x720 -pix_fmt yuv420p -b:a 63k -b:v 753k -r 18 .\lucene.mp4
          */
-		List<String> commend = new ArrayList<>();
-		commend.add(ffmpeg_path);
-		commend.add("-i");
-		commend.add(video_path);
-		commend.add("-c:v");
-		commend.add("libx264");
+		List<String> command = new ArrayList<>();
+		command.add(ffmpeg_path);
+		command.add("-i");
+		command.add(video_path);
+		command.add("-c:v");
+		command.add("libx264");
 		//覆盖输出文件
-		commend.add("-y");
-		commend.add("-s");
-		commend.add("1280x720");
-		commend.add("-pix_fmt");
-		commend.add("yuv420p");
-		commend.add("-b:a");
-		commend.add("63k");
-		commend.add("-b:v");
-		commend.add("753k");
-		commend.add("-r");
-		commend.add("18");
-		commend.add(mp4folder_path + mp4_name);
+		command.add("-y");
+		command.add("-s");
+		command.add("1280x720");
+		command.add("-pix_fmt");
+		command.add("yuv420p");
+		command.add("-b:a");
+		command.add("63k");
+		command.add("-b:v");
+		command.add("753k");
+		command.add("-r");
+		command.add("18");
+		command.add(mp4_path);
 		String outstring = null;
 		try {
 			ProcessBuilder builder = new ProcessBuilder();
-			builder.command(commend);
+			builder.command(command);
 			//将标准输入流和错误输入流合并，通过标准输入流程读取信息
 			builder.redirectErrorStream(true);
 			Process p = builder.start();
@@ -78,7 +76,7 @@ public class Mp4VideoUtil extends VideoUtil {
 			ex.printStackTrace();
 			
 		}
-		Boolean check_video_time = this.check_video_time(video_path, mp4folder_path + mp4_name);
+		Boolean check_video_time = this.check_video_time(video_path, mp4_path);
 		if (!check_video_time) {
 			return outstring;
 		} else {
@@ -90,13 +88,12 @@ public class Mp4VideoUtil extends VideoUtil {
 		//ffmpeg的路径
 		String ffmpeg_path = "E:\\浏览器下载\\xcplus\\ffmpeg\\ffmpeg.exe";
 		//源avi视频的路径
-		String video_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\TEST.avi";
+		String video_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\11.avi";
 		//转换后mp4文件的名称
-		String mp4_name = "TEST2.mp4";
 		//转换后mp4文件的路径
-		String mp4_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\";
+		String mp4_path = "C:\\Users\\pczkc\\Desktop\\wallpaper\\11.mp4";
 		//创建工具类对象
-		Mp4VideoUtil videoUtil = new Mp4VideoUtil(ffmpeg_path, video_path, mp4_name, mp4_path);
+		Mp4VideoUtil videoUtil = new Mp4VideoUtil(ffmpeg_path, video_path, mp4_path);
 		//开始视频转换，成功将返回success
 		String s = videoUtil.generateMp4();
 		System.out.println(s);

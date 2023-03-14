@@ -42,7 +42,6 @@
         <Logger name="com.alibaba.nacos" level="info"/>
         <Root level="debug" includeLocation="true">
             <AppenderRef ref="console"/>
-            <AppenderRef ref="debugAppender"/>
             <AppenderRef ref="errorAsyncAppender"/>
             <AppenderRef ref="debugAsyncAppender"/>
         </Root>

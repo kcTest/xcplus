@@ -16,12 +16,13 @@ Content-Type: multipart/form-data;boundary=WebAppBoundary
 
 # 边界线  name 接口定义的参数名  filename 文件名
 --WebAppBoundary
-Content-Disposition: form-data; name="file"; filename="3F192936841.jpg"
+Content-Disposition: form-data; name="file"; filename="22.avi"
 #通用类型
-Content-Type: application/octet-stream
+#Content-Type: application/octet-stream
+Content-Type: video/x-msvideo
 
 #文件地址 空格
-< C:\Users\pczkc\Desktop\wallpaper\3F192936841.jpg
+< C:\Users\pczkc\Desktop\wallpaper\22.avi
 
 ### 文件上传前检查文件
 POST {{gateway_host}}/media/bigfile/checkfile?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1
@@ -65,4 +66,4 @@ Content-Type: application/octet-stream
 
 
 ### 合并文件
-POST {{gateway_host}}/media/bigfile/mergechunks?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&fileName=TEST.MP4&chunkTotal=3
+POST {{gateway_host}}/media/bigfile/mergechunks?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&fileName=TEST.avi&chunkTotal=3

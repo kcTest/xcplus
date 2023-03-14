@@ -12,8 +12,11 @@ import com.zkc.xcplus.media.model.dto.QueryMediaFilesDto;
 import com.zkc.xcplus.media.model.dto.UploadFileParamsDto;
 import com.zkc.xcplus.media.model.dto.UploadFileResultDto;
 import com.zkc.xcplus.media.model.po.MediaFiles;
+import com.zkc.xcplus.media.model.po.MediaProcess;
 import com.zkc.xcplus.media.service.MediaFileService;
 import com.zkc.xcplus.media.service.dao.MediaFilesMapper;
+import com.zkc.xcplus.media.service.dao.MediaProcessHistoryMapper;
+import com.zkc.xcplus.media.service.dao.MediaProcessMapper;
 import io.minio.*;
 import io.minio.messages.DeleteError;
 import io.minio.messages.DeleteObject;
@@ -53,6 +56,12 @@ public class MediaFileServiceImpl implements MediaFileService {
 	@Autowired
 	private MediaFilesMapper mediaFilesMapper;
 	
+	@Autowired
+	private MediaProcessMapper mediaProcessMapper;
+	
+	@Autowired
+	private MediaProcessHistoryMapper mediaProcessHistoryMapper;
+	
 	@Override
 	public PageResult<MediaFiles> queryMediaFilesDto(Long companyId, PageParams pageParams, QueryMediaFilesDto dto) {
 		LambdaQueryWrapper<MediaFiles> queryWrapper = new LambdaQueryWrapper<>();
@@ -81,6 +90,10 @@ public class MediaFileServiceImpl implements MediaFileService {
 				saveFolder += "/";
 			}
 			String oriFileName = dto.getFilename();
+			//扩展名得到mimeType
+			String extension = oriFileName.substring(oriFileName.lastIndexOf("."));
+			String mimeType = getMimeTypeByExtension(extension);
+			
 			String md5Id = DigestUtils.md5DigestAsHex(fileData);
 			if (!StringUtils.hasText(savePath)) {
 				//md5作为保存后的文件名 
@@ -89,7 +102,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 			//共同作为服务器上的存储路径objectname 
 			savePath = saveFolder + savePath;
 			
-			addFileToMinio(defaultBucket, dto.getContentType(), fileData, savePath);
+			addFileToMinio(defaultBucket, mimeType, fileData, savePath);
 			//1.
 			//			MediaFiles mediaFiles = addFileDbInfo(companyId, dto, savePath, oriFileName, md5Id);
 			//2.
@@ -101,7 +114,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 			return resultDto;
 		} catch (Exception e) {
 			CustomException.cast("上传文件失败: " + e.getMessage());
-			log.error(e.toString());
+//			log.error(e.toString());
 		}
 		return null;
 	}
@@ -142,33 +155,39 @@ public class MediaFileServiceImpl implements MediaFileService {
 			mediaFiles.setStatus("1");
 			//默认未审核
 			mediaFiles.setAuditStatus("002002");
-			mediaFilesMapper.insert(mediaFiles);
-		} else {
-			mediaFiles.setFilePath(savePath);
-			mediaFiles.setUrl("/" + defaultBucket + "/" + savePath);
-			mediaFiles.setChangeDate(LocalDateTime.now());
-			mediaFilesMapper.updateById(mediaFiles);
+			int row = mediaFilesMapper.insert(mediaFiles);
+			//暂时相同视频只能插入一次
+			if (row <= 0) {
+				log.error("保存文件信息失败, bucket:{},objectName:{}", bigFileBucket, savePath);
+				CustomException.cast("保存文件信息失败");
+			}
 		}
 
 //		int a = 1 / 0;
 		
-		//对avi视频添加到待处理任务表
-		//获取扩展名
-//		String extension = null;
-//		String filename = dto.getFilename();
-//		if (StringUtils.hasText(filename) && filename.contains(".")) {
-//			extension = filename.substring(filename.lastIndexOf("."));
-//		}
-//		String mimeType = getMimeTypeByExtension(extension);
-//		if ("video/x-msvideo".equals(mimeType)) {
-//			MediaProcess mediaProcess = new MediaProcess();
-//			BeanUtils.copyProperties(mediaFiles, mediaProcess);
-//			//设置一个状态
-//			mediaProcess.setStatus("1");//未处理
-//			mediaProcessMapper.insert(mediaProcess);
-//		}
+		addTask(mediaFiles);
 		
 		return mediaFiles;
+	}
+	
+	/**
+	 * 检查格式添加待处理任务
+	 *
+	 * @param mediaFiles 文件信息
+	 */
+	private void addTask(MediaFiles mediaFiles) {
+		String fileName = mediaFiles.getFilename();
+		String extension = fileName.substring(fileName.lastIndexOf("."));
+		String mimeType = getMimeTypeByExtension(extension);
+		if ("video/x-msvideo".equals(mimeType)) {
+			MediaProcess mediaProcess = new MediaProcess();
+			BeanUtils.copyProperties(mediaFiles, mediaProcess);
+			mediaProcess.setStatus("1");
+			mediaProcess.setCreateDate(LocalDateTime.now());
+			mediaProcess.setFailCount(0);
+			mediaProcess.setUrl(null);
+			mediaProcessMapper.insert(mediaProcess);
+		}
 	}
 	
 	/**
@@ -235,14 +254,16 @@ public class MediaFileServiceImpl implements MediaFileService {
 	}
 	
 	@Override
-	public RestResponse<Boolean> uploadChunk(String fileMd5, int chunkIdx, byte[] bytes, String contentType) {
+	public RestResponse<Boolean> uploadChunk(String fileMd5, int chunkIdx, byte[] bytes) {
 		//得到分块文件所在目录
 		String chunkFileFolderPath = getChunkFileFolder(fileMd5);
 		//分块文件的路径
 		String chunkFilePath = chunkFileFolderPath + chunkIdx;
+		//获取mimeType
+		String mimeType = getMimeTypeByExtension(null);
 		try {
 			//将分块上传到文件系统
-			addFileToMinio(bigFileBucket, contentType, bytes, chunkFilePath);
+			addFileToMinio(bigFileBucket, mimeType, bytes, chunkFilePath);
 			//上传成功
 			return RestResponse.success(true);
 		} catch (Exception e) {
@@ -338,6 +359,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 	 * @param objectName 路径
 	 * @return 文件
 	 */
+	@Override
 	public File downloadFileFromMinio(String bucket, String objectName) {
 		File tempMergedFile;
 		//临时文件
@@ -397,6 +419,31 @@ public class MediaFileServiceImpl implements MediaFileService {
 			CustomException.cast("上传文件到文件系统失败: " + e.getMessage());
 		}
 	}
+	
+	@Override
+	public boolean addLocalFileToMinio(String bucketName, String contentType, String sourcePath, String savePath) {
+		try {
+			UploadObjectArgs uploadObjectArgs = UploadObjectArgs.builder()
+					//桶
+					.bucket(bucketName)
+					//指定本地文件路径
+					.filename(sourcePath)
+					//对象名 放在子目录下
+					.object(savePath)
+					//设置媒体文件类型
+					.contentType(contentType)
+					.build();
+			//上传文件
+			client.uploadObject(uploadObjectArgs);
+			log.debug("上传文件到minio成功,bucket:{},objectName:{}", bucketName, savePath);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("上传文件出错,bucket:{},objectName:{},错误信息:{}", bucketName, savePath, e.getMessage());
+		}
+		return false;
+	}
+	
 	
 	private String getFileFolder(Date date, boolean year, boolean month, boolean day) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
