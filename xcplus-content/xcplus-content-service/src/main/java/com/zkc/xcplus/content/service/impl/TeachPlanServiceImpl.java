@@ -3,15 +3,21 @@ package com.zkc.xcplus.content.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.zkc.xcplus.base.exception.CommonError;
 import com.zkc.xcplus.base.exception.CustomException;
+import com.zkc.xcplus.content.model.dto.BindTeachPlanMediaDto;
 import com.zkc.xcplus.content.model.dto.SaveTeachPlanDto;
 import com.zkc.xcplus.content.model.dto.TeachPlanDto;
 import com.zkc.xcplus.content.model.po.Teachplan;
+import com.zkc.xcplus.content.model.po.TeachplanMedia;
 import com.zkc.xcplus.content.service.TeachPlanService;
 import com.zkc.xcplus.content.service.dao.TeachplanMapper;
+import com.zkc.xcplus.content.service.dao.TeachplanMediaMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -20,7 +26,11 @@ public class TeachPlanServiceImpl implements TeachPlanService {
 	@Autowired
 	private TeachplanMapper teachplanMapper;
 	
+	@Autowired
+	private TeachplanMediaMapper teachplanMediaMapper;
+	
 	@Override
+	
 	public List<TeachPlanDto> getTreeNodes(Long courseId) {
 		return teachplanMapper.getTreeNodes(courseId);
 	}
@@ -47,6 +57,31 @@ public class TeachPlanServiceImpl implements TeachPlanService {
 			BeanUtils.copyProperties(dto, teachplan);
 			teachplanMapper.updateById(teachplan);
 		}
+	}
+	
+	@Transactional(isolation = Isolation.READ_COMMITTED)
+	@Override
+	public void bindMedia(BindTeachPlanMediaDto dto) {
+		Long planId = dto.getTeachPlanId();
+		Teachplan teachplan = teachplanMapper.selectById(planId);
+		if (teachplan == null) {
+			CustomException.cast("课程计划不存在");
+		}
+		if (teachplan.getGrade() != 2) {
+			CustomException.cast("只允许第二季教学计划绑定媒资文件");
+		}
+		
+		LambdaQueryWrapper<TeachplanMedia> queryWrapper = new LambdaQueryWrapper<>();
+		queryWrapper.eq(TeachplanMedia::getTeachplanId, planId);
+		teachplanMediaMapper.delete(queryWrapper);
+		
+		TeachplanMedia teachplanMedia = new TeachplanMedia();
+		teachplanMedia.setMediaId(dto.getMediaId());
+		teachplanMedia.setTeachplanId(planId);
+		teachplanMedia.setMediaFilename(dto.getFileName());
+		teachplanMedia.setCreateDate(LocalDateTime.now());
+		teachplanMedia.setCourseId(teachplan.getCourseId());
+		teachplanMediaMapper.insert(teachplanMedia);
 	}
 	
 	private Long getSiblingPlanCount(Long courseId, Long parentId) {

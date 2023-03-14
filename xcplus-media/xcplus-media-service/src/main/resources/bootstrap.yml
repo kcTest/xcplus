@@ -1,16 +1,18 @@
-spring:
-  application:
-    name: media-service
-  profiles:
-    active: dev
-  cloud:
-    nacos:
-      server-addr: centos006:1005
-      config:
-        namespace: ns-xcplus-${spring.profiles.active}
-        group: media
-        file-extension: yaml
-        refresh-enabled: true
+#spring:
+#  application:
+#    name: media-service
+#  profiles:
+#    active: dev
+#  cloud:
+#    nacos:
+#      server-addr: centos006:1005
+#      config:
+#        namespace: ns-xcplus-${spring.profiles.active}
+#        group: media
+#        file-extension: yaml
+#        refresh-enabled: true
+
+## 已被引入
       
       
       

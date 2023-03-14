@@ -118,3 +118,13 @@ Content-Type: application/json
   "coursePubId": null,
   "isPreview": "0"
 }
+
+### 课程计划绑定媒资
+POST {{gateway_host}}/content/teachplan/bindMedia
+Content-Type: application/json
+
+{
+  "mediaId": "48022f1ad00c2ea6210c0fa461f26a31",
+  "fileName": "22.avi",
+  "teachPlanId": 281
+}

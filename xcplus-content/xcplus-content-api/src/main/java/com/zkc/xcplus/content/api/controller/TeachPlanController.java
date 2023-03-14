@@ -1,5 +1,6 @@
 package com.zkc.xcplus.content.api.controller;
 
+import com.zkc.xcplus.content.model.dto.BindTeachPlanMediaDto;
 import com.zkc.xcplus.content.model.dto.SaveTeachPlanDto;
 import com.zkc.xcplus.content.model.dto.TeachPlanDto;
 import com.zkc.xcplus.content.service.TeachPlanService;
@@ -28,5 +29,11 @@ public class TeachPlanController {
 	@PostMapping("/save")
 	public void saveTeachPlan(@RequestBody SaveTeachPlanDto dto) {
 		teachPlanService.saveTeachPlan(dto);
+	}
+	
+	@Operation(summary = "课程计划和媒资绑定")
+	@PostMapping("/bindMedia")
+	public void bindMedia(@RequestBody BindTeachPlanMediaDto dto) {
+		teachPlanService.bindMedia(dto);
 	}
 }
