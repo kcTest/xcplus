@@ -390,6 +390,11 @@ public class MediaFileServiceImpl implements MediaFileService {
 		return null;
 	}
 	
+	@Override
+	public MediaFiles getMediaById(String mediaId) {
+		return mediaFilesMapper.selectById(mediaId);
+	}
+	
 	/**
 	 * 根据MD5值得到分块文件存储的目录
 	 * 位作为分块文件完整路径 MD5第一位/MD5第二位/MD5/chunk/i

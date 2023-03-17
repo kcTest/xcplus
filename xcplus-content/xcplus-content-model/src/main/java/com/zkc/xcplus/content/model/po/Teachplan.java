@@ -117,14 +117,14 @@ public class Teachplan implements Serializable {
 	 */
 	@TableField(value = "create_date")
 	@Schema(description = "创建时间")
-	private Date createDate;
+	private LocalDateTime createDate;
 	
 	/**
 	 * 修改时间
 	 */
 	@TableField(value = "change_date")
 	@Schema(description = "修改时间")
-	private Date changeDate;
+	private LocalDateTime changeDate;
 	
 	private static final long serialVersionUID = 1L;
 }

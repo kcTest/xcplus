@@ -45,6 +45,7 @@ public class TeachPlanServiceImpl implements TeachPlanService {
 			//新增 第一级章 或 第二级节
 			Teachplan teachplan = new Teachplan();
 			BeanUtils.copyProperties(dto, teachplan);
+			teachplan.setCreateDate(LocalDateTime.now());
 			//新增时顺序为同级别最后一个
 			teachplan.setOrderby(Math.toIntExact(getSiblingPlanCount(teachplan.getCourseId(), teachplan.getParentid())));
 			teachplanMapper.insert(teachplan);
@@ -55,6 +56,7 @@ public class TeachPlanServiceImpl implements TeachPlanService {
 				CustomException.cast("课程计划不存在");
 			}
 			BeanUtils.copyProperties(dto, teachplan);
+			teachplan.setChangeDate(LocalDateTime.now());
 			teachplanMapper.updateById(teachplan);
 		}
 	}

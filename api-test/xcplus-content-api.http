@@ -124,7 +124,14 @@ POST {{gateway_host}}/content/teachplan/bindMedia
 Content-Type: application/json
 
 {
-  "mediaId": "48022f1ad00c2ea6210c0fa461f26a31",
-  "fileName": "22.avi",
-  "teachPlanId": 281
+  "mediaId": "a2c7c8b3b703c59ce9614b0c46b85e3b",
+  "fileName": "11.avi",
+  "teachPlanId": 280
 }
+
+### freemaker测试页面模板
+GET {{gateway_host}}/content/fm/aa
+
+
+### 课程发布预览
+GET {{gateway_host}}/content/coursepublish/preview/124

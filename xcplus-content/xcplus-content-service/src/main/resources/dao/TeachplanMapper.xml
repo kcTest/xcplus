@@ -52,11 +52,12 @@
         <result column="parent_orderby" property="orderby"/>
         <result column="parent_courseId" property="courseId"/>
         <result column="parent_coursePubId" property="coursePubId"/>
-        <association property="teachplanMedia" javaType="com.zkc.xcplus.content.model.po.TeachplanMedia">
-            <result column="mediaRelation_Id" property="id"/>
-            <result column="mediaRelation_mediaId" property="mediaId"/>
-            <result column="mediaRelation_mediaFileName" property="mediaFilename"/>
-        </association>
+        <!--        一级节点不绑定媒资-->
+        <!--        <association property="teachplanMedia" javaType="com.zkc.xcplus.content.model.po.TeachplanMedia">-->
+        <!--            <result column="mediaRelation_Id" property="id"/>-->
+        <!--            <result column="mediaRelation_mediaId" property="mediaId"/>-->
+        <!--            <result column="mediaRelation_mediaFileName" property="mediaFilename"/>-->
+        <!--        </association>-->
         <collection property="childTreeNodes" ofType="com.zkc.xcplus.content.model.dto.TeachPlanDto">
             <id column="child_id" property="id"/>
             <result column="child_pname" property="pname"/>
@@ -68,6 +69,11 @@
             <result column="child_orderby" property="orderby"/>
             <result column="child_courseId" property="courseId"/>
             <result column="child_coursePubId" property="coursePubId"/>
+            <association property="teachplanMedia" javaType="com.zkc.xcplus.content.model.po.TeachplanMedia">
+                <result column="mediaRelation_Id" property="id"/>
+                <result column="mediaRelation_mediaId" property="mediaId"/>
+                <result column="mediaRelation_mediaFileName" property="mediaFilename"/>
+            </association>
         </collection>
     </resultMap>
 
