@@ -6,9 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Tag(name = "CoursePublishController", description = "课程发布")
@@ -29,4 +27,14 @@ public class CoursePublishController {
 		mv.addObject("model", previewInfo);
 		return mv;
 	}
+	
+	@Operation(summary = "课程提交审核")
+	@PostMapping("/submitforreview/{courseId}")
+	@ResponseBody
+	public void submitForReview(@PathVariable("courseId") Long courseId) {
+		//TODO 获取机构id
+		Long companyId = 1L;
+		coursePublishService.submitForReview(companyId, courseId);
+	}
+	
 }

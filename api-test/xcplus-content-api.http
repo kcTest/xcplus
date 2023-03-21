@@ -135,3 +135,7 @@ GET {{gateway_host}}/content/fm/aa
 
 ### 课程发布预览
 GET {{gateway_host}}/content/coursepublish/preview/124
+
+
+### 课程提交审核
+POST {{gateway_host}}/content/coursepublish/submitforreview/124

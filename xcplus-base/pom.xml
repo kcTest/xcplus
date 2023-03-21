@@ -30,6 +30,10 @@
             <artifactId>simplemagic</artifactId>
             <version>1.17</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -42,6 +42,7 @@
         <xcplus-media.model.version>0.0.1-SNAPSHOT</xcplus-media.model.version>
         <minio.version>8.5.2</minio.version>
         <xxl-job-core.version>2.3.1</xxl-job-core.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
@@ -166,6 +167,11 @@
                 <groupId>com.xuxueli</groupId>
                 <artifactId>xxl-job-core</artifactId>
                 <version>${xxl-job-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
 
