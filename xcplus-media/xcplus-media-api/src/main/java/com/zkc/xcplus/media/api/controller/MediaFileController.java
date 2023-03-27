@@ -17,6 +17,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 
 @Tag(name = "MediaFileController", description = "媒资管理")
@@ -66,6 +67,22 @@ public class MediaFileController {
 			CustomException.cast("获取文件内容失败");
 		}
 		return mediaFileService.upload(companyId, paramsDto, fileBytes, saveFolder, savePath);
+	}
+	
+	@PostMapping(value = "/upload/html", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	public UploadFileResultDto uploadHtmlFile(@RequestPart("file") MultipartFile file,
+											  @RequestParam(value = "objectName", required = false) String objectName) throws IOException {
+		//TODO 获取机构名称
+		Long companyId = 1L;
+		UploadFileParamsDto paramsDto = new UploadFileParamsDto();
+		paramsDto.setFilename(file.getOriginalFilename());
+		paramsDto.setContentType(file.getContentType());
+		paramsDto.setFileSize(file.getSize());
+		paramsDto.setFileType("001001");
+		File temp = File.createTempFile("minio", ".temp");
+		file.transferTo(temp);
+		String localFilePath = temp.getAbsolutePath();
+		return mediaFileService.uploadHtmlFile(companyId, paramsDto, localFilePath, objectName);
 	}
 	
 }

@@ -37,4 +37,13 @@ public class CoursePublishController {
 		coursePublishService.submitForReview(companyId, courseId);
 	}
 	
+	@Operation(summary = "课程发布")
+	@ResponseBody
+	@PostMapping("/{courseId}")
+	public void coursePublish(@PathVariable("courseId") Long courseId) {
+		//TODO 获取机构id
+		Long companyId = 1L;
+		coursePublishService.coursePublish(companyId, courseId);
+	}
+	
 }

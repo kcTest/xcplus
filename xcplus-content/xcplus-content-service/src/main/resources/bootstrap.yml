@@ -11,7 +11,14 @@ spring:
         group: content
         file-extension: yaml
         refresh-enabled: true
-    #  在nacos中配置 本地不起作用?
+    #        shared-configs: 被api中shared-configs覆盖
+    #          - data-id: feign-${spring.profiles.active}.yaml #远程服务调用的公共配置
+    #            group: common
+    #            refresh: true
+
+
+    #  在nacos中配置 本地被覆盖
+
     #  datasource:
     #    #    //ip 
     #    url: jdbc:mysql://centos006:1001/xcplus_content?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
@@ -21,5 +28,3 @@ spring:
     #mybatis-plus:
     #  mapper-locations:
     #    - classpath*:dao/*.xml     #修改默认文件后 指定自定义位置
-
-    

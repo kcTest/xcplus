@@ -113,4 +113,14 @@ public interface MediaFileService {
 	 * @return 媒资信息
 	 */
 	MediaFiles getMediaById(String mediaId);
+	
+	/**
+	 * 上传静态页面文件
+	 * @param companyId  机构id
+	 * @param dto        文件信息
+	 * @param localFilePath 文件路径
+	 * @param objectName   文件在minio的存放目录，不指定按日期创建目录存放
+	 * @return 媒资信息
+	 */
+	UploadFileResultDto uploadHtmlFile(Long companyId, UploadFileParamsDto dto, String localFilePath, String objectName);
 }

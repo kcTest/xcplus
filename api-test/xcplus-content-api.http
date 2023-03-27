@@ -139,3 +139,6 @@ GET {{gateway_host}}/content/coursepublish/preview/124
 
 ### 课程提交审核
 POST {{gateway_host}}/content/coursepublish/submitforreview/124
+
+### 课程发布
+POST {{gateway_host}}/content/coursepublish/124

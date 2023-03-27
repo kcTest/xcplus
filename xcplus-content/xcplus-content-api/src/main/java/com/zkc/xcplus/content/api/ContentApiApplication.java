@@ -2,6 +2,7 @@ package com.zkc.xcplus.content.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @ComponentScan("com.zkc.xcplus")
 @SpringBootApplication
+@EnableFeignClients(basePackages = "com.zkc.xcplus.content.service.feignclient")
 public class ContentApiApplication {
 	
 	public static void main(String[] args) {

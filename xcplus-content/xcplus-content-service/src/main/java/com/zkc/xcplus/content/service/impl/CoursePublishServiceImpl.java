@@ -1,29 +1,48 @@
 package com.zkc.xcplus.content.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.zkc.xcplus.base.exception.CommonError;
 import com.zkc.xcplus.base.exception.CustomException;
 import com.zkc.xcplus.content.model.dto.CourseBaseInfoDto;
 import com.zkc.xcplus.content.model.dto.CoursePreviewDto;
 import com.zkc.xcplus.content.model.dto.TeachPlanDto;
 import com.zkc.xcplus.content.model.po.CourseBase;
 import com.zkc.xcplus.content.model.po.CourseMarket;
+import com.zkc.xcplus.content.model.po.CoursePublish;
 import com.zkc.xcplus.content.model.po.CoursePublishPre;
 import com.zkc.xcplus.content.service.CourseBaseInfoService;
 import com.zkc.xcplus.content.service.CoursePublishService;
 import com.zkc.xcplus.content.service.TeachPlanService;
+import com.zkc.xcplus.content.service.config.MultipartSupportConfig;
 import com.zkc.xcplus.content.service.dao.CourseBaseMapper;
 import com.zkc.xcplus.content.service.dao.CourseMarketMapper;
+import com.zkc.xcplus.content.service.dao.CoursePublishMapper;
 import com.zkc.xcplus.content.service.dao.CoursePublishPreMapper;
+import com.zkc.xcplus.content.service.feignclient.MediaServiceClient;
+import com.zkc.xcplus.message.model.MqMessage;
+import com.zkc.xcplus.message.service.MqMessageService;
+import freemarker.cache.ClassTemplateLoader;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
+@Slf4j
 public class CoursePublishServiceImpl implements CoursePublishService {
 	
 	@Autowired
@@ -40,6 +59,15 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 	
 	@Autowired
 	private CourseBaseMapper courseBaseMapper;
+	
+	@Autowired
+	private CoursePublishMapper coursePublishMapper;
+	
+	@Autowired
+	private MqMessageService mqMessageService;
+	
+	@Autowired
+	private MediaServiceClient mediaServiceClient;
 	
 	@Override
 	public CoursePreviewDto getCoursePreviewInfo(Long courseId) {
@@ -105,4 +133,99 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 		courseBase.setAuditStatus("202003");
 		courseBaseMapper.updateById(courseBase);
 	}
+	
+	@Transactional
+	@Override
+	public void coursePublish(Long companyId, Long courseId) {
+		
+		CoursePublishPre publishPre = coursePublishPreMapper.selectById(courseId);
+		if (publishPre == null) {
+			CustomException.cast("课程预发布信息未找到");
+		}
+		if (publishPre.getCompanyId().longValue() != companyId.longValue()) {
+			CustomException.cast("只能发布本机构课程");
+		}
+		if (!"202004".equals(publishPre.getStatus())) {
+			CustomException.cast("课程未审核通过");
+		}
+		
+		// 课程发布表
+		CoursePublish publish = new CoursePublish();
+		BeanUtils.copyProperties(publishPre, publish);
+		CoursePublish publishOld = coursePublishMapper.selectById(courseId);
+		if (publishOld == null) {
+			coursePublishMapper.insert(publish);
+		} else {
+			coursePublishMapper.updateById(publish);
+		}
+		
+		//消息写入数据
+		saveCoursePublishMessage(courseId);
+		
+		//预发布表记录删除
+		coursePublishPreMapper.deleteById(publishPre);
+	}
+	
+	@Override
+	public File generateCourseHtml(Long courseId) {
+		//获取当前使用的freemarker版本
+		Configuration configuration = new Configuration(Configuration.getVersion());
+		//静态页面文件
+		File htmlFile = null;
+		try {
+			//指定页面模板目录
+			configuration.setTemplateLoader(new ClassTemplateLoader(this.getClass().getClassLoader(), "/templates"));
+			//指定页面编码
+			configuration.setDefaultEncoding("utf-8");
+			
+			//获取页面模板
+			Template template = configuration.getTemplate("course_template.ftl");
+			
+			//准备课程页面数据
+			CoursePreviewDto previewInfo = this.getCoursePreviewInfo(courseId);
+			HashMap<String, Object> map = new HashMap<>();
+			map.put("model", previewInfo);
+			
+			//填充数据后的页面字符串
+			String html = FreeMarkerTemplateUtils.processTemplateIntoString(template, map);
+			
+			//字符输出文件
+			InputStream inputStream = IOUtils.toInputStream(html, "utf-8");
+			htmlFile = File.createTempFile("coursepublish", ".html");
+			FileOutputStream outputStream = new FileOutputStream(htmlFile);
+			IOUtils.copy(inputStream, outputStream);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			log.error("页面静态化出现问题，课程id:{}", courseId, ex);
+		}
+		return htmlFile;
+	}
+	
+	@Override
+	public void uploadCourseHtml(long courseId, File file) {
+		try {
+			MultipartFile multipartFile = MultipartSupportConfig.getMultipartFile(file);
+			String ret = mediaServiceClient.uploadHtml(multipartFile, null);
+			if (ret == null) {
+				log.debug("远程调用媒资服务上传页面文件异常,课程id:{}", courseId);
+				CustomException.cast("远程调用媒资服务上传页面文件异常");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			CustomException.cast("上传静态文件异常");
+		}
+	}
+	
+	/**
+	 * 消息表 写入数据,课程发布后写入发布表 消息表，后续任务调度上传缓存到redis 上传索引到es 生成页面缓存到nginx； AP
+	 *
+	 * @param courseId 课程id
+	 */
+	private void saveCoursePublishMessage(Long courseId) {
+		MqMessage message = mqMessageService.addMessage("course_publish", String.valueOf(courseId), null, null);
+		if (message == null) {
+			CustomException.cast(CommonError.UNKNOWN_ERROR);
+		}
+	}
+	
 }

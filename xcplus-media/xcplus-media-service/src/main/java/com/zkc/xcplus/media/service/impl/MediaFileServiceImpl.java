@@ -50,6 +50,9 @@ public class MediaFileServiceImpl implements MediaFileService {
 	@Value("${minio.bucket.bigfile}")
 	private String bigFileBucket;
 	
+	@Value("${minio.bucket.html}")
+	private String htmlBucket;
+	
 	@Autowired
 	private MinioClient client;
 	
@@ -393,6 +396,36 @@ public class MediaFileServiceImpl implements MediaFileService {
 	@Override
 	public MediaFiles getMediaById(String mediaId) {
 		return mediaFilesMapper.selectById(mediaId);
+	}
+	
+	@Override
+	public UploadFileResultDto uploadHtmlFile(Long companyId, UploadFileParamsDto dto, String localFilePath, String objectName) {
+		try {
+			boolean exists = client.bucketExists(BucketExistsArgs.builder().bucket(htmlBucket).build());
+			if (!exists) {
+				throw new Exception("存储桶不存在");
+			}
+			
+			String oriFileName = dto.getFilename();
+			//扩展名得到mimeType
+			String extension = oriFileName.substring(oriFileName.lastIndexOf("."));
+			String mimeType = getMimeTypeByExtension(extension);
+			//md5作为保存后的文件名 
+			String md5Id = DigestUtils.md5DigestAsHex(new FileInputStream(localFilePath));
+			//设置默认路径
+			if (!StringUtils.hasText(objectName)) {
+				objectName = md5Id + extension;
+			}
+			addLocalFileToMinio(htmlBucket, mimeType, localFilePath, objectName);
+			MediaFiles mediaFiles = currentProxy.addFileDbInfo(companyId, dto, objectName, oriFileName, md5Id);
+			
+			UploadFileResultDto resultDto = new UploadFileResultDto();
+			BeanUtils.copyProperties(mediaFiles, resultDto);
+			return resultDto;
+		} catch (Exception e) {
+			CustomException.cast("上传文件失败: " + e.getMessage());
+		}
+		return null;
 	}
 	
 	/**
