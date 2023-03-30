@@ -23,6 +23,7 @@
         <module>xcplus-gateway</module>
         <module>xcplus-media</module>
         <module>xcplus-message</module>
+        <module>xcplus-search</module>
     </modules>
 
     <properties>
@@ -47,6 +48,7 @@
         <xcplus-message.version>0.0.1-SNAPSHOT</xcplus-message.version>
         <openfeign.version>3.8.0</openfeign.version>
         <hystrix.version>2.2.10.RELEASE</hystrix.version>
+        <spring.boot.starter.data.elasticsearch.version>3.0.5</spring.boot.starter.data.elasticsearch.version>
     </properties>
 
     <dependencies>
@@ -191,6 +193,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
                 <version>${hystrix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${spring.boot.starter.data.elasticsearch.version}</version>
             </dependency>
         </dependencies>
 

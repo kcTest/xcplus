@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: search-api
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: centos006:1005
+      discovery:
+        namespace: ns-xcplus-${spring.profiles.active}
+        group: xcplus
+      config:
+        namespace: ns-xcplus-${spring.profiles.active}
+        group: search
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: common
+            refresh: true
+
+elasticsearch:
+  hostlist: https://esnode:1016
+  course:
+    index: course_publish
+    source_fields: id,name,grade,mt,st,charge,pic,originalPrice,teachmode,validDays,createDate

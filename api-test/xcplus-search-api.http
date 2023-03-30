@@ -1,0 +1,4 @@
+
+### 搜索课程
+GET {{gateway_host}}/search/course/list?pageNo=1&keyword=spring
+Content-Type: application/json

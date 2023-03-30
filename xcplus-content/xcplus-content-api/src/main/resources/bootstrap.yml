@@ -14,7 +14,7 @@ spring:
         group: content
         file-extension: yaml
         refresh-enabled: true
-        extension-configs: #使用拓展配置 依赖项目的配置     a.yaml>ext.yaml>share.yaml>  local.yaml
+        extension-configs: #使用拓展配置 依赖项目的配置     nacos.yaml>ext.yaml>share.yaml>  local.yaml
           - data-id: content-service-${spring.profiles.active}.yaml
             group: content
             refresh: true

@@ -38,8 +38,8 @@ public class CoursePublishTask extends MessageProcessAbstract {
 		long courseId = Long.parseLong(businessKey1);
 		
 		generateCourseHtml(msg, courseId);
-//		saveCourseIndex(msg, courseId);
-//		saveCourseCache(msg, courseId);
+		saveCourseIndex(msg, courseId);
+		saveCourseCache(msg, courseId);
 		
 		return true;
 	}
@@ -89,6 +89,7 @@ public class CoursePublishTask extends MessageProcessAbstract {
 		}
 		
 		//处理
+		int i = 1 / 0;
 		
 		//更新二阶段完成状态
 		messageService.completeStageTwo(msgId);
@@ -111,6 +112,7 @@ public class CoursePublishTask extends MessageProcessAbstract {
 		}
 		
 		//处理
+		int i = 1 / 0;
 		
 		//更新三阶段完成状态
 		messageService.completeStageThree(msgId);
