@@ -20,7 +20,7 @@ public class CourseCategoryController {
 	private CourseCategoryService courseCategoryService;
 	
 	@GetMapping("/treeNodes")
-	public List<CourseCategoryTreeDto> getTreeNodes(@Parameter(description = "父节点id",required = true) String parentId) {
+	public List<CourseCategoryTreeDto> getTreeNodes(@Parameter(description = "父节点id", required = true) String parentId) {
 		return courseCategoryService.getTreeNodes(parentId);
 	}
 	
