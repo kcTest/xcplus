@@ -3,6 +3,7 @@ package com.zkc.xcplus.search.config;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.SSLContexts;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.client.ClientConfiguration;
@@ -21,12 +22,21 @@ import java.security.cert.CertificateFactory;
 @Slf4j
 public class ESClientConfig extends ElasticsearchConfiguration {
 	
+	@Value("${elasticsearch.host}")
+	private String host;
+	
+	@Value("${elasticsearch.username}")
+	private String username;
+	
+	@Value("${elasticsearch.password}")
+	private String password;
+	
 	@Override
 	public ClientConfiguration clientConfiguration() {
 		return ClientConfiguration.builder()
-				.connectedTo("https://esnode:1016")
+				.connectedTo(host)
 				.usingSsl(buildSSLContext())
-				.withBasicAuth("elastic", "123456xxx")
+				.withBasicAuth(username, password)
 				.build();
 	}
 	

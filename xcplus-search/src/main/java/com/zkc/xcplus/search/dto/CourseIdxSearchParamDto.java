@@ -8,7 +8,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class SearchCourseParamDto {
+public class CourseIdxSearchParamDto {
 	
 	/**
 	 * 关键字

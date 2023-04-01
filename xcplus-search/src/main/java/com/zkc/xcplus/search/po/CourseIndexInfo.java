@@ -1,6 +1,7 @@
 package com.zkc.xcplus.search.po;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -8,7 +9,8 @@ import java.time.LocalDateTime;
 /**
  * 课程索引信息
  */
-public class CourseIndex implements Serializable {
+@Data
+public class CourseIndexInfo implements Serializable {
 	/**
 	 * 主键
 	 */

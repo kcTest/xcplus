@@ -13,7 +13,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @ToString
-public class SearchPageResultDto<T> extends PageResult<T> {
+public class IdxSearchResultDto<T> extends PageResult<T> {
 	
 	/**
 	 * 小分类列表
@@ -25,7 +25,7 @@ public class SearchPageResultDto<T> extends PageResult<T> {
 	 */
 	private List<String> mtList;
 	
-	public SearchPageResultDto(List<T> items, long counts, long page, long pageSize) {
+	public IdxSearchResultDto(List<T> items, long counts, long page, long pageSize) {
 		super(items, counts, page, pageSize);
 	}
 }

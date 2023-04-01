@@ -2,10 +2,9 @@ package com.zkc.xcplus.content.model.dto;
 
 import com.zkc.xcplus.base.exception.ValidationGroups;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
-
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 @Data
 @Schema(description = "新增课程信息")
@@ -16,7 +15,7 @@ public class AddCourseDto {
 	 */
 	@NotEmpty(message = "新增课程名称不能为空", groups = {ValidationGroups.Insert.class})
 	@NotEmpty(message = "课程名称不能为空", groups = {ValidationGroups.Update.class})
-	@Schema(description = "课程名称", required = true)
+	@Schema(description = "课程名称", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String name;
 	
 	/**
@@ -24,7 +23,7 @@ public class AddCourseDto {
 	 */
 	@NotEmpty(message = "适用人群不能为空")
 	@Size(message = "适用人群内容过少", min = 10)
-	@Schema(description = "适用人群", required = true)
+	@Schema(description = "适用人群", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String users;
 	
 	/**
@@ -37,28 +36,28 @@ public class AddCourseDto {
 	 * 大分类
 	 */
 	@NotEmpty(message = "课程分类不能为空")
-	@Schema(description = "大分类", required = true)
+	@Schema(description = "大分类", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String mt;
 	
 	/**
 	 * 小分类
 	 */
 	@NotEmpty(message = "课程分类不能为空")
-	@Schema(description = "小分类", required = true)
+	@Schema(description = "小分类", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String st;
 	
 	/**
 	 * 课程等级
 	 */
 	@NotEmpty(message = "课程分类不能为空")
-	@Schema(description = "课程等级", required = true)
+	@Schema(description = "课程等级", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String grade;
 	
 	/**
 	 * 教育模式(common普通，record 录播，live直播等）
 	 */
 	@NotEmpty(message = "教育模式不能为空")
-	@Schema(description = "教育模式(common普通，record 录播，live直播等）", required = true)
+	@Schema(description = "教育模式(common普通，record 录播，live直播等）", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String teachmode;
 	
 	/**
@@ -70,14 +69,14 @@ public class AddCourseDto {
 	/**
 	 * 课程图片
 	 */
-	@Schema(description = "课程图片", required = true)
+	@Schema(description = "课程图片", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String pic;
 	
 	/**
 	 * 收费规则，对应数据字典
 	 */
 	@NotEmpty(message = "收费规则不能为空")
-	@Schema(description = "收费规则，对应数据字典", required = true)
+	@Schema(description = "收费规则，对应数据字典", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String charge;
 	
 	/**
