@@ -19,10 +19,10 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <!--      在线接口文档-->
+        <!--   http://localhost:1007/media/swagger-ui/index.html   在线接口文档-->
         <dependency>
             <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
         </dependency>
         <!--        根据拓展名获取对应mimeType-->
         <dependency>
@@ -43,7 +43,6 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

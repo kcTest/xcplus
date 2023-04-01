@@ -11,13 +11,13 @@ import lombok.ToString;
 @ToString
 public class BindTeachPlanMediaDto {
 	
-	@Schema(description = "媒体文件id", required = true)
+	@Schema(description = "媒体文件id", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String mediaId;
 	
-	@Schema(description = "媒体文件名称", required = true)
+	@Schema(description = "媒体文件名称", requiredMode = Schema.RequiredMode.REQUIRED)
 	private String fileName;
 	
-	@Schema(description = "课程计划标识", required = true)
+	@Schema(description = "课程计划标识", requiredMode = Schema.RequiredMode.REQUIRED)
 	private Long teachPlanId;
 	
 }
