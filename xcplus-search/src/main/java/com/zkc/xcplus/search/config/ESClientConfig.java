@@ -1,7 +1,6 @@
 package com.zkc.xcplus.search.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.conn.ssl.DefaultHostnameVerifier;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.SSLContexts;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,7 +9,6 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.client.ClientConfiguration;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchConfiguration;
 
-import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import java.io.InputStream;
 import java.security.KeyStore;
@@ -35,8 +33,6 @@ public class ESClientConfig extends ElasticsearchConfiguration {
 	
 	@Override
 	public ClientConfiguration clientConfiguration() {
-		
-		HostnameVerifier hostnameVerifier = new DefaultHostnameVerifier();
 		ClientConfiguration configuration = ClientConfiguration.builder()
 				.connectedTo(host)
 				.usingSsl(buildSslLCxt())

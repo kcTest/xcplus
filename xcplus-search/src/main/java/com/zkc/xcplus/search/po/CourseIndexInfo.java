@@ -103,6 +103,7 @@ public class CourseIndexInfo implements Serializable {
 	
 	/**
 	 * 发布时间
+	 * 日期转换问题 新增时传json或将该字段改为string
 	 */
 	@Schema(description = "发布时间")
 	private String createDate;

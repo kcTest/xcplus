@@ -103,6 +103,7 @@
                 <artifactId>xcplus-content-model</artifactId>
                 <version>${xcplus-content.model.version}</version>
             </dependency>
+            <!--            降低版本 默认4.18仓库找不到-->
             <dependency>
                 <groupId>org.webjars</groupId>
                 <artifactId>swagger-ui</artifactId>
