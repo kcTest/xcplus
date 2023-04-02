@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 
 ###查询课程
-GET {{gateway_host}}/content/coursebaseinfo/1
+GET {{gateway_host}}/content/coursebaseinfo/124
 
 ### 修改课程
 PUT {{gateway_host}}/content/coursebaseinfo/update
@@ -57,9 +57,6 @@ Content-Type: application/json
   "teachmode": "live",
   "description": null,
   "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
-  "createDate": "2019-09-03 17:48:19",
-  "changeDate": "2022-09-17 16:47:29",
-  "createPeople": "1",
   "changePeople": null,
   "auditStatus": "202004",
   "status": "203001",
@@ -113,7 +110,7 @@ Content-Type: application/json
   "grade": 2,
   "mediaType": "2",
   "startTime": "2023-03-03 06:39:26",
-  "endTime": "2023-04-03 06:39:26",
+  "endTime": "2023-04-03 06:49:26",
   "courseId": 124,
   "coursePubId": null,
   "isPreview": "0"

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "CourseIdxController", description = "课程信息索引管理")
 @RestController
-@RequestMapping("/courseidx")
+@RequestMapping("/course")
 public class CourseIdxController {
 	
 	@Autowired
@@ -22,6 +22,12 @@ public class CourseIdxController {
 	@PostMapping("/add")
 	public boolean add(@RequestBody CourseIndexInfo courseIndexInfo) {
 		return courseIdxSearchService.addCourseIdx(courseIndexInfo);
+	}
+	
+	@Operation(summary = "课程信息索引删除")
+	@PostMapping("/delete/{courseid}")
+	public boolean add(@PathVariable String courseid) {
+		return courseIdxSearchService.deleteCourseIdx(courseid);
 	}
 	
 	@Operation(summary = "搜索课程信息索引")

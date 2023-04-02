@@ -1,6 +1,7 @@
 package com.zkc.xcplus.search.config;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.http.conn.ssl.DefaultHostnameVerifier;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.SSLContexts;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,6 +10,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.client.ClientConfiguration;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchConfiguration;
 
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import java.io.InputStream;
 import java.security.KeyStore;
@@ -33,17 +35,20 @@ public class ESClientConfig extends ElasticsearchConfiguration {
 	
 	@Override
 	public ClientConfiguration clientConfiguration() {
-		return ClientConfiguration.builder()
+		
+		HostnameVerifier hostnameVerifier = new DefaultHostnameVerifier();
+		ClientConfiguration configuration = ClientConfiguration.builder()
 				.connectedTo(host)
-				.usingSsl(buildSSLContext())
+				.usingSsl(buildSslLCxt())
 				.withBasicAuth(username, password)
 				.build();
+		return configuration;
 	}
 	
-	private static SSLContext buildSSLContext() {
-		ClassPathResource resource = new ClassPathResource("http_ca.crt");
-		SSLContext sslContext = null;
+	private static SSLContext buildSslLCxt() {
+		final SSLContext sslContext;
 		try {
+			ClassPathResource resource = new ClassPathResource("http_ca.crt");
 			CertificateFactory factory = CertificateFactory.getInstance("X.509");
 			Certificate trustedCa;
 			try (InputStream is = resource.getInputStream()) {
@@ -56,9 +61,11 @@ public class ESClientConfig extends ElasticsearchConfiguration {
 					.loadTrustMaterial(trustStore, null);
 			sslContext = sslContextBuilder.build();
 		} catch (Exception e) {
-			log.error("ES连接认证失败", e);
+			log.error("加载证书异常", e);
+			e.printStackTrace();
+			return null;
 		}
-		
 		return sslContext;
 	}
+	
 }

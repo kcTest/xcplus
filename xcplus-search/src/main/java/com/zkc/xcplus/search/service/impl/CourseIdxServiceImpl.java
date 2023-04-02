@@ -1,6 +1,9 @@
 package com.zkc.xcplus.search.service.impl;
 
 import co.elastic.clients.elasticsearch._types.aggregations.AggregationBuilders;
+import co.elastic.clients.elasticsearch._types.aggregations.Buckets;
+import co.elastic.clients.elasticsearch._types.aggregations.StringTermsAggregate;
+import co.elastic.clients.elasticsearch._types.aggregations.StringTermsBucket;
 import co.elastic.clients.elasticsearch._types.query_dsl.Query;
 import com.zkc.xcplus.base.exception.CustomException;
 import com.zkc.xcplus.base.model.PageParams;
@@ -9,10 +12,10 @@ import com.zkc.xcplus.search.dto.IdxSearchResultDto;
 import com.zkc.xcplus.search.po.CourseIndexInfo;
 import com.zkc.xcplus.search.service.CourseIdxService;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.elasticsearch.client.elc.ElasticsearchAggregation;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchAggregations;
 import org.springframework.data.elasticsearch.client.elc.NativeQuery;
 import org.springframework.data.elasticsearch.client.elc.NativeQueryBuilder;
@@ -30,6 +33,7 @@ import org.springframework.util.StringUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Service
@@ -93,7 +97,7 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 	public IdxSearchResultDto<CourseIndexInfo> queryCoursePublishIndex(PageParams pageParams, CourseIdxSearchParamDto searchCourseParamDto) {
 		NativeQueryBuilder queryBuilder = NativeQuery.builder();
 		//包含字段
-		String[] sourceFieldsArr = sourceFields.split("");
+		String[] sourceFieldsArr = sourceFields.split(",");
 		SourceFilter sourceFilter = new FetchSourceFilter(sourceFieldsArr, new String[]{});
 		queryBuilder.withSourceFilter(sourceFilter);
 		//分页
@@ -126,7 +130,7 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 		//分类聚合
 		queryBuilder.withAggregation("mtAgg", AggregationBuilders.terms(f -> f.field("mtName").size(100)));
 		queryBuilder.withAggregation("stAgg", AggregationBuilders.terms(f -> f.field("stName").size(100)));
-		//高亮
+		//关键字高亮
 		HighlightParameters parameters = HighlightParameters.builder().withPreTags("<font class='eslight'>").withPostTags("</font>").build();
 		Highlight highlight = new Highlight(parameters, List.of(new HighlightField("name")));
 		HighlightQuery highlightQuery = new HighlightQuery(highlight, null);
@@ -141,6 +145,7 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 		long totalHits = searchHits.getTotalHits();
 		//数据列表
 		List<CourseIndexInfo> courseIndexLst = new ArrayList<>();
+		//取出高亮字段
 		for (SearchHit<CourseIndexInfo> hit : searchHits) {
 			CourseIndexInfo indexInfo = hit.getContent();
 			List<String> field = hit.getHighlightField("name");
@@ -151,18 +156,19 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 			indexInfo.setName(sb.toString());
 			courseIndexLst.add(indexInfo);
 		}
-		//取出高亮字段
 		//分类聚合结果处理
 		List<String> mtNameLst = new ArrayList<>();
 		List<String> stNameLst = new ArrayList<>();
-		ElasticsearchAggregations elasticsearchAggregations = (ElasticsearchAggregations) searchHits.getAggregations().aggregations();
-		Terms mtNameTerms = (Terms) elasticsearchAggregations.get("mtName");
-		for (Terms.Bucket bucket : mtNameTerms.getBuckets()) {
-			mtNameLst.add(bucket.getKeyAsString());
-		}
-		Terms stNameTerms = (Terms) elasticsearchAggregations.get("stName");
-		for (Terms.Bucket bucket : stNameTerms.getBuckets()) {
-			stNameLst.add(bucket.getKeyAsString());
+		if (searchHits.getAggregations() != null) {
+			Map<String, ElasticsearchAggregation> aggMap = ((ElasticsearchAggregations) searchHits.getAggregations()).aggregationsAsMap();
+			Buckets<StringTermsBucket> mtAggBuckets = ((StringTermsAggregate) aggMap.get("mtAgg").aggregation().getAggregate()._get()).buckets();
+			for (StringTermsBucket bucket : mtAggBuckets.array()) {
+				mtNameLst.add(bucket.key().stringValue());
+			}
+			Buckets<StringTermsBucket> stAggBuckets = ((StringTermsAggregate) aggMap.get("stAgg").aggregation().getAggregate()._get()).buckets();
+			for (StringTermsBucket bucket : stAggBuckets.array()) {
+				stNameLst.add(bucket.key().stringValue());
+			}
 		}
 		//填充结果
 		IdxSearchResultDto<CourseIndexInfo> ret = new IdxSearchResultDto<>(courseIndexLst, totalHits, pageNo, pageSize);

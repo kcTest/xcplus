@@ -2,14 +2,15 @@ package com.zkc.xcplus.search.po;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * 课程索引信息
  */
 @Data
+@ToString
 public class CourseIndexInfo implements Serializable {
 	/**
 	 * 主键
@@ -104,7 +105,7 @@ public class CourseIndexInfo implements Serializable {
 	 * 发布时间
 	 */
 	@Schema(description = "发布时间")
-	private LocalDateTime createDate;
+	private String createDate;
 	
 	
 	/**
