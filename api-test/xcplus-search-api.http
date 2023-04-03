@@ -1,6 +1,6 @@
 
 ### 添加课程
-POST {{search_host}}/search/course/add
+POST {{search_host}}/search/course/idx/add
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ### 添加课程
-POST {{search_host}}/search/course/delete/125
+POST {{search_host}}/search/course/idx/delete/124
 Content-Type: application/json
 
 ### 搜索课程

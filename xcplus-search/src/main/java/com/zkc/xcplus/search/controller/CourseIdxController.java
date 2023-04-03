@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Tag(name = "CourseIdxController", description = "课程信息索引管理")
+@Tag(name = "CourseIdxController", description = "课程索引管理")
 @RestController
 @RequestMapping("/course")
 public class CourseIdxController {
@@ -18,22 +18,21 @@ public class CourseIdxController {
 	@Autowired
 	private CourseIdxService courseIdxSearchService;
 	
-	@Operation(summary = "课程信息索引添加")
-	@PostMapping("/add")
+	@Operation(summary = "课程索引添加")
+	@PostMapping("/idx/add")
 	public boolean add(@RequestBody CourseIndexInfo courseIndexInfo) {
 		return courseIdxSearchService.addCourseIdx(courseIndexInfo);
 	}
 	
-	@Operation(summary = "课程信息索引删除")
-	@PostMapping("/delete/{courseid}")
+	@Operation(summary = "课程索引删除")
+	@PostMapping("/idx/delete/{courseid}")
 	public boolean add(@PathVariable String courseid) {
 		return courseIdxSearchService.deleteCourseIdx(courseid);
 	}
 	
-	@Operation(summary = "搜索课程信息索引")
+	@Operation(summary = "搜索课程索引")
 	@GetMapping("/list")
 	public IdxSearchResultDto<CourseIndexInfo> list(PageParams pageParams, CourseIdxSearchParamDto dto) {
 		return courseIdxSearchService.queryCoursePublishIndex(pageParams, dto);
 	}
-	
 }

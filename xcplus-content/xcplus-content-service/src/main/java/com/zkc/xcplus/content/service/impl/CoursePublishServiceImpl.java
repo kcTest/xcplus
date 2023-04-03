@@ -19,6 +19,8 @@ import com.zkc.xcplus.content.service.dao.CourseMarketMapper;
 import com.zkc.xcplus.content.service.dao.CoursePublishMapper;
 import com.zkc.xcplus.content.service.dao.CoursePublishPreMapper;
 import com.zkc.xcplus.content.service.feignclient.MediaServiceClient;
+import com.zkc.xcplus.content.service.feignclient.SearchServiceClient;
+import com.zkc.xcplus.content.service.po.CourseIndexInfo;
 import com.zkc.xcplus.message.model.MqMessage;
 import com.zkc.xcplus.message.service.MqMessageService;
 import freemarker.cache.ClassTemplateLoader;
@@ -68,6 +70,9 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 	
 	@Autowired
 	private MediaServiceClient mediaServiceClient;
+	
+	@Autowired
+	private SearchServiceClient searchServiceClient;
 	
 	@Override
 	public CoursePreviewDto getCoursePreviewInfo(Long courseId) {
@@ -166,6 +171,18 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 		coursePublishPreMapper.deleteById(publishPre);
 	}
 	
+	/**
+	 * 消息表 写入数据,课程发布后写入发布表 消息表，后续任务调度上传缓存到redis 上传索引到es 生成页面缓存到nginx； AP
+	 *
+	 * @param courseId 课程id
+	 */
+	private void saveCoursePublishMessage(Long courseId) {
+		MqMessage message = mqMessageService.addMessage("course_publish", String.valueOf(courseId), null, null);
+		if (message == null) {
+			CustomException.cast(CommonError.UNKNOWN_ERROR);
+		}
+	}
+	
 	@Override
 	public File generateCourseHtml(Long courseId) {
 		//获取当前使用的freemarker版本
@@ -205,7 +222,7 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 	public void uploadCourseHtml(long courseId, File file) {
 		try {
 			MultipartFile multipartFile = MultipartSupportConfig.getMultipartFile(file);
-			String ret = mediaServiceClient.uploadHtml(multipartFile, null);
+			String ret = mediaServiceClient.uploadHtml(multipartFile, courseId + ".html");
 			if (ret == null) {
 				log.debug("远程调用媒资服务上传页面文件异常,课程id:{}", courseId);
 				CustomException.cast("远程调用媒资服务上传页面文件异常");
@@ -216,16 +233,21 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 		}
 	}
 	
-	/**
-	 * 消息表 写入数据,课程发布后写入发布表 消息表，后续任务调度上传缓存到redis 上传索引到es 生成页面缓存到nginx； AP
-	 *
-	 * @param courseId 课程id
-	 */
-	private void saveCoursePublishMessage(Long courseId) {
-		MqMessage message = mqMessageService.addMessage("course_publish", String.valueOf(courseId), null, null);
-		if (message == null) {
-			CustomException.cast(CommonError.UNKNOWN_ERROR);
+	@Override
+	public boolean addCourseIdx(CourseIndexInfo courseIndexInfo) {
+		try {
+			boolean ret = searchServiceClient.addCourseIdx(courseIndexInfo);
+			if (!ret) {
+				log.debug("远程调用媒资服务上传页面文件异常,课程索引:{}", courseIndexInfo);
+				CustomException.cast("远程调用媒资服务上传页面文件异常");
+			}
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			CustomException.cast("保存课程索引异常");
 		}
+		return false;
 	}
+	
 	
 }

@@ -5,6 +5,7 @@ import co.elastic.clients.elasticsearch._types.aggregations.Buckets;
 import co.elastic.clients.elasticsearch._types.aggregations.StringTermsAggregate;
 import co.elastic.clients.elasticsearch._types.aggregations.StringTermsBucket;
 import co.elastic.clients.elasticsearch._types.query_dsl.Query;
+import com.alibaba.fastjson.JSON;
 import com.zkc.xcplus.base.exception.CustomException;
 import com.zkc.xcplus.base.model.PageParams;
 import com.zkc.xcplus.search.dto.CourseIdxSearchParamDto;
@@ -57,9 +58,10 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 		if (id == null) {
 			CustomException.cast("课程id为空");
 		}
+		String sourceStr = JSON.toJSONString(courseIndexInfo);
 		IndexQueryBuilder builder = new IndexQueryBuilder();
 		builder.withIndex(courseIdxName).withId(String.valueOf(id)).withOpType(IndexQuery.OpType.CREATE)
-				.withObject(courseIndexInfo);
+				.withSource(sourceStr);
 		
 		String docId = operations.index(builder.build(), IndexCoordinates.of(courseIdxName));
 		if (!StringUtils.hasText(docId)) {
@@ -106,7 +108,7 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 		PageRequest pageRequest = PageRequest.of(pageNo.intValue() - 1, pageSize.intValue());
 		queryBuilder.withPageable(pageRequest);
 		//关键词匹配
-		String keyword = searchCourseParamDto.getKeyword();
+		String keyword = searchCourseParamDto.getKeywords();
 		String grade = searchCourseParamDto.getGrade();
 		if (StringUtils.hasText(keyword)) {
 			Query matchQuery1 = Query.of(f -> f.match(v -> v.field("name").query(keyword).boost(10f).minimumShouldMatch("70%")));
@@ -149,11 +151,13 @@ public class CourseIdxServiceImpl implements CourseIdxService {
 		for (SearchHit<CourseIndexInfo> hit : searchHits) {
 			CourseIndexInfo indexInfo = hit.getContent();
 			List<String> field = hit.getHighlightField("name");
-			StringBuffer sb = new StringBuffer();
-			for (String s : field) {
-				sb.append(s);
+			if (field.size() > 0) {
+				StringBuffer sb = new StringBuffer();
+				for (String s : field) {
+					sb.append(s);
+				}
+				indexInfo.setName(sb.toString());
 			}
-			indexInfo.setName(sb.toString());
 			courseIndexLst.add(indexInfo);
 		}
 		//分类聚合结果处理

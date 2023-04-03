@@ -1,12 +1,10 @@
-package com.zkc.xcplus.search.po;
+package com.zkc.xcplus.content.service.po;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -115,7 +113,6 @@ public class CourseIndexInfo implements Serializable {
 	@Schema(description = "发布时间")
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@JSONField(format = "yyyy-MM-dd HH:mm:ss")
-	@Field(type = FieldType.Date, pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime createDate;
 	
 	

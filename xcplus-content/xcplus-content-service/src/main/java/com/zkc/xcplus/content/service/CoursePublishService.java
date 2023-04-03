@@ -1,6 +1,7 @@
 package com.zkc.xcplus.content.service;
 
 import com.zkc.xcplus.content.model.dto.CoursePreviewDto;
+import com.zkc.xcplus.content.service.po.CourseIndexInfo;
 
 import java.io.File;
 
@@ -42,10 +43,18 @@ public interface CoursePublishService {
 	File generateCourseHtml(Long courseId);
 	
 	/**
-	 * 上传静态页面文件到minio
+	 * 上传静态页面文件到minio 前端默认取 课程id.html 文件
 	 *
 	 * @param courseId 课程id
 	 * @param file     静态文件
 	 */
 	void uploadCourseHtml(long courseId, File file);
+	
+	/**
+	 * 保存课程索引到ES
+	 *
+	 * @param courseIndexInfo 课程索引
+	 * @return 保存是否成功
+	 */
+	boolean addCourseIdx(CourseIndexInfo courseIndexInfo);
 }

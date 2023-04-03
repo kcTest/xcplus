@@ -3,11 +3,17 @@ package com.zkc.xcplus.content.service.jobhandler;
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import com.zkc.xcplus.base.exception.CustomException;
+import com.zkc.xcplus.content.model.dto.CourseBaseInfoDto;
+import com.zkc.xcplus.content.model.po.CoursePublish;
+import com.zkc.xcplus.content.service.CourseBaseInfoService;
 import com.zkc.xcplus.content.service.CoursePublishService;
+import com.zkc.xcplus.content.service.dao.CoursePublishMapper;
+import com.zkc.xcplus.content.service.po.CourseIndexInfo;
 import com.zkc.xcplus.message.model.MqMessage;
 import com.zkc.xcplus.message.service.MessageProcessAbstract;
 import com.zkc.xcplus.message.service.MqMessageService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -22,6 +28,9 @@ public class CoursePublishTask extends MessageProcessAbstract {
 	
 	@Autowired
 	private CoursePublishService coursePublishService;
+	
+	@Autowired
+	private CoursePublishMapper coursePublishMapper;
 	
 	@XxlJob("CoursePublishJobHandler")
 	public void coursePublishJobHandler() {
@@ -73,7 +82,7 @@ public class CoursePublishTask extends MessageProcessAbstract {
 	}
 	
 	/**
-	 * 课程索引上传到es
+	 * 保存课程索引到ES
 	 *
 	 * @param msg      消息
 	 * @param courseId 课程id
@@ -84,12 +93,15 @@ public class CoursePublishTask extends MessageProcessAbstract {
 		MqMessageService messageService = this.getMqMessageService();
 		int stageTwo = messageService.getStageTwo(msgId);
 		if (stageTwo > 0) {
-			log.debug("上传课程索引到ES已完成,不需要处理");
+			log.debug("保存课程索引到ES已完成,不需要处理");
 			return;
 		}
 		
 		//处理
-		int i = 1 / 0;
+		CoursePublish coursePublish = coursePublishMapper.selectById(courseId);
+		CourseIndexInfo indexInfo = new CourseIndexInfo();
+		BeanUtils.copyProperties(coursePublish, indexInfo);
+		coursePublishService.addCourseIdx(indexInfo);
 		
 		//更新二阶段完成状态
 		messageService.completeStageTwo(msgId);
@@ -107,7 +119,7 @@ public class CoursePublishTask extends MessageProcessAbstract {
 		MqMessageService messageService = this.getMqMessageService();
 		int stageThree = messageService.getStageThree(msgId);
 		if (stageThree > 0) {
-			log.debug("上传课程索引到ES已完成,不需要处理");
+			log.debug("保存课程缓存到Redis已完成,不需要处理");
 			return;
 		}
 		

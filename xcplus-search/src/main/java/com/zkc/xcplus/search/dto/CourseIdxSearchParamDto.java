@@ -13,7 +13,7 @@ public class CourseIdxSearchParamDto {
 	/**
 	 * 关键字
 	 */
-	private String keyword;
+	private String keywords;
 	
 	/**
 	 * 大分类
