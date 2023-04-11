@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: centos006:1005
+      discovery:
+        namespace: ns-xcplus-${spring.profiles.active}
+        group: xcplus
+      config:
+        namespace: ns-xcplus-${spring.profiles.active}
+        group: auth
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: common
+            refresh: true

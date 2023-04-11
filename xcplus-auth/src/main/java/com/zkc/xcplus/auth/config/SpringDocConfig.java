@@ -1,4 +1,4 @@
-package com.zkc.xcplus.search.config;
+package com.zkc.xcplus.auth.config;
 
 import com.zkc.xcplus.base.config.BaseSpringDocConfig;
 import com.zkc.xcplus.base.model.SwaggerProperties;
@@ -17,7 +17,7 @@ public class SpringDocConfig extends BaseSpringDocConfig {
 	@Override
 	public SwaggerProperties swaggerProperties() {
 		return SwaggerProperties.builder()
-				.apiBasePackage("com.zkc.xcplus.search.controller")
+				.apiBasePackage("com.zkc.xcplus.oauth.controller")
 				.title(title)
 				.description(description)
 				.version("1.0")
