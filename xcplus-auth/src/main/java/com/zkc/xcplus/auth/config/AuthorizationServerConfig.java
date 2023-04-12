@@ -82,19 +82,18 @@ public class AuthorizationServerConfig {
 	@Bean
 	@Order(Ordered.HIGHEST_PRECEDENCE)
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		//请求最先匹配到的SecurityFilterChain有效 
 		//默认配置 authorization code 访问授权相关端点需要进行用户登录授权 需要配置formLogin 
 //		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
-		OAuth2AuthorizationServerConfigurer configurer = new OAuth2AuthorizationServerConfigurer();
-		RequestMatcher endpointsMatcher = configurer.getEndpointsMatcher();
+		OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = new OAuth2AuthorizationServerConfigurer();
+		RequestMatcher endpointsMatcher = authorizationServerConfigurer.getEndpointsMatcher();
 		http
-				.securityMatcher(endpointsMatcher)
+//				.securityMatcher(endpointsMatcher) 移除授权相关端点身份验证
 				.authorizeHttpRequests(authorize ->
-						authorize.requestMatchers("/oauth2/token")
-								.permitAll()
-								.anyRequest().authenticated()
+						authorize.anyRequest().authenticated()
 				)
 				.csrf(csrf -> csrf.ignoringRequestMatchers(endpointsMatcher))
-				.apply(configurer);
+				.apply(authorizationServerConfigurer);
 		http.apply(http.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
 				.tokenEndpoint((tokenEndpoint) -> tokenEndpoint.accessTokenRequestConverter(
 						new DelegatingAuthenticationConverter(Arrays.asList(
@@ -106,7 +105,7 @@ public class AuthorizationServerConfig {
 		SecurityFilterChain securityFilterChain = http.formLogin(Customizer.withDefaults()).build();
 		//添加自定义 authenticationProvider
 		http.authenticationProvider(createOAuth2ResourceOwnerPasswordAuthenticationProvider(http));
-		return securityFilterChain;//顺序?
+		return securityFilterChain;
 	}
 	
 	/**
@@ -179,8 +178,9 @@ public class AuthorizationServerConfig {
 				//请求code时scope匹配
 				.scope("all")
 				.tokenSettings(TokenSettings.builder()
-						.accessTokenTimeToLive(Duration.ofHours(2))
-						.refreshTokenTimeToLive(Duration.ofDays(3))
+						.authorizationCodeTimeToLive(Duration.ofMinutes(10))
+						.accessTokenTimeToLive(Duration.ofDays(1))
+						.refreshTokenTimeToLive(Duration.ofDays(2))
 						.reuseRefreshTokens(false).build())
 				//必填 code\token 追加到url
 				.redirectUri(redirectUri)
@@ -189,7 +189,7 @@ public class AuthorizationServerConfig {
 	}
 	
 	/**
-	 * token使用jwt形式  从本地jks文件中获取秘钥
+	 * TokenSettings中token默认使用jwt形式  需定义JWKSource 从本地jks文件中获取秘钥
 	 */
 	@Bean
 	public JWKSource<SecurityContext> jwkSource(KeyPair keyPair) {
