@@ -24,6 +24,7 @@
         <module>xcplus-media</module>
         <module>xcplus-message</module>
         <module>xcplus-search</module>
+        <module>xcplus-auth</module>
     </modules>
 
     <properties>
@@ -50,6 +51,9 @@
         <hystrix.version>2.2.10.RELEASE</hystrix.version>
         <spring.boot.starter.data.elasticsearch.version>3.0.5</spring.boot.starter.data.elasticsearch.version>
         <commons-io.version>2.11.0</commons-io.version>
+        <authorization-server.version>1.0.1</authorization-server.version>
+        <spring-security-config.version>6.0.1</spring-security-config.version>
+
     </properties>
 
     <dependencies>
@@ -212,21 +216,20 @@
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-oauth2-authorization-server</artifactId>
+                <version>${authorization-server.version}</version>
+            </dependency>
+            <!--            授权服务依赖 降低版本-->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security-config.version}</version>
+            </dependency>
+
         </dependencies>
 
     </dependencyManagement>
-
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>3.0.5</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
 </project>

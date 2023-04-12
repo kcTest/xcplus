@@ -1,0 +1,45 @@
+# keytool -genkey -alias alias -keyalg RSA -keysize 2048 -keystore jwt.jks -validity 365 -keypass keypass -storepass keypass
+
+### AUTHORIZATION_CODE 获取授code  需要response_type+client_id+scope 使用网页登录测试
+# GET {{auth_host}}/auth/oauth2/authorize?response_type=code&client_id=xcWebApp&scope=all
+
+### AUTHORIZATION_CODE 获取token
+POST {{auth_host}}/auth/oauth2/token?grant_type=authorization_code&client_id=xcWebApp&client_secret=xcWebApp&code=qkF8VodXYBxkJVO2LdEIFA9o6Nom5CjJnkcbbjp-JmbtVV5qL3rctThCJwlHZqs1Qe3SuLghRV_ctaHIgiixXLoPGascpUOyfcoiE4cMRlr98OhjyK0_x_AMA6201E_i
+
+#{
+#  "access_token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODEzMDE5MDksInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTM4ODMwOSwiaWF0IjoxNjgxMzAxOTA5fQ.FkIZ3NVvzJ7y-tDEe7855unQTYUHLLkVCYoTsMW7t9xCArnVilDQXpt4KQXjTQwwSHjKniyxFfGLUTtjC_bsCMsJgLyOtbCYrip2agNJctm6BCMuiy8N18GhvexdNA73BZT4218cFpiyVXff9U9ce6QHQJzAFCSpd6AFiivT8jfcykgDbsrKKnNTj6Rv1wNZfPanaqZfCrMMmrGoFZByTecEwSw6qf-jKGKjrup_Lgj-UBgIkEeSCZDRSWD3qIEDNTsjjpYTx90DflOOozw0MZM2dXr5vt3qC3HQQn2IdmSihR5IIkjKmw5uFH2dkVME7jpm-EPvc_6v2EKl3_vC4Q",
+#  "refresh_token": "-EOVTzcUgqTNcxdaIDDKsGsP4lVoKx_x_8LBujpcIkw_apeo5JaLPYvZw3FNFCASgRTtYXFg5iL91El8yw0u-WdJH-FXy80Z9e83MovkJU2wYz6xFmCoyKQjDR0ifJOH",
+#  "scope": "all",
+#  "token_type": "Bearer",
+#  "expires_in": 86399
+#}
+
+### Refreshing an Access Token 
+POST {{auth_host}}/auth/oauth2/token?grant_type=refresh_token&client_id=xcWebApp&client_secret=xcWebApp&refresh_token=MhADG9R576_YTG5JqVN_daK_SXNCCpk65QqMjtqJwVvsPKN_W-wWeVz6ILMQkndDKhfM6ZDJqn1Lzpob71X8ia1Wxli7i5FQ1shtGNDfedE14HK1XtXxs5aag1S7M-Z_
+
+#{
+#  "access_token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODEyODY2OTgsInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTM3MzA5OCwiaWF0IjoxNjgxMjg2Njk4fQ.JssX7ooOwQw8StPIUWaMtiJ3_RiM_FJe0YWFjDVdV7EM3Ok4uP8O8zhqqdKptYGWI7TnTCkdMfe5z9wihBsWA7GBHwLEy8zkjOAX3X8MCUTb6n7s_nusH7L_IdVQZCZa9GlIL9QHja0J8w3sHo6Mv0hd5FzgC5PFWBSp_yLuJVSsY-JQy7Bw4XTKGLh6-HDW7_3hAbhUb_-eFtk4kUyFUjtDaj9WxLnhmTWTN250KN_fwWdEicziU-vrR_LIfHb-DJwkGlvcisCZiYmoQaiuXUWDEFaU3oKliX3uQ1LrfatpR8Xg8wyn5_3BGHrMaSD3imjEGMC_AgxX5sTea5q_xA",
+#  "refresh_token": "YjN28lw8oG4d6SK8L6tpTjgBnhK1ffYkqb0tIPka3YnAetBSzLfzlmGFL7SdU5IaXKYS8p9LsinDDSzLTJOUPjPJCWuMRdhQaZvf3EK5yY8jCWC_nd_WBMWAuU4c5pPT",
+#  "scope": "all",
+#  "token_type": "Bearer",
+#  "expires_in": 86400
+#}
+
+
+### PASSWORD 获取token
+POST {{auth_host}}/auth/oauth2/token?grant_type=password&client_id=xcWebApp&client_secret=xcWebApp&username=test&password=123
+
+#{
+#  "access_token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODEzMDIxMTUsInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTM4ODUxNSwiaWF0IjoxNjgxMzAyMTE1fQ.ZZnmMoC6pQt4EwluWVBVx7Qg8gB8jtxPSL3k4F1a6sPsfuTpRKT0QPOFo5RpfwEC-kCI1749l7LJ0bV4ebzWfOT8HdNd91mZnhEn4Ddr9sit1t-GaQ2EYX8Ocsuc7MGKElj3yy-hUygensay9pcScuBmH5vcd9Q3z1hfjrRmUTwXzrmEjlB2XPpPbtj8ZmmfYMfCEV9wsVRqjBEvilFekmGuxuCTQPrpMpxKKJCMwPYBTJquWjYUuPudZQCQdNZzX13qZrIjIG1uHgC4ce64JSqf6hhWRnGrKCv1Iw4FkDoScKkiKU5mgInM5cJwensJb9AK8_2AEjU8EGcEDiitgw",
+#  "refresh_token": "ygE8b0msvj_5OQvlTuDMPDaL147SB4SXRJWozRtNIqSHLuNUqlIBhmOyJqLpZtg_EIYKfrc9uZ-exAQdqBhm6zgToWnp9NpyBcGcvXNvVD8CcyKuhoVU0mjDPAySd4nO",
+#  "scope": "all",
+#  "token_type": "Bearer",
+#  "expires_in": 86400
+#}
+
+### test
+GET {{auth_host}}/auth/test/success
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODEyODc3MjEsInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTM3NDEyMSwiaWF0IjoxNjgxMjg3NzIxfQ.lYRVdin6iB4Q3xDjk_TkFLEdIvp8JT6gvd5P8En2ah8Hi3Y5qkGA-aqPJWflkdH_K9VoERviDduUu-Z1C_En9R9OAPV5159kWnIDPlkQR0tOrwK_MthIw7_Gkw6RCm7yGNN1hHYaPo8BuREbrHqWzZXvXctLOwrYlMgulPV2k1HwHNV0bB7YhC99EqZiNKMOjlYBjUgz0M-yy8U3CeRjvCHgi1rc4cR_OvxZl-a-XKZYMDWTZxfnWVHSRBc6DibxKDuCcj3V3fNS36sqX9u_FJ4ofR0ZHNKaL0eKNmqyA38KleLBWbKe8s2WYzw_dFGqBpCKomqCvxv00nqW76Ctow
+
+### jwk
+GET {{auth_host}}/auth/oauth2/jwks
