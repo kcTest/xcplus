@@ -21,8 +21,6 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
@@ -43,7 +41,6 @@ import org.springframework.security.oauth2.server.authorization.web.authenticati
 import org.springframework.security.oauth2.server.authorization.web.authentication.OAuth2AuthorizationCodeAuthenticationConverter;
 import org.springframework.security.oauth2.server.authorization.web.authentication.OAuth2ClientCredentialsAuthenticationConverter;
 import org.springframework.security.oauth2.server.authorization.web.authentication.OAuth2RefreshTokenAuthenticationConverter;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.rsa.crypto.KeyStoreKeyFactory;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -144,14 +141,6 @@ public class AuthorizationServerConfig {
 	}
 	
 	@Bean
-	public UserDetailsService userDetailsService() {
-		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-		//BCryptPasswordEncoder加密 123
-		manager.createUser(User.withUsername("test").password("123").authorities("r1", "r2").passwordEncoder(passwordEncoder()::encode).build());
-		return manager;
-	}
-	
-	@Bean
 	public PasswordEncoder passwordEncoder() {
 		//与加密密码时匹配  登录后使用该PasswordEncoder加密明文密码与用户已加密密码比较；client_secret同样
 		//default uses strength 10
@@ -185,6 +174,8 @@ public class AuthorizationServerConfig {
 	
 	/**
 	 * TokenSettings中token默认使用jwt形式  需定义JWKSource 从本地jks文件中获取秘钥
+	 * If a JwtEncoder @Bean or JWKSource<SecurityContext> @Bean is registered,
+	 * then a JwtGenerator is additionally composed in the DelegatingOAuth2TokenGenerator.
 	 */
 	@Bean
 	public JWKSource<SecurityContext> jwkSource(KeyPair keyPair) {
