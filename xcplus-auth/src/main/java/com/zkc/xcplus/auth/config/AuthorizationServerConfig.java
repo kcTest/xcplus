@@ -23,7 +23,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
@@ -34,6 +34,7 @@ import org.springframework.security.oauth2.server.authorization.OAuth2Authorizat
 import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
+import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
@@ -45,7 +46,6 @@ import org.springframework.security.oauth2.server.authorization.web.authenticati
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.rsa.crypto.KeyStoreKeyFactory;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import java.security.KeyPair;
 import java.security.interfaces.RSAPrivateKey;
@@ -84,16 +84,7 @@ public class AuthorizationServerConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		//请求最先匹配到的SecurityFilterChain有效 
 		//默认配置 authorization code 访问授权相关端点需要进行用户登录授权 需要配置formLogin 
-//		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
-		OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = new OAuth2AuthorizationServerConfigurer();
-		RequestMatcher endpointsMatcher = authorizationServerConfigurer.getEndpointsMatcher();
-		http
-//				.securityMatcher(endpointsMatcher) 移除授权相关端点身份验证
-				.authorizeHttpRequests(authorize ->
-						authorize.anyRequest().authenticated()
-				)
-				.csrf(csrf -> csrf.ignoringRequestMatchers(endpointsMatcher))
-				.apply(authorizationServerConfigurer);
+		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
 		http.apply(http.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
 				.tokenEndpoint((tokenEndpoint) -> tokenEndpoint.accessTokenRequestConverter(
 						new DelegatingAuthenticationConverter(Arrays.asList(
@@ -136,32 +127,35 @@ public class AuthorizationServerConfig {
 	
 	@Bean
 	public SecurityFilterChain standardSecurityFilterChain(HttpSecurity http) throws Exception {
+		//authenticate with a username/password，  
+		//Reading the Username & Password ,(Form \ Basic)
+		//Basic HTTP Authentication  请求头: Authorization: Basic+Base64(用户名:密码)
+		//Form Login 登录读取用户名和密码
 		// 不包含context-path  其余url路径如果匹配到也需要身份验证 需要配置formLogin 
 		http.authorizeHttpRequests(authorize -> {
 					authorize
 							//默认formLogin/login 允许访问   默认错误页面 允许访问 
 							.requestMatchers("/login").permitAll()
 							.requestMatchers("/error/**").permitAll()
-							.requestMatchers("/jwk/**").permitAll()
 							.anyRequest().authenticated();
 				}
 		);
 		return http.formLogin(Customizer.withDefaults()).build();
 	}
 	
-	/**
-	 * 临时
-	 */
 	@Bean
 	public UserDetailsService userDetailsService() {
 		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-		manager.createUser(User.withUsername("test").password("123").authorities("r1", "r2").build());
+		//BCryptPasswordEncoder加密 123
+		manager.createUser(User.withUsername("test").password("123").authorities("r1", "r2").passwordEncoder(passwordEncoder()::encode).build());
 		return manager;
 	}
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-		return NoOpPasswordEncoder.getInstance();
+		//与加密密码时匹配  登录后使用该PasswordEncoder加密明文密码与用户已加密密码比较；client_secret同样
+		//default uses strength 10
+		return new BCryptPasswordEncoder();
 	}
 	
 	@Bean
@@ -169,6 +163,7 @@ public class AuthorizationServerConfig {
 		RegisteredClient client = RegisteredClient
 				.withId(UUID.randomUUID().toString())
 				.clientId(clientId)
+				//ClientSecretAuthenticationProvider PasswordEncoder
 				.clientSecret(clientSecret)
 				//在请求参数中
 				.clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_POST)

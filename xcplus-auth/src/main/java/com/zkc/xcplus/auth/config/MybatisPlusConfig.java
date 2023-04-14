@@ -7,7 +7,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@MapperScan("com.zkc.xcplus.auth.uccenter.dao")
+@MapperScan("com.zkc.xcplus.auth.user.dao")
 @Configuration
 public class MybatisPlusConfig {
 	

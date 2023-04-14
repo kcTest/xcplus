@@ -1,7 +1,6 @@
 package com.zkc.xcplus.gateway.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -14,20 +13,21 @@ import java.util.List;
 @Configuration
 public class ResourceServerConfig {
 	
-	@Value("${spring.security.oauth2.resourceserver.jwt.jwk-set-uri}")
-	String jwkSetUri;
-	
 	@Autowired
 	private WhiteListConfig whiteListConfig;
 	
 	@Bean
-	public SecurityWebFilterChain securityFilterChain(ServerHttpSecurity http) throws Exception {
+	public SecurityWebFilterChain securityFilterChain(ServerHttpSecurity http) {
 		List<String> urls = whiteListConfig.getUrls();
 		http.authorizeExchange((authorize) ->
 						authorize.pathMatchers(urls.toArray(new String[urls.size()])).permitAll()
 								.anyExchange().authenticated()
-				)
+				)//Enables JWT Resource Server support.
 				.oauth2ResourceServer().jwt();
+//      默认ReactiveAuthenticationManager->DelegatingReactiveAuthenticationManager		
+//		认证失败返回处理 Reactive
+//		默认 ServerAuthenticationFailureHandler->
+//		ServerAuthenticationEntryPointFailureHandler-> 默认 BearerTokenServerAuthenticationEntryPoint
 		return http.build();
 	}
 	

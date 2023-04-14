@@ -1,7 +1,7 @@
 package com.zkc.xcplus.auth.controller;
 
-import com.zkc.xcplus.auth.uccenter.dao.XcUserMapper;
-import com.zkc.xcplus.auth.uccenter.model.XcUser;
+import com.zkc.xcplus.auth.user.dao.XcUserMapper;
+import com.zkc.xcplus.auth.user.model.XcUser;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
