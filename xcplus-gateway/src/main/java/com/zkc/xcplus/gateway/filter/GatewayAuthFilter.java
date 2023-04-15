@@ -1,6 +1,8 @@
 package com.zkc.xcplus.gateway.filter;
 
 import com.alibaba.fastjson.JSON;
+import com.nimbusds.jwt.JWT;
+import com.nimbusds.jwt.JWTParser;
 import com.zkc.xcplus.gateway.config.RestErrorResponse;
 import com.zkc.xcplus.gateway.config.WhiteListConfig;
 import lombok.extern.slf4j.Slf4j;
@@ -21,6 +23,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
+import java.text.ParseException;
 import java.util.List;
 
 @Component
@@ -44,17 +47,21 @@ public class GatewayAuthFilter implements GlobalFilter, Ordered {
 				return chain.filter(exchange);
 			}
 		}
-
-//		//提取token
-//		String tokenStr = extractToken(request);
-//		if (StringUtils.hasText(tokenStr)) {
-//			try {
-//				JWT jwt = JWTParser.parse(tokenStr);
-//				log.info("令牌信息：{}", JSON.toJSONString(jwt.getJWTClaimsSet().getClaims()));
-//			} catch (ParseException e) {
-//				return buildErrResponse("令牌解析异常", response);
-//			}
-//		}
+		
+		//提取token
+		String tokenStr = extractToken(request);
+		if (StringUtils.hasText(tokenStr)) {
+			try {
+				JWT jwt = JWTParser.parse(tokenStr);
+				String userinfo =JSON.toJSONString(jwt.getJWTClaimsSet().getClaim("userinfo"));
+				log.info("令牌用户信息：{}", userinfo);
+				//ReadOnlyHttpHeaders 转变类型  将信息放入header 
+				ServerHttpRequest serverHttpRequest = exchange.getRequest().mutate().header("userinfo", userinfo).build();
+				exchange = exchange.mutate().request(serverHttpRequest).build();
+			} catch (ParseException e) {
+				return buildErrResponse("令牌解析异常", response);
+			}
+		}
 		return chain.filter(exchange);
 	}
 	

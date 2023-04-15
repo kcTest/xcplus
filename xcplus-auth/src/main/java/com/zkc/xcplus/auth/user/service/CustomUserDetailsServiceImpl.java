@@ -31,11 +31,8 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
 		String password = user.getPassword();
 		
 		CustomUser customUser = new CustomUser(username, password, AuthorityUtils.createAuthorityList("test"));
-		customUser.setName(user.getName());
-		customUser.setCompanyId(user.getCompanyId());
-		customUser.setNickname(user.getNickname());
-		customUser.setUserpic(user.getName());
-		
+		user.setPassword(null);
+		customUser.setXcUser(user);
 		return customUser;
 	}
 }

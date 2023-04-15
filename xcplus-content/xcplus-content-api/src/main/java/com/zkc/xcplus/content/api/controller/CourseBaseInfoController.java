@@ -32,9 +32,7 @@ public class CourseBaseInfoController {
 	@Operation(summary = "新增课程")
 	@PostMapping("/add")
 	public CourseBaseInfoDto add(@RequestBody @Validated(ValidationGroups.Insert.class) AddCourseDto addCourseDto) {
-		//TODO 获取机构名称和ID
-		Long companyId = 1L;
-		return courseBaseInfoService.add(companyId, addCourseDto);
+		return courseBaseInfoService.add(addCourseDto);
 	}
 	
 	@Operation(summary = "查询课程信息")
@@ -46,9 +44,7 @@ public class CourseBaseInfoController {
 	@Operation(summary = "修改课程信息")
 	@PutMapping("/update")
 	public CourseBaseInfoDto update(@RequestBody @Validated UpdateCourseDto dto) {
-		//TODO 获取机构名称和ID
-		Long companyId = 1232141425L;
-		return courseBaseInfoService.update(companyId, dto);
+		return courseBaseInfoService.update(dto);
 	}
 	
 }

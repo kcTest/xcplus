@@ -20,14 +20,12 @@ public interface CourseBaseInfoService {
 	PageResult<CourseBase> courseBaseList(PageParams pageParams, CourseQueryParamsDto courseQueryParamsDto);
 	
 	/**
-	 * 
-	 * @param companyId 机构ID
 	 * @param addCourseDto 新增课程信息
 	 * @return 课程基本信息
 	 */
-	CourseBaseInfoDto add(Long companyId, AddCourseDto addCourseDto);
+	CourseBaseInfoDto add(AddCourseDto addCourseDto);
 	
 	CourseBaseInfoDto get(Long id);
 	
-	CourseBaseInfoDto update(Long companyId,UpdateCourseDto dto);
+	CourseBaseInfoDto update(UpdateCourseDto dto);
 }

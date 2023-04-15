@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ### 获取课程分类
 GET {{gateway_host}}/content/coursecategory/treeNodes?parentId=1
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODE0NzQyNjYsInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTU2MDY2NiwiaWF0IjoxNjgxNDc0MjY2LCJpbmZvIjp7ImNvbXBhbnlJZCI6IjEyMzQ1NiIsInVzZXJwaWMiOiJ6a2MiLCJuYW1lIjoiemtjIiwibmlja25hbWUiOiJ6a2MifX0.F-_tvbxqfy2AtQPve9rbYe3H0zRipoXVQwPW_tdhJA_F7I7OYKgZXeY2o9B7-bPyILocvc_TsfGmbdCppCULrRun-lFSTqyGVr2F7mj2J75NwnxhRV4aiFxNTUGhaDquqvfAXw-sK4aX3rPVgSTWCYewG3V9t8aKq4VSqIQ8U7HeP6SQixqsz6Q3fViSB4Mun80VWOeOnxdKAlBTwiUx5-U11haxy_xN988tcHwQMzRlmY5QtQqrw2kPV0u7xQgcZ1JDMMrpDW3VY79k5wKuUcZsVDyPIjKpeOqB5jnHs1VcNrD51rIHGxG4Mm5r2XY1oOa1730uwbIIUu-KBTSOEg
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODE1NDI5NTUsInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTYyOTM1NSwiaWF0IjoxNjgxNTQyOTU1LCJ1c2VyaW5mbyI6eyJpZCI6IjUzIiwidXNlcm5hbWUiOiJ0ZXN0IiwicGFzc3dvcmQiOm51bGwsInNhbHQiOm51bGwsInd4VW5pb25pZCI6bnVsbCwibmlja25hbWUiOiJ6a2MiLCJuYW1lIjoiemtjIiwidXNlcnBpYyI6bnVsbCwiY29tcGFueUlkIjoiMTIzNDU2IiwidXR5cGUiOiIxMDEwMDMiLCJiaXJ0aGRheSI6bnVsbCwic2V4IjoiMSIsImVtYWlsIjpudWxsLCJjZWxscGhvbmUiOm51bGwsInFxIjpudWxsLCJzdGF0dXMiOiIxIiwiY3JlYXRlVGltZSI6IkFwciAxNCwgMjAyMywgNjoxMTo1NiBQTSIsInVwZGF0ZVRpbWUiOm51bGx9fQ.UEuUJRZw7L8tcuQb_JGSFLxVsr9iUdFLg6oAV_iDEorN_WwHIl9mVx7zUHzHk9aH6vw8nV6Yw259f6RgEvAeExeVtLDM-ColjMFWh8xPYZnzaHTrxG4FXvR8ExgxzCEnSSSFyi5DbHbV24563yHDGMoQwvEMyd-5EzHf_a7HG0dZJF8uCR6Xla8P5FJLdGN2Y3WT82PnrH6PgjRHuqhl8nU6jExDEm8VKesufvf85nv1ENd7XxZSz2mobbdylmF3t3ebYvY_6yMGszUKToez_mikyXo_g0_scEGXS20Lz82Oq_JkkUx0UTHdXhOhZeHDaTjFm6GX5G3YJA9wuIKdeg
 
 
 ### 创建课程
@@ -40,36 +40,39 @@ Content-Type: application/json
 
 ###查询课程
 GET {{gateway_host}}/content/coursebaseinfo/124
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODE1NTY4NzksInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTY0MzI3OSwiaWF0IjoxNjgxNTU2ODc5LCJ1c2VyaW5mbyI6eyJpZCI6IjUzIiwidXNlcm5hbWUiOiJ0ZXN0IiwicGFzc3dvcmQiOm51bGwsInNhbHQiOm51bGwsInd4VW5pb25pZCI6bnVsbCwibmlja25hbWUiOiJ6a2MiLCJuYW1lIjoiemtjIiwidXNlcnBpYyI6bnVsbCwiY29tcGFueUlkIjoiMSIsInV0eXBlIjoiMTAxMDAzIiwiYmlydGhkYXkiOm51bGwsInNleCI6IjEiLCJlbWFpbCI6bnVsbCwiY2VsbHBob25lIjpudWxsLCJxcSI6bnVsbCwic3RhdHVzIjoiMSIsImNyZWF0ZVRpbWUiOiJBcHIgMTQsIDIwMjMsIDY6MTE6NTYgUE0iLCJ1cGRhdGVUaW1lIjpudWxsfX0.CH1yqoRTeUuAw76UuKum9Tt2muoUw5DuFcK4ZQ3bZWZjL94Iytq1j2pis1KdJQq1W8-hp1mUUUeQrvWjsnES_hVaabLCcFPb3twcIhZoiKQYZ4YCWhWUP5_K8WpZ_rwWBdtxjVxSEW0KC529N7GhdDwKMkGkLCuBbdxX0STLh-mFk_qejC7sgfg5e07xKVMa-X4ClUe7LuH_iuCA7eaU5crhBggRXuOsaNc7YSZS6UIriaAwZ-HxuKaBB8fifSDlxCyHVV0YhE89np3RUHRCnJ-z222INR-HDJ67SEw20qw52zKPx1gAaTCtzPoqayi02n3YlOHycJEj8BQBnidhGA
 
 ### 修改课程
 PUT {{gateway_host}}/content/coursebaseinfo/update
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkIjoieGNXZWJBcHAiLCJuYmYiOjE2ODE1NjA1NzEsInNjb3BlIjpbImFsbCJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEwMTkvYXV0aCIsImV4cCI6MTY4MTY0Njk3MSwiaWF0IjoxNjgxNTYwNTcxLCJ1c2VyaW5mbyI6eyJpZCI6IjUzIiwidXNlcm5hbWUiOiJ0ZXN0IiwicGFzc3dvcmQiOm51bGwsInNhbHQiOm51bGwsInd4VW5pb25pZCI6bnVsbCwibmlja25hbWUiOiJ6a2MiLCJuYW1lIjoiemtjIiwidXNlcnBpYyI6bnVsbCwiY29tcGFueUlkIjoiMSIsInV0eXBlIjoiMTAxMDAzIiwiYmlydGhkYXkiOm51bGwsInNleCI6IjEiLCJlbWFpbCI6bnVsbCwiY2VsbHBob25lIjpudWxsLCJxcSI6bnVsbCwic3RhdHVzIjoiMSIsImNyZWF0ZVRpbWUiOiJBcHIgMTQsIDIwMjMsIDY6MTE6NTYgUE0iLCJ1cGRhdGVUaW1lIjpudWxsfX0.T3c_J9j6bakeB2k295hfcEQkhC7m0a37HLOH3tjnDP3KP3_dGVvdEpsEfUnM79gIziQ8UJq1FETbwuY_AsFD-f39vIy6W4Q5PL2XsMLxMrmqcvHoeoaa-v4D5wk7Gb8OhSTAaI-Ds0QtvKkAAW-0IqAYYpFAnFu9B4tAwExiuYIWvLbf85dBbqf5kJa1nPrgRdT8dIos9FZBBOOmcBF461V_iUNjzjEA3utztN5ctWuVXbwJYGSAW0N569K5CUYARuIMN_eeVbTCcp0zTCYN4hit5bZQoWHuWl3DuiBUIZhEas9vR1HvmpVcfI9drVpErjRIZgDl4Iljor50atx43Q
 
 {
-  "id": 1,
-  "companyId": 1232141425,
+  "id": 124,
+  "companyId": 1,
   "companyName": null,
-  "name": "JAVA8/9/10新特性讲解23",
-  "users": "java爱好者,有一定java基础23",
-  "tags": "有个java 版本变化的新内容，帮助大家使用最新的思想和工具23",
-  "mt": "1",
+  "name": "新增测试1748",
+  "users": "适用人群适用人群-适用人群-适用人群-",
+  "tags": "标签",
+  "mt": "1-3",
   "st": "1-3-2",
   "grade": "204002",
-  "teachmode": "live",
-  "description": null,
-  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
-  "changePeople": null,
+  "teachmode": "200002",
+  "description": "课程介绍-data,更新测试 ",
+  "pic": "/xcplus/2023/03/14/Snipaste_2023-03-17_17-48-04.png",
+  "createDate": "2023-03-01 17:48:52",
+  "createPeople": null,
   "auditStatus": "202004",
   "status": "203001",
   "charge": "201001",
-  "price": 5.0,
-  "originalPrice": 11.0,
-  "qq": "1",
-  "wechat": "1",
-  "phone": "1",
-  "validDays": 1,
-  "mtName": null,
-  "stName": null
+  "price": 60.0,
+  "originalPrice": 100.0,
+  "qq": "8888888",
+  "wechat": "222555",
+  "phone": "333",
+  "validDays": 1000,
+  "mtName": "编程开发",
+  "stName": "Java"
 }
 
 ###查询课程计划

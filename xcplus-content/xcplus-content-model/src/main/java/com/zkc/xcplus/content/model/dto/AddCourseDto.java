@@ -83,13 +83,13 @@ public class AddCourseDto {
 	 * 现价
 	 */
 	@Schema(description = "现价")
-	private Float price;
+	private Double price;
 	
 	/**
 	 * 原价
 	 */
 	@Schema(description = "原价")
-	private Float originalPrice;
+	private Double originalPrice;
 	
 	/**
 	 * 咨询qq

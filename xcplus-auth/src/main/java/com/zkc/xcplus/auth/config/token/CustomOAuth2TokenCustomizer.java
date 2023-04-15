@@ -17,6 +17,6 @@ public class CustomOAuth2TokenCustomizer implements OAuth2TokenCustomizer<JwtEnc
 	public void customize(JwtEncodingContext context) {
 		JwtClaimsSet.Builder claims = context.getClaims();
 		CustomUser customUser = (CustomUser) context.getPrincipal().getPrincipal();
-		claims.claim("info", customUser.getAdditionalInfo());
+		claims.claim("userinfo", customUser.getXcUser());
 	}
 }

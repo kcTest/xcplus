@@ -13,8 +13,10 @@ import com.zkc.xcplus.content.model.dto.UpdateCourseDto;
 import com.zkc.xcplus.content.model.po.CourseBase;
 import com.zkc.xcplus.content.model.po.CourseCategory;
 import com.zkc.xcplus.content.model.po.CourseMarket;
+import com.zkc.xcplus.content.model.po.XcUser;
 import com.zkc.xcplus.content.service.CourseBaseInfoService;
 import com.zkc.xcplus.content.service.CourseMarketService;
+import com.zkc.xcplus.content.service.UserInfoService;
 import com.zkc.xcplus.content.service.dao.CourseBaseMapper;
 import com.zkc.xcplus.content.service.dao.CourseCategoryMapper;
 import com.zkc.xcplus.content.service.dao.CourseMarketMapper;
@@ -23,6 +25,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
@@ -41,6 +44,9 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 	
 	@Autowired
 	private CourseCategoryMapper courseCategoryMapper;
+	
+	@Autowired
+	private UserInfoService userInfoService;
 	
 	@Override
 	public PageResult<CourseBase> courseBaseList(PageParams pageParams, CourseQueryParamsDto courseQueryParamsDto) {
@@ -65,21 +71,22 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 	}
 	
 	@Override
-	public CourseBaseInfoDto add(Long companyId, AddCourseDto dto) {
-		
+	public CourseBaseInfoDto add(AddCourseDto dto) {
 		//参数校验
-		if (companyId == null) {
-			CustomException.cast(CommonError.OBJECT_NULL);
+		XcUser user = userInfoService.getCurrentUser();
+		if (user == null) {
+			CustomException.cast(CommonError.UNAUTHORIZED);
 		}
 		if (dto == null) {
-			CustomException.cast(CommonError.OBJECT_NULL);
+			CustomException.cast(CommonError.REQUEST_NULL);
 		}
-		
+		Long companyId = Long.valueOf(user.getCompanyId());
 		//组装课程基本信息插入 其余信息页面填写传入
 		CourseBase courseBase = new CourseBase();
 		BeanUtils.copyProperties(dto, courseBase);
 		courseBase.setCompanyId(companyId);
 		courseBase.setCreateDate(LocalDateTime.now());
+		courseBase.setCreatePeople(user.getName());
 		courseBase.setAuditStatus("202002");
 		courseBase.setStatus("203001");
 		int countCourseBase = courseBaseMapper.insert(courseBase);
@@ -126,8 +133,13 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		return dto;
 	}
 	
+	@Transactional
 	@Override
-	public CourseBaseInfoDto update(Long companyId, UpdateCourseDto dto) {
+	public CourseBaseInfoDto update(UpdateCourseDto dto) {
+		XcUser user = userInfoService.getCurrentUser();
+		if (user == null) {
+			CustomException.cast(CommonError.UNAUTHORIZED);
+		}
 		if (dto == null) {
 			CustomException.cast(CommonError.REQUEST_NULL);
 		}
@@ -138,12 +150,12 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		if (courseBase == null) {
 			CustomException.cast("课程不存在");
 		}
-		if (!courseBase.getCompanyId().equals(companyId)) {
+		if (!courseBase.getCompanyId().toString().equals(user.getCompanyId())) {
 			CustomException.cast("只能修改本机构的课程");
 		}
 		BeanUtils.copyProperties(dto, courseBase);
 		courseBase.setChangeDate(LocalDateTime.now());
-		//TODO 设置修改人
+		courseBase.setChangePeople(user.getName());
 		int countCourseBase = courseBaseMapper.updateById(courseBase);
 		if (countCourseBase == 0) {
 			CustomException.cast("课程更新失败");
@@ -172,4 +184,5 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		}
 		return true;
 	}
+	
 }
