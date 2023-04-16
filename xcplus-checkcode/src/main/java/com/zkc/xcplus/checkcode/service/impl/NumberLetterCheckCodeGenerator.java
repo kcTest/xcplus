@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * 包含数字字母的验证码生成器
  */
-@Component
+@Component("NumberLetterCheckCodeGenerator")
 public class NumberLetterCheckCodeGenerator implements CheckCodeService.CheckCodeGenerator {
 	
 	@Override
