@@ -47,7 +47,7 @@ public abstract class AbstractCheckCodeService implements CheckCodeService {
 		if (storeCode == null) {
 			return false;
 		}
-		boolean result = storeCode.equals(code);
+		boolean result = storeCode.equalsIgnoreCase(code);
 		if (result) {
 			checkCodeStore.remove(key);
 		}

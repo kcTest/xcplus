@@ -41,7 +41,7 @@ public class PicCheckCodeServiceImpl extends AbstractCheckCodeService implements
 	
 	@Override
 	public CheckCodeResultDto generate(CheckCodeParamsDto dto) {
-		GenerateResult generate = generate(dto, 4, "checkcode", 300);
+		GenerateResult generate = generate(dto, 4, "checkcode:", 300);
 		String key = generate.getKey();
 		String code = generate.getCode();
 		String pic = createPic(code);
