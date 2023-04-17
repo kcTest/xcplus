@@ -1,4 +1,4 @@
-package com.zkc.xcplus.auth.user.model;
+package com.zkc.xcplus.auth.user.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

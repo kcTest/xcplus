@@ -22,8 +22,9 @@ public class ResourceServerConfig {
 		http.authorizeExchange((authorize) ->
 						authorize.pathMatchers(urls.toArray(new String[urls.size()])).permitAll()
 								.anyExchange().authenticated()
-				)//Enables JWT Resource Server support.
-				.oauth2ResourceServer().jwt();
+				)
+				.csrf().disable()//白名单POST方法Invalid CSRF Token 'null' was found on the request   禁用
+				.oauth2ResourceServer().jwt();//Enables JWT Resource Server support.
 //      默认ReactiveAuthenticationManager->DelegatingReactiveAuthenticationManager		
 //		认证失败返回处理 Reactive
 //		默认 ServerAuthenticationFailureHandler->

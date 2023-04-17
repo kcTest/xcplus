@@ -92,6 +92,12 @@ public class AuthorizationServerConfig {
 				)));
 		SecurityFilterChain securityFilterChain = http.formLogin(Customizer.withDefaults()).build();
 		//添加自定义 authenticationProvider
+		//authenticationManager.authenticate->ProviderManager.authenticate->for (AuthenticationProvider provider : getProviders())
+		//result = provider.authenticate(authentication);
+		//				if (result != null) {
+		//					copyDetails(authentication, result);
+		//					break;
+		//				}
 		http.authenticationProvider(createOAuth2ResourceOwnerPasswordAuthenticationProvider(http));
 		return securityFilterChain;
 	}

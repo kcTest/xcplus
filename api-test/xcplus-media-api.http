@@ -67,3 +67,7 @@ Content-Type: application/octet-stream
 
 ### 合并文件
 POST {{gateway_host}}/media/bigfile/mergechunks?fileMd5=90f6d59a1d859972b5ae6be292eb9eb1&fileName=TEST.avi&chunkTotal=3
+
+
+###课程预览文件
+GET  {{gateway_host}}/media/open/preview/124

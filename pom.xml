@@ -25,6 +25,7 @@
         <module>xcplus-message</module>
         <module>xcplus-search</module>
         <module>xcplus-auth</module>
+        <module>xcplus-checkcode</module>
     </modules>
 
     <properties>
@@ -53,7 +54,9 @@
         <commons-io.version>2.11.0</commons-io.version>
         <authorization-server.version>1.0.1</authorization-server.version>
         <spring-security-config.version>6.0.1</spring-security-config.version>
-
+        <kaptcha.version>2.3.2</kaptcha.version>
+        <starter-data-redis.version>3.0.4</starter-data-redis.version>
+        <data-redis.version>3.0.3</data-redis.version>
     </properties>
 
     <dependencies>
@@ -227,7 +230,22 @@
                 <artifactId>spring-security-config</artifactId>
                 <version>${spring-security-config.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.github.penggle</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+            <!-- 版本降低-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${starter-data-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>${data-redis.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>

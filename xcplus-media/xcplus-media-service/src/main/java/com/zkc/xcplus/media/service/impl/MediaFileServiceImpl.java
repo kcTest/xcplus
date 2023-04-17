@@ -133,7 +133,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 	 * 事务控制生效
 	 * 【方法抛出异常+方法被代理对象调用+方法加@Transactional】
 	 * 1.在upload方法加@Transactional。
-	 * 2.本方法+@Transactional ，使用@Autowired声明当前serviced对象作为字段，该字段成为代理对象。upload方法中使用currentProxy调用addFileDbInfo
+	 * 2.本方法+@Transactional ，使用@Autowired声明当前serviced对象作为字段，该字段成为代理对象。upload方法中使用currentProxy调用addFileDbInfo（非事务方法内调用事务方法需使用代理对象）
 	 * upload方法包含上传文件操作 事务占用时间长， 使用1
 	 */
 	//2.

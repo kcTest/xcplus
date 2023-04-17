@@ -22,6 +22,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 		if (!StringUtils.hasText(userinfo)) {
 			CustomException.cast(CommonError.UNAUTHORIZED);
 		}
+		//授权服务内部使用gson序列化日期
 		return new Gson().fromJson(userinfo, XcUser.class);
 	}
 }

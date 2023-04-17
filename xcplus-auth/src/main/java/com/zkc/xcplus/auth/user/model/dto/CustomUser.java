@@ -1,6 +1,6 @@
-package com.zkc.xcplus.auth.user.model;
+package com.zkc.xcplus.auth.user.model.dto;
 
-import lombok.ToString;
+import com.zkc.xcplus.auth.user.model.po.XcUser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 

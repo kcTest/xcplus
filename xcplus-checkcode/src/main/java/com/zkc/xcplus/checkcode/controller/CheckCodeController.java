@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @Tag(name = "CheckCodeController", description = "验证码服务接口")
@@ -34,7 +35,7 @@ public class CheckCodeController {
 	
 	@Operation(summary = "校验")
 	@PostMapping("/verify")
-	public Boolean verify(String key, String code) {
+	public Boolean verify(@RequestParam("key") String key, @RequestParam("code") String code) {
 		return picCheckCodeService.verify(key, code);
 	}
 }

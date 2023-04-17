@@ -1,9 +1,12 @@
-package com.zkc.xcplus.auth.user.service;
+package com.zkc.xcplus.auth.user.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.zkc.xcplus.auth.user.dao.XcUserMapper;
-import com.zkc.xcplus.auth.user.model.CustomUser;
-import com.zkc.xcplus.auth.user.model.XcUser;
+import com.zkc.xcplus.auth.user.model.dto.AuthParamsDto;
+import com.zkc.xcplus.auth.user.model.dto.CustomUser;
+import com.zkc.xcplus.auth.user.model.po.XcUser;
+import com.zkc.xcplus.base.exception.CustomException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,8 +23,21 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	private XcUserMapper xcUserMapper;
 	
+	/**
+	 * 传入的认证数据AuthParamsDto
+	 */
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		//将传入的json串转成AuthParamsDto
+//		AuthParamsDto dto = null;
+//		try {
+//			dto = JSON.parseObject(data, AuthParamsDto.class);
+//		} catch (Exception e) {
+//			CustomException.cast("请求认证参数不符合要求");
+//		}
+//		
+//		String username = dto.getUsername();
+		
 		LambdaQueryWrapper<XcUser> queryWrapper = new LambdaQueryWrapper<>();
 		queryWrapper.eq(XcUser::getUsername, username);
 		XcUser user = xcUserMapper.selectOne(queryWrapper);

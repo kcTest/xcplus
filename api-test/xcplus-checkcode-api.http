@@ -1,0 +1,7 @@
+
+### 获取图形验证码
+POST {{gateway_host}}/checkcode/pic
+
+
+### 校验图形验证码是否存在
+POST {{gateway_host}}/checkcode/verify?key=checkcode:a039b0cca85a4f55a134679f7d39732b&code=8tx9

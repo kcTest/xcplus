@@ -1,6 +1,6 @@
 package com.zkc.xcplus.auth.config.token;
 
-import com.zkc.xcplus.auth.user.model.CustomUser;
+import com.zkc.xcplus.auth.user.model.dto.CustomUser;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
