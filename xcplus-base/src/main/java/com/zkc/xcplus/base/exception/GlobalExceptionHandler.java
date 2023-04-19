@@ -39,6 +39,9 @@ public class GlobalExceptionHandler {
 		e.printStackTrace();
 		String msg = e.getMessage();
 		log.error(msg);
+		if ("Access Denied".equals(msg)) {
+			msg = "没有权限访问";
+		}
 		return new RestErrorResponse(msg);
 	}
 	

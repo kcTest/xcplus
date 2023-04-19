@@ -9,7 +9,7 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 
 import java.util.List;
 
-@EnableWebFluxSecurity
+@EnableWebFluxSecurity//gateway使用webflux
 @Configuration
 public class ResourceServerConfig {
 	
@@ -20,7 +20,7 @@ public class ResourceServerConfig {
 	public SecurityWebFilterChain securityFilterChain(ServerHttpSecurity http) {
 		List<String> urls = whiteListConfig.getUrls();
 		http.authorizeExchange((authorize) ->
-						authorize.pathMatchers(urls.toArray(new String[urls.size()])).permitAll()
+						authorize.pathMatchers(urls.toArray(new String[0])).permitAll()
 								.anyExchange().authenticated()
 				)
 				.csrf().disable()//白名单POST方法Invalid CSRF Token 'null' was found on the request   禁用
