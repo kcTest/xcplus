@@ -21,6 +21,6 @@ spring:
           - data-id: feign-${spring.profiles.active}.yaml
             group: common
             refresh: true
-#          - data-id: redis-${spring.profiles.active}.yaml
-#            group: common
-#            refresh: true
+          - data-id: redis-${spring.profiles.active}.yaml
+            group: common
+            refresh: true

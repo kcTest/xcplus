@@ -35,6 +35,7 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
+import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenGenerator;
 import org.springframework.security.oauth2.server.authorization.web.authentication.DelegatingAuthenticationConverter;
@@ -174,6 +175,8 @@ public class AuthorizationServerConfig {
 						.reuseRefreshTokens(false).build())
 				//必填 code\token 追加到url
 				.redirectUri(redirectUri)
+				//登录后需授权确认
+				.clientSettings(ClientSettings.builder().requireAuthorizationConsent(false).build())
 				.build();
 		return new InMemoryRegisteredClientRepository(client);
 	}
