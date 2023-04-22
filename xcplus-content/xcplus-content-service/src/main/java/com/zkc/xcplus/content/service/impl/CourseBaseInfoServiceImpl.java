@@ -50,6 +50,8 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 	
 	@Override
 	public PageResult<CourseBase> courseBaseList(PageParams pageParams, CourseQueryParamsDto courseQueryParamsDto) {
+		XcUser user = userInfoService.getCurrentUser();
+		String companyId = user.getCompanyId();
 		//分页
 		Long pageNo = pageParams.getPageNo();
 		Long pageSize = pageParams.getPageSize();
@@ -64,6 +66,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 		wrapper.like(StringUtils.isNotEmpty(courseName), CourseBase::getName, courseName);
 		wrapper.eq(StringUtils.isNotEmpty(auditStatus), CourseBase::getAuditStatus, auditStatus);
 		wrapper.eq(StringUtils.isNotEmpty(status), CourseBase::getStatus, status);
+		wrapper.eq(CourseBase::getCompanyId, Long.valueOf(companyId));
 		
 		//返回
 		Page<CourseBase> selectPage = courseBaseMapper.selectPage(page, wrapper);
@@ -72,11 +75,8 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 	
 	@Override
 	public CourseBaseInfoDto add(AddCourseDto dto) {
-		//参数校验
 		XcUser user = userInfoService.getCurrentUser();
-		if (user == null) {
-			CustomException.cast(CommonError.UNAUTHORIZED);
-		}
+		//参数校验
 		if (dto == null) {
 			CustomException.cast(CommonError.REQUEST_NULL);
 		}

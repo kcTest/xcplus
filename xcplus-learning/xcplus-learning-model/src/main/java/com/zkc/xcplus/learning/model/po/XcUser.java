@@ -1,7 +1,6 @@
-package com.zkc.xcplus.content.model.po;
+package com.zkc.xcplus.learning.model.po;
 
 import lombok.Data;
-import lombok.ToString;
 
 import java.io.Serial;
 import java.io.Serializable;

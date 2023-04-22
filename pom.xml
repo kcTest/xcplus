@@ -26,6 +26,7 @@
         <module>xcplus-search</module>
         <module>xcplus-auth</module>
         <module>xcplus-checkcode</module>
+        <module>xcplus-learning</module>
     </modules>
 
     <properties>
@@ -57,6 +58,8 @@
         <kaptcha.version>2.3.2</kaptcha.version>
         <starter-data-redis.version>3.0.4</starter-data-redis.version>
         <data-redis.version>3.0.3</data-redis.version>
+        <xcplus-learning.service.version>0.0.1-SNAPSHOT</xcplus-learning.service.version>
+        <xcplus-learning.model.version>0.0.1-SNAPSHOT</xcplus-learning.model.version>
     </properties>
 
     <dependencies>
@@ -245,6 +248,16 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-redis</artifactId>
                 <version>${data-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zkc</groupId>
+                <artifactId>xcplus-learning-service</artifactId>
+                <version>${xcplus-learning.service.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zkc</groupId>
+                <artifactId>xcplus-learning-model</artifactId>
+                <version>${xcplus-learning.model.version}</version>
             </dependency>
         </dependencies>
 

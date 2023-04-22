@@ -26,7 +26,6 @@ import java.util.concurrent.TimeUnit;
  * InMemoryOAuth2AuthorizationService  InMemoryOAuth2AuthorizationConsentService
  * is recommended ONLY to be used during development and testing
  * <p>
- * 暂时只定义CustomAuthorizationService
  */
 
 @Component
