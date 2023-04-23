@@ -1,6 +1,6 @@
 spring:
   application:
-    name: learning-api
+    name: orders-api
   profiles:
     active: dev
   cloud:
@@ -11,18 +11,15 @@ spring:
         group: xcplus
       config:
         namespace: ns-xcplus-${spring.profiles.active}
-        group: learning
+        group: orders
         file-extension: yaml
         refresh-enabled: true
         extension-configs: #使用拓展配置 依赖项目的配置     nacos.yaml>ext.yaml>share.yaml>  local.yaml
-          - data-id: learning-service-${spring.profiles.active}.yaml
-            group: learning
+          - data-id: orders-service-${spring.profiles.active}.yaml
+            group: orders
             refresh: true
         shared-configs: #使用公共配置
           - data-id: logging-${spring.profiles.active}.yaml
-            group: common
-            refresh: true
-          - data-id: feign-${spring.profiles.active}.yaml
             group: common
             refresh: true
           - data-id: rabbitmq-${spring.profiles.active}.yaml
