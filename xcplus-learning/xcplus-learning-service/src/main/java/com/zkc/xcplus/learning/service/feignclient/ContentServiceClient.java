@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public interface ContentServiceClient {
 	
 	@ResponseBody
-	@GetMapping("/coursepublish/{courseId}")
+	@GetMapping("/coursepublish/info/{courseId}")
 	CoursePublish getCoursePublish(@PathVariable("courseId") Long courseId);
 }

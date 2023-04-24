@@ -10,6 +10,9 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * 处理订单支付成功消息
+ */
 @Service
 public class ReceivePayNotifyService {
 	
@@ -33,7 +36,7 @@ public class ReceivePayNotifyService {
 		//订单类型[{"code":"60201","desc":"购买课程"},{"code":"60202","desc":"学习资料"}]
 		String orderType = mqMessage.getBusinessKey2();
 		if ("60201".equals(orderType)) {
-			boolean b = courseTableService.saveChooseCourseSuccess(chooseCourseId);
+			boolean b = courseTableService.chooseCourseSuccess(chooseCourseId);
 			if (!b) {
 				CustomException.cast("选课记录成功状态更新失败");
 			}

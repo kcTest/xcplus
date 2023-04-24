@@ -33,5 +33,5 @@ POST {{search_host}}/search/course/idx/delete/124
 Content-Type: application/json
 
 ### 搜索课程
-GET {{search_host}}/search/course/list?pageNo=1&pageSize=10&keyword=新增测试
+GET {{search_host}}/search/course/list?pageNo=1&pageSize=10&keyword=新增
 Content-Type: application/json

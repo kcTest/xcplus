@@ -14,5 +14,5 @@ public class XcChooseCourseDto extends XcChooseCourse {
 	 * 702002：没有选课或选课后没有支付
 	 * 702003：已过期需要申请续期或重新支付
 	 */
-	private String learningStatus;
+	private String learnStatus;
 }

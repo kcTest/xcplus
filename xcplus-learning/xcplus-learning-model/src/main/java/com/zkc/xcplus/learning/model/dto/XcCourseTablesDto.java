@@ -11,5 +11,5 @@ public class XcCourseTablesDto extends XcCourseTables {
 	/**
 	 * 学习资格
 	 */
-	private String learningStatus;
+	private String learnStatus;
 }

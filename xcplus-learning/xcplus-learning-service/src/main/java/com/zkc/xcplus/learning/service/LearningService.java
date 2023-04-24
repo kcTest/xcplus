@@ -10,10 +10,11 @@ public interface LearningService {
 	
 	/**
 	 * 获取教学视频URL
-	 * @param courseId 课程id
+	 *
+	 * @param courseId    课程id
 	 * @param teachPlanId 课程计划id
-	 * @param mediaId 视频文件id
+	 * @param mediaId     视频文件id
 	 * @return 视频URL
 	 */
-	RestResponse<String> getVideo(Long courseId, Long teachPlanId, String mediaId);
+	RestResponse<String> getVideo(Long courseId, String mediaId);
 }

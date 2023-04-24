@@ -161,7 +161,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 			int row = mediaFilesMapper.insert(mediaFiles);
 			//暂时相同视频只能插入一次
 			if (row <= 0) {
-				log.error("保存文件信息失败, bucket:{},objectName:{}", bigFileBucket, savePath);
+				log.error("保存文件信息失败, bucket:{},objectName:{}", defaultBucket, savePath);
 				CustomException.cast("保存文件信息失败");
 			}
 		}

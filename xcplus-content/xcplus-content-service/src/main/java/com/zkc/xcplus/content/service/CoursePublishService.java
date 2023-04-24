@@ -1,6 +1,7 @@
 package com.zkc.xcplus.content.service;
 
 import com.zkc.xcplus.content.model.dto.CoursePreviewDto;
+import com.zkc.xcplus.content.model.po.CoursePublish;
 import com.zkc.xcplus.content.service.po.CourseIndexInfo;
 
 import java.io.File;
@@ -57,4 +58,9 @@ public interface CoursePublishService {
 	 * @return 保存是否成功
 	 */
 	boolean addCourseIdx(CourseIndexInfo courseIndexInfo);
+	
+	/**
+	 * 获取课程发布信息
+	 */
+	CoursePublish getCoursePublish(Long courseId);
 }

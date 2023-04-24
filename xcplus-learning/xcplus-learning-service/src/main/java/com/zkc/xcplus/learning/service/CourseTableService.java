@@ -33,7 +33,7 @@ public interface CourseTableService {
 	 * @param chooseCourseId 选课记录id
 	 * @return 是否保存成功
 	 */
-	boolean saveChooseCourseSuccess(String chooseCourseId);
+	boolean chooseCourseSuccess(String chooseCourseId);
 	
 	/**
 	 * 获取我的课程表

@@ -29,7 +29,7 @@ public class CourseTableController {
 	}
 	
 	@Operation(summary = "查询当前用户指定课程的学习资格")
-	@PostMapping("/learningstatus/{courseId}")
+	@PostMapping("/learnstatus/{courseId}")
 	public XcCourseTablesDto getLearningStatus(@PathVariable("courseId") Long courseId) {
 		return courseTableService.getLearningStatus(courseId);
 	}

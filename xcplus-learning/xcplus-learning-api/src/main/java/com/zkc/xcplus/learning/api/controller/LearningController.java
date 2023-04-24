@@ -18,10 +18,10 @@ public class LearningController {
 	@Autowired
 	private LearningService learningService;
 	
-	@Operation(summary = "添加选课")
-	@PostMapping("/getvideo/{courseId}/{teachPlanId}/{mediaId}")
-	public RestResponse<String> addChooseCourse(@PathVariable("courseId") Long courseId, @PathVariable("teachPlanId") Long teachPlanId, @PathVariable("mediaId") String mediaId) {
-		return learningService.getVideo(courseId, teachPlanId, mediaId);
+	@Operation(summary = "获取教学视频")
+	@PostMapping("/getvideo/{courseId}/{mediaId}")
+	public RestResponse<String> addChooseCourse(@PathVariable("courseId") Long courseId, @PathVariable("mediaId") String mediaId) {
+		return learningService.getVideo(courseId, mediaId);
 	}
 	
 }

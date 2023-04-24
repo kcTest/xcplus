@@ -54,27 +54,25 @@ public class CourseTableServiceImpl implements CourseTableService {
 		if (coursePublish == null) {
 			CustomException.cast("课程不存在");
 		}
-		//收费规则
 		String charge = coursePublish.getCharge();
-		//选课记录
 		XcChooseCourse xcChooseCourse;
 		//免费课程  生成选课记录选课记录 生成我的课程表
 		if ("201000".equals(charge)) {
 			xcChooseCourse = addFreeCourse(userId, coursePublish);
 			addCourseTable(xcChooseCourse);
 		} else {
-			//收费课程 生成选课记录 
+			//收费课程 只生成选课记录  
 			xcChooseCourse = addChargeCourse(userId, coursePublish);
 		}
 		
 		//获取学生的学习资格
 		XcCourseTablesDto xcCourseTablesDto = getLearningStatus(courseId);
-		String learningStatus = xcCourseTablesDto.getLearningStatus();
+		String learningStatus = xcCourseTablesDto.getLearnStatus();
 		
 		//构造返回结果
 		XcChooseCourseDto result = new XcChooseCourseDto();
 		BeanUtils.copyProperties(xcChooseCourse, result);
-		result.setLearningStatus(learningStatus);
+		result.setLearnStatus(learningStatus);
 		
 		return result;
 	}
@@ -105,10 +103,12 @@ public class CourseTableServiceImpl implements CourseTableService {
 		chooseCourse.setCourseName(coursePublish.getName());
 		chooseCourse.setUserId(userId);
 		chooseCourse.setCompanyId(coursePublish.getCompanyId());
+		//免费类型
 		chooseCourse.setOrderType("700001");
 		chooseCourse.setCreateDate(LocalDateTime.now());
 		chooseCourse.setCoursePrice(coursePublish.getPrice());
 		chooseCourse.setValidDays(365);
+		//选课成功状态
 		chooseCourse.setStatus("701001");
 		chooseCourse.setValidtimeStart(LocalDateTime.now());
 		chooseCourse.setValidtimeEnd(LocalDateTime.now().plusDays(365));
@@ -145,10 +145,12 @@ public class CourseTableServiceImpl implements CourseTableService {
 		chooseCourse.setCourseName(coursePublish.getName());
 		chooseCourse.setUserId(userId);
 		chooseCourse.setCompanyId(coursePublish.getCompanyId());
+		//收费课程
 		chooseCourse.setOrderType("700002");
 		chooseCourse.setCreateDate(LocalDateTime.now());
 		chooseCourse.setCoursePrice(coursePublish.getPrice());
 		chooseCourse.setValidDays(365);
+		//待支付状态 支付成功再生成我的课程数据
 		chooseCourse.setStatus("701002");
 		chooseCourse.setValidtimeStart(LocalDateTime.now());
 		chooseCourse.setValidtimeEnd(LocalDateTime.now().plusDays(365));
@@ -193,21 +195,21 @@ public class CourseTableServiceImpl implements CourseTableService {
 		//查询我的课程表 
 		XcCourseTables xcCourseTables = getXcCourseTables(userId, courseId);
 		if (xcCourseTables == null) {
-			//没有选课设置相应状态直接返回
-			courseTablesDto.setLearningStatus("702002");
+			//没有选课 没有学习资格 设置相应状态直接返回
+			courseTablesDto.setLearnStatus("702002");
 			return courseTablesDto;
 		}
 		
-		//否则判断是否过期 过期不能继续学习
+		//有选课否则判断是否过期 过期不能继续学习
 		boolean before = xcCourseTables.getValidtimeEnd().isBefore(LocalDateTime.now());
 		BeanUtils.copyProperties(xcCourseTables, courseTablesDto);
 		if (before) {
 			//过期需要续期
-			courseTablesDto.setLearningStatus("702003");
+			courseTablesDto.setLearnStatus("702003");
 			return courseTablesDto;
 		}
 		//可以正常学习
-		courseTablesDto.setLearningStatus("702001");
+		courseTablesDto.setLearnStatus("702001");
 		return courseTablesDto;
 	}
 	
@@ -219,7 +221,7 @@ public class CourseTableServiceImpl implements CourseTableService {
 	}
 	
 	@Override
-	public boolean saveChooseCourseSuccess(String chooseCourseId) {
+	public boolean chooseCourseSuccess(String chooseCourseId) {
 		XcChooseCourse chooseCourse = chooseCourseMapper.selectById(chooseCourseId);
 		if (chooseCourse == null) {
 			log.debug("未找到选课记录,id:{}", chooseCourseId);

@@ -249,5 +249,10 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 		return false;
 	}
 	
+	@Override
+	public CoursePublish getCoursePublish(Long courseId) {
+		return coursePublishMapper.selectById(courseId);
+	}
+	
 	
 }

@@ -1,6 +1,7 @@
 package com.zkc.xcplus.content.api.controller;
 
 import com.zkc.xcplus.content.model.dto.CoursePreviewDto;
+import com.zkc.xcplus.content.model.po.CoursePublish;
 import com.zkc.xcplus.content.service.CoursePublishService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -44,6 +45,13 @@ public class CoursePublishController {
 		//TODO 获取机构id
 		Long companyId = 1L;
 		coursePublishService.coursePublish(companyId, courseId);
+	}
+	
+	@Operation(summary = "获取课程发布信息")
+	@ResponseBody
+	@GetMapping("/info/{courseId}")
+	public CoursePublish getCoursePublish(@PathVariable("courseId") Long courseId) {
+		return coursePublishService.getCoursePublish(courseId);
 	}
 	
 }

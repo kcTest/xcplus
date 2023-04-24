@@ -27,14 +27,14 @@ public class LearningServiceImpl implements LearningService {
 	private CourseTableService courseTableService;
 	
 	@Override
-	public RestResponse<String> getVideo(Long courseId, Long teachPlanId, String mediaId) {
+	public RestResponse<String> getVideo(Long courseId, String mediaId) {
 		
 		//查询课程信息
 		CoursePublish coursePublish = contentServiceClient.getCoursePublish(courseId);
 		if (coursePublish == null) {
 			return RestResponse.validfail("课程不存在");
 		}
-		//如果免费直接返回视频地址
+		//如果免费直接返回视频地址 根据媒资id获取媒资的预览地址
 		if ("201000".equals(coursePublish.getCharge())) {
 			return mediaServiceClient.getPlayUrlByMediaId(mediaId);
 		}
@@ -47,7 +47,7 @@ public class LearningServiceImpl implements LearningService {
 		
 		//获取学习资格
 		XcCourseTablesDto courseTablesDto = courseTableService.getLearningStatus(courseId);
-		String learningStatus = courseTablesDto.getLearningStatus();
+		String learningStatus = courseTablesDto.getLearnStatus();
 		if ("702002".equals(learningStatus)) {
 			return RestResponse.validfail("无法学习,因为没有选课或选课后没有支付");
 		} else if ("702003".equals(learningStatus)) {
