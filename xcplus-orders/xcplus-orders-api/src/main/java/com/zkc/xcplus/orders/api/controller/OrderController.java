@@ -1,9 +1,11 @@
 package com.zkc.xcplus.orders.api.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
+import com.alipay.api.response.AlipayTradeWapPayResponse;
 import com.zkc.xcplus.base.exception.CustomException;
 import com.zkc.xcplus.orders.model.dto.AddOrderDto;
 import com.zkc.xcplus.orders.model.dto.PayRecordDto;
@@ -37,24 +39,25 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 	
-	@Value("${pay.alipay.APP_ID}")
-	private String APP_ID;
+	@Value("${pay.alipay.APPID}")
+	private String APPID;
 	
-	@Value("${pay.alipay.APP_PRIVATE_KEY}")
-	private String APP_PRIVATE_KEY;
+	@Value("${pay.alipay.PRIVATE_KEY}")
+	private String PRIVATE_KEY;
 	
-	@Value("${pay.alipay.APP_PUBLIC_KEY}")
-	private String APP_PUBLIC_KEY;
+	@Value("${pay.alipay.ALIPAY_PUBLIC_KEY}")
+	private String ALIPAY_PUBLIC_KEY;
 	
 	@Operation(summary = "生成支付二维码")
 	@PostMapping("/generatepaycode")
 	@ResponseBody
 	public PayRecordDto generatePayCode(@RequestBody AddOrderDto dto) {
+		//二维码链接指向/requestpay接口  电脑使用模拟器 安装沙箱支付宝扫码 可以识别本机地址
 		return orderService.createOrder(dto);
 	}
 	
 	@Operation(summary = "扫码下单接口")
-	@PostMapping("/requestpay")
+	@GetMapping("/requestpay")
 	public void requestPay(String payNo, HttpServletResponse response) throws AlipayApiException, IOException {
 		XcPayRecord payRecord = orderService.getPayRecordByPayNo(payNo);
 		if (payRecord == null) {
@@ -65,21 +68,29 @@ public class OrderController {
 			CustomException.cast("已支付,无需重复支付");
 		}
 		
-		DefaultAlipayClient alipayClient = new DefaultAlipayClient(MyAlipayConfig.URL, APP_ID, APP_PRIVATE_KEY, MyAlipayConfig.FORMAT
-				, MyAlipayConfig.CHARSET, APP_PUBLIC_KEY, MyAlipayConfig.SIGNTYPE);
+		DefaultAlipayClient alipayClient = new DefaultAlipayClient(MyAlipayConfig.URL, APPID, PRIVATE_KEY, MyAlipayConfig.FORMAT
+				, MyAlipayConfig.CHARSET, ALIPAY_PUBLIC_KEY, MyAlipayConfig.SIGNTYPE);
 		AlipayTradeWapPayRequest wapPayRequest = new AlipayTradeWapPayRequest();
-		//wapPayRequest.setNotifyUrl("");
+		wapPayRequest.setNotifyUrl("");
 		//填充业务参数
-		wapPayRequest.setBizContent(String.format(
-				"'{'    \"out_trade_no\":\"%s\",   " +
-						" \"total_amount\":%s,  " +
-						"  \"subject\":\"%s\",  " +
-						"  \"product_code\":\"QUICK_WAP_WAY\"  '}'", payNo, payRecord.getTotalPrice(), payRecord.getOrderName()));
-		String body = alipayClient.pageExecute(wapPayRequest).getBody();
-		
+		JSONObject bizContent = new JSONObject();
+		bizContent.put("out_trade_no", payNo);
+		bizContent.put("total_amount", payRecord.getTotalPrice());
+		bizContent.put("subject", payRecord.getOrderName());
+		bizContent.put("product_code", "QUICK_WAP_WAY");
+		wapPayRequest.setBizContent(bizContent.toString());
+		AlipayTradeWapPayResponse wapPayResponse = alipayClient.pageExecute(wapPayRequest);
 		response.setContentType("text/html;charset" + MyAlipayConfig.CHARSET);
-		response.getWriter().write(body);
-		response.getWriter().flush();
+		if (wapPayResponse.isSuccess()) {
+			String body = wapPayResponse.getBody();
+			response.getWriter().write(body);
+			response.getWriter().flush();
+		} else {
+			String body = wapPayResponse.getMsg();
+			log.debug("下单接口调用失败,{}", body);
+			response.getWriter().write(body);
+			response.getWriter().flush();
+		}
 	}
 	
 	@Operation(summary = "查询支付结果")
@@ -105,7 +116,7 @@ public class OrderController {
 			}
 			params.put(keyName, valueStr);
 		}
-		boolean verifyResult = AlipaySignature.rsaCheckV1(params, APP_PUBLIC_KEY, MyAlipayConfig.CHARSET, "RSA2");
+		boolean verifyResult = AlipaySignature.rsaCheckV1(params, ALIPAY_PUBLIC_KEY, MyAlipayConfig.CHARSET, "RSA2");
 		if (verifyResult) {//验证成功
 			//商户订单号
 			String out_trade_no = new String(request.getParameter("out_trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
@@ -122,7 +133,7 @@ public class OrderController {
 				payStatusDto.setTradeNo(trade_no);
 				payStatusDto.setOutTradeNo(out_trade_no);
 				payStatusDto.setTotalAmount(total_amount);
-				payStatusDto.setAppId(APP_ID);
+				payStatusDto.setAppId(APPID);
 				orderService.saveAlipayStatus(payStatusDto);
 			}
 			response.getWriter().write("success");

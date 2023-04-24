@@ -73,14 +73,14 @@ public class OrderServiceImpl implements OrderService {
 	@Value("${pay.qrcodeurl}")
 	private String qrcodeUrl;
 	
-	@Value("${pay.alipay.APP_ID}")
-	private String APP_ID;
+	@Value("${pay.alipay.APPID}")
+	private String APPID;
 	
-	@Value("${pay.alipay.APP_PRIVATE_KEY}")
-	private String APP_PRIVATE_KEY;
+	@Value("${pay.alipay.PRIVATE_KEY}")
+	private String PRIVATE_KEY;
 	
-	@Value("${pay.alipay.APP_PUBLIC_KEY}")
-	private String APP_PUBLIC_KEY;
+	@Value("${pay.alipay.ALIPAY_PUBLIC_KEY}")
+	private String ALIPAY_PUBLIC_KEY;
 	
 	@Transactional
 	@Override
@@ -128,7 +128,7 @@ public class OrderServiceImpl implements OrderService {
 		//订单类型
 		orders.setOrderType("60201");
 		orders.setOrderName(addOrderDto.getOrderName());
-		orders.setOrderDescrip(addOrderDto.getOrderDesc());
+		orders.setOrderDescrip(addOrderDto.getOrderDescrip());
 		orders.setOrderDetail(addOrderDto.getOrderDetail());
 		orders.setOutBusinessId(addOrderDto.getOutBusinessId());
 		int count = ordersMapper.insert(orders);
@@ -223,8 +223,8 @@ public class OrderServiceImpl implements OrderService {
 	 * @return 支付结果
 	 */
 	private PayStatusDto queryPayResultFromAlipay(String payNo) {
-		DefaultAlipayClient alipayClient = new DefaultAlipayClient(MyAlipayConfig.URL, APP_ID, APP_PRIVATE_KEY, MyAlipayConfig.FORMAT,
-				MyAlipayConfig.CHARSET, APP_PUBLIC_KEY, MyAlipayConfig.SIGNTYPE);
+		DefaultAlipayClient alipayClient = new DefaultAlipayClient(MyAlipayConfig.URL, APPID, PRIVATE_KEY, MyAlipayConfig.FORMAT,
+				MyAlipayConfig.CHARSET, ALIPAY_PUBLIC_KEY, MyAlipayConfig.SIGNTYPE);
 		
 		AlipayTradeQueryRequest queryRequest = new AlipayTradeQueryRequest();
 		JSONObject jsonObject = new JSONObject();
@@ -252,7 +252,7 @@ public class OrderServiceImpl implements OrderService {
 		payStatusDto.setTradeNo((String) tradeQueryResponse.get("trade_no"));
 		//交易状态
 		payStatusDto.setTradeStatus((String) tradeQueryResponse.get("trade_status"));
-		payStatusDto.setAppId(APP_ID);
+		payStatusDto.setAppId(APPID);
 		//总金额
 		payStatusDto.setTotalAmount((String) tradeQueryResponse.get("total_amount"));
 		

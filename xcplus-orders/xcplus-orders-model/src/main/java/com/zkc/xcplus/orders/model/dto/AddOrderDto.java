@@ -26,7 +26,7 @@ public class AddOrderDto {
 	/**
 	 * 订单描述
 	 */
-	private String orderDesc;
+	private String orderDescrip;
 	
 	/**
 	 * 订单明细json
