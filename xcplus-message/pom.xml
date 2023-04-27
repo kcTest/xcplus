@@ -27,4 +27,5 @@
             <version>${mysql-connector-java.version}</version>
         </dependency>
     </dependencies>
+
 </project>

@@ -31,6 +31,7 @@
     </modules>
 
     <properties>
+        <spring-boot.version>3.0.5</spring-boot.version>
         <lombok.version>1.18.26</lombok.version>
         <mybatisplus.version>3.5.3.1</mybatisplus.version>
         <xcplus-base.version>0.0.1-SNAPSHOT</xcplus-base.version>
@@ -64,6 +65,15 @@
         <xcplus-orders.service.version>0.0.1-SNAPSHOT</xcplus-orders.service.version>
         <xcplus-orders.model.version>0.0.1-SNAPSHOT</xcplus-orders.model.version>
         <alipay-sdk.version>4.35.110.ALL</alipay-sdk.version>
+        <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
+        <docker.registry>192.168.164.133:1026</docker.registry>
+        <docker.registry.image.dir>xcplus</docker.registry.image.dir>
+        <!--        跳过测试-->
+        <skipTests>true</skipTests>
+        <!--        project.build.sourceEncoding属性用来指定Maven用什么编码来读取源码及文档，
+        而project.reporting.outputEncoding用来指定 Maven用什么编码来呈现站点的html文档。-->
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -282,13 +292,41 @@
 
     </dependencyManagement>
 
+    <!--    
+    java -Dfile.encoding=utf-8 -jar xcplus-checkcode-0.0.1-SNAPSHOT.jar
+    -->
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>3.0.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>${dockerfile-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                                <goal>push</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <!--  本机需设置环境变量 DOCKER_HOST tcp://centos006:1027 -->
+                    <configuration>
+                        <contextDirectory>${project.basedir}</contextDirectory>
+                        <!--  docker.registry 与 maven settings.xml 中<servers>下的定义的<server>id一致 ，认证信息在 <servers>下定义-->
+                        <repository>${docker.registry}/${docker.registry.image.dir}/${project.artifactId}</repository>
+                        <tag>${project.version}</tag>
+                        <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+                        <buildArgs>
+                            <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+                        </buildArgs>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
