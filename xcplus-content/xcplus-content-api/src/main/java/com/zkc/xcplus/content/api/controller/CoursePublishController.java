@@ -51,7 +51,7 @@ public class CoursePublishController {
 	@ResponseBody
 	@GetMapping("/info/{courseId}")
 	public CoursePublish getCoursePublish(@PathVariable("courseId") Long courseId) {
-		return coursePublishService.getCoursePublish(courseId);
+		return coursePublishService.getCoursePublishCache(courseId);
 	}
 	
 }

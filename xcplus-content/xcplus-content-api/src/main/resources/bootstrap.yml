@@ -28,6 +28,8 @@ spring:
           - data-id: feign-${spring.profiles.active}.yaml
             group: common
             refresh: true
-
+          - data-id: redis-${spring.profiles.active}.yaml
+            group: common
+            refresh: true
   #logging: 公共配置从nacos读取
   #  config: classpath:log4j2-dev.xml

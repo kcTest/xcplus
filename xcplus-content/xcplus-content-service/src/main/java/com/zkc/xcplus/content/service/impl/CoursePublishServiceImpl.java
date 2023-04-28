@@ -30,6 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
@@ -73,6 +74,9 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 	
 	@Autowired
 	private SearchServiceClient searchServiceClient;
+	
+	@Autowired
+	private RedisTemplate<String, Object> redisTemplate;
 	
 	@Override
 	public CoursePreviewDto getCoursePreviewInfo(Long courseId) {
@@ -254,5 +258,22 @@ public class CoursePublishServiceImpl implements CoursePublishService {
 		return coursePublishMapper.selectById(courseId);
 	}
 	
+	@Override
+	public CoursePublish getCoursePublishCache(Long courseId) {
+		String key = "course:" + courseId;
+		Object o = redisTemplate.opsForValue().get(key);
+		CoursePublish coursePublish;
+		if (o == null) {
+			coursePublish = getCoursePublish(courseId);
+			if (coursePublish != null) {
+				redisTemplate.opsForValue().set(key, JSON.toJSON(coursePublish));
+				return coursePublish;
+			}
+		} else {
+			coursePublish = JSON.parseObject(o.toString(), CoursePublish.class);
+		}
+		return coursePublish;
+	}
 	
 }
+	
