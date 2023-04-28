@@ -1,0 +1,14 @@
+server:
+  port: 1002
+  servlet:
+    context-path: /content #项目路径，构成url地址的一部分。
+swagger:
+  title: 在线内容管理系统
+  description: 内容管理系统后台接口文档
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt: #内网
+          #jwk-set-uri: http://localhost:1019/auth/oauth2/jwks
+          jwk-set-uri: http://centos006:1019/auth/oauth2/jwks

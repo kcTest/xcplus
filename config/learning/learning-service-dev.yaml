@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    #    //ip 
+    url: jdbc:mysql://centos006:1001/xcplus_learning?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456xxx
+    driver-class-name: com.mysql.cj.jdbc.Driver

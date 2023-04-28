@@ -1,0 +1,17 @@
+feign:
+  sentinel: #sentinel作为熔断器
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 6000
+        readTimeout: 6000
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+# Cannot invoke "org.springframework.cloud.openfeign.FeignClientFactoryBean.getFallback()" because "feignClientFactoryBean" is null
+spring:
+  cloud:
+    openfeign:
+      lazy-attributes-resolution: true

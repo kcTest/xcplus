@@ -1,0 +1,22 @@
+server:
+  port: 1019
+  servlet:
+    context-path: /auth #项目路径，构成url地址的一部分。
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://centos006:1001/xcplus_users?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456xxx
+swagger:
+  title: 在线内容管理系统授权认证
+  description: 内容管理系统授权认证服务接口文档
+oauth2:
+  client:
+    clientid: xcWebApp
+    clientsecret: $2a$10$ryLasv/aqmE0i9JVpERX8eUSA6Rk62Z0KCQ6ZR6M3U97tkREgYj/G
+    # code\token 追加到url
+    redirecturi: http://www.51xuecheng.cn
+  jwt:
+    alias: alias
+    password: keypass

@@ -1,0 +1,29 @@
+spring:
+  rabbitmq:
+    host: centos006
+    port: 1023
+    username: admin
+    password: 123456xxx
+    virtual-host: /
+    # 异步回调 定义ConfirmCallback MQ返回结果时会调用这个ConfirmCallback
+    publisher-confirm-type: correlated
+    # 开启后需定义ReturnCallback
+    publisher-returns: false
+    template:
+      # 定义消息路由失败时的策略 true：调用ReturnCallback false: 直接丢弃消息
+      mandatory: false
+    listener:
+      simple:
+        # 出现异常时autoAck,消息回滚到mq 没有异常返回ack; 
+        # manual:手动控制; 
+        # none:丢弃消息 不会滚到mq  
+        acknowledge-mode: none
+        retry:
+          #初始的失败等待时长为1s
+          initial-interval: 1000ms
+          #失败的等待时长倍数 下次等待时长=multiplier*previous retry interval
+          multiplier: 1
+          #最大重试次数
+          max-attempts: 3
+          #true:无状态, false:有状态。如果业务中包含事务 改为false
+          stateless: true

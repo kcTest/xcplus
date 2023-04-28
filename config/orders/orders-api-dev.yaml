@@ -1,0 +1,13 @@
+server:
+  port: 1025
+  servlet:
+    context-path: /orders #项目路径，构成url地址的一部分。
+swagger:
+  title: 支付订单管理
+  description: 在线支付订单管理相关接口文档
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt: #内网
+          jwk-set-uri: http://localhost:1019/auth/oauth2/jwks

@@ -1,0 +1,55 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: content-api #路由id 唯一
+          uri: lb://content-api #路由的目标地址 lb负载均衡跟服务名称
+          predicates: #路由断言 判断请求是否符合路由规则
+            - Path=/content/** #按路径匹配  
+        - id: system-api
+          uri: lb://system-api
+          predicates:
+            - Path=/system/**
+        - id: media-api
+          uri: lb://media-api
+          predicates:
+            - Path=/media/**
+        - id: search-api 
+          uri: lb://search-api
+          predicates:
+            - Path=/search/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+        - id: checkcode
+          uri: lb://checkcode
+          predicates:
+            - Path=/checkcode/**
+        - id: learning-api
+          uri: lb://learning-api
+          predicates:
+            - Path=/learning/**
+        - id: orders-api
+          uri: lb://orders-api
+          predicates:
+            - Path=/orders/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt: #内网
+          #jwk-set-uri: http://localhost:1019/auth/oauth2/jwks
+          jwk-set-uri: http://centos006:1019/auth/oauth2/jwks
+server:
+  port: 1006
+whitelist:
+  urls:
+    # 认证地址 放开token
+    - /auth/oauth2/authorize
+    - /auth/oauth2/token
+    # 内容管理公开访问接口
+    - /content/open/**
+    # 媒资管理公开访问接口
+    - /media/open/**
+    # 登录界面验证码获取
+    - /checkcode/**

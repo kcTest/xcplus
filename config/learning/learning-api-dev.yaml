@@ -1,0 +1,13 @@
+server:
+  port: 1022
+  servlet:
+    context-path: /learning
+swagger:
+  title: 在线学习管理
+  description: 在线学习管理相关接口文档
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt: #内网
+          jwk-set-uri: http://localhost:1019/auth/oauth2/jwks

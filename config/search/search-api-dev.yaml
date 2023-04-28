@@ -1,0 +1,14 @@
+server:
+  port: 1018
+  servlet:
+    context-path: /search #项目路径，构成url地址的一部分。
+swagger:
+  title: 课程搜索
+  description: 课程搜索后台服务
+elasticsearch:
+  host: esnode:1016
+  username: elastic
+  password: 123456xxx
+  course:
+    idxname: course_publish
+    source_fields: id,name,grade,mt,st,charge,pic,price,teachmode,validDays,createDate

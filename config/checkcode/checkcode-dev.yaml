@@ -1,0 +1,7 @@
+server:
+  port: 1020
+  servlet:
+    context-path: /checkcode
+swagger:
+  title: 图形验证码服务
+  description: 图形验证码服务接口文档
